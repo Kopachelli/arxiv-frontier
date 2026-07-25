@@ -57,11 +57,10 @@ def fig_growth(coded):
     ax.set_title("Autonomous AI research papers per quarter (arXiv)", loc="left")
     ax.tick_params(axis="x", rotation=45)
     ax.set_ylim(0, max(vals) * 1.16)
-    ax.annotate(f"{partial}: partial\n(July only)", xy=(len(keys) - 1, vals[-1] * 1.06),
-                xytext=(len(keys) - 3.2, max(vals) * 0.34), fontsize=7.5, color="#666",
-                ha="center",
+    ax.annotate(f"{partial}: partial\n(July only)", xy=(len(keys) - 1.35, vals[-1] * 0.75),
+                xytext=(1.4, max(vals) * 0.80), fontsize=7.5, color="#666", ha="center",
                 arrowprops=dict(arrowstyle="->", color="#999", lw=0.8,
-                                connectionstyle="arc3,rad=-0.2"))
+                                connectionstyle="arc3,rad=0.18"))
     save(fig, "fig1-growth")
 
 

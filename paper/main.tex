@@ -45,9 +45,13 @@ Two things distinguish this map. First, the object: we ask not what these system
 \growthFactor{}-fold (\firstQn{} papers in \firstQ{} to \peakQn{} in \peakQ{}), yet
 \pctAuditNone{} of the corpus provides no auditability mechanism of any kind, only
 \pctHeldOut{} test a selected result outside the loop that produced it, and
-\pctHumanUnspec{} never state what humans did. The imbalance is sharpest exactly where it
-matters most: among papers claiming the AI produced new scientific knowledge,
-\pctDiscNoAudit{} provide no auditability mechanism.
+\pctHumanUnspec{} never state what humans did. Conditioning on claim strength separates two
+things the aggregates blur: papers claiming the AI produced new scientific knowledge validate
+their \emph{results} better than average (\pctDiscRealWorld{} report external validation
+versus \pctRealWorld{} corpus-wide) while exposing their \emph{process} worse
+(\pctDiscNoAudit{} provide no auditability mechanism versus \pctAuditNone{} overall). This
+field validates outputs better than it exposes process, and the gap is widest where its
+claims are strongest.
 
 Second, the instrument: the review was conducted by a frontier language model, and its
 process was logged rather than smoothed. That log is data. Two frontier models screening

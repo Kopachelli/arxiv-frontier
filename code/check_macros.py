@@ -26,6 +26,8 @@ KNOWN = {
     "_", "$", "{", "}", "toprule", "midrule", "bottomrule", "multicolumn", "hline",
     "subsection*", "section*", "protect", "ldots", "dots", "and", "e", "colon",
     "definecolor", "color", "textcolor", "hidelinks", "natbib", ",",
+    "small", "footnotesize", "scriptsize", "tiny", "centering", "tabular", "table",
+    "figure", "raggedright", "newline", "par",
 }
 
 

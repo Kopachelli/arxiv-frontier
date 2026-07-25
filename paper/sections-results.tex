@@ -71,7 +71,7 @@ the loop that produced it, and the share of papers offering no auditability mech
 \label{fig:verification}
 \end{figure}
 
-\subsection{Claims outrun evidence exactly where it matters}
+\subsection{Validating a result and auditing a process come apart}
 
 The prespecified operationalisation of the auditability gap --- a strong claim paired with
 evaluation limited to LLM judging or nothing, and no released code --- flags \nWeakStrong{}
@@ -79,13 +79,53 @@ papers (\pctWeakStrong{}). We report that figure as specified, but it is insensi
 treats any benchmark metric as adequate verification, which is precisely the assumption in
 question.
 
-Conditioning on claim strength is more informative (Figure~\ref{fig:gap}). The corpus makes
+Conditioning on claim strength is more informative, and it separates two things the aggregate
+figures blur together (Figure~\ref{fig:gap}, Table~\ref{tab:gap}). The corpus makes
 \nMethodClaim{} method claims, \nCapability{} capability claims, \nConceptual{} conceptual
 claims, and \nDiscovery{} discovery claims --- assertions that the AI produced new knowledge
-about the world. Discovery claims are the ones a reader most needs to be able to check, and
-they are among the least checkable: \pctDiscNoAudit{} of them provide no auditability
-mechanism, and only \pctDiscRealWorld{} report external validation. Of the discovery papers
-we verified from full text, \pctDiscRepo{} link a code repository.
+about the world.
+
+Discovery papers evaluate their \emph{results} substantially better than the corpus average.
+Half of them (\pctDiscRealWorld{}) report external validation against \pctRealWorld{}
+corpus-wide, \pctDiscStrongEval{} use at least one evaluation that tests a claim outside the
+loop that produced it against \pctStrongEval{} overall, and they use held-out transfer at
+three times the corpus rate. Authors claiming a discovery evidently feel the burden of proving
+the finding, and many discharge it.
+
+They do not discharge the other burden. The same papers expose their \emph{process} worse than
+average: \pctDiscNoAudit{} provide no auditability mechanism at all, against \pctAuditNone{}
+across the corpus, and \pctDiscRepo{} link a code repository against \pctRepo{} overall.
+
+This dissociation is the sharpest result in our map, and it is not what we expected to find.
+Validation of outputs and auditability of process are different things, and this literature
+does the first considerably better than the second precisely where its claims are strongest.
+A reader of a typical discovery paper can often verify \emph{that} the reported finding holds
+--- a material was synthesised, a known result was reproduced --- while having no way to
+establish \emph{how} the system reached it, whether the route generalises, or whether the
+result survived a selection process over many discarded attempts that is nowhere reported.
+For a claim about what an autonomous system can discover, the second question is the load
+bearing one.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+Headline claim & $n$ & strong eval. & real-world & any audit & code repo \\
+\midrule
+Discovery   & \nDiscovery{}   & \pctDiscStrongEval{} & \pctDiscRealWorld{} & \pctDiscAudit{} & \pctDiscRepo{} \\
+Capability  & \nCapability{}  & \pctCapStrongEval{}  & \pctCapRealWorld{}  & \pctCapAudit{}  & \pctCapRepo{}  \\
+Method      & \nMethodClaim{} & \pctMethStrongEval{} & \pctMethRealWorld{} & \pctMethAudit{} & \pctMethRepo{} \\
+Conceptual  & \nConceptual{}  & \pctConcStrongEval{} & \pctConcRealWorld{} & \pctConcAudit{} & \pctConcRepo{} \\
+\midrule
+All papers  & \nCorpus{}      & \pctStrongEval{}     & \pctRealWorld{}     & \pctAnyAudit{}  & \pctRepo{}     \\
+\bottomrule
+\end{tabular}
+\caption{Verification and auditability by strength of headline claim. ``Strong eval.''
+means at least one of human-expert assessment, held-out transfer, or real-world validation.
+Code-repository figures are verified from full text, not abstracts.}
+\label{tab:gap}
+\end{table}
 
 \begin{figure}[t]
 \centering

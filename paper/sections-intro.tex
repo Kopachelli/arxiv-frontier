@@ -34,15 +34,23 @@ So we asked the question that this thread implies but nobody had measured across
 \emph{when these systems make claims, what evidence do they offer that the claims are true?}
 Not how good the systems are --- what they let you check.
 
-The answer is lopsided. The field grew roughly \growthFactor{}-fold in nine quarters
-(\firstQn{} papers in \firstQ{} to \peakQn{} in \peakQ{}), and by conventional standards it
-evaluates itself diligently: \pctBenchMetric{} of the corpus reports benchmark metrics. But
-only \pctHeldOut{} of papers re-test a selected result outside the loop that produced it,
-\pctAuditNone{} provide no auditability mechanism of any kind --- no inspectable traces, no
-claim-to-evidence provenance, no reproduction artifacts, no calibration --- and
-\pctHumanUnspec{} never state what the humans did. Among the \nDiscovery{} papers claiming
-the AI produced new scientific knowledge, \pctDiscNoAudit{} provide no auditability
-mechanism. Benchmark scores are abundant; the ability to check a specific claim is scarce.
+The answer is lopsided in a specific and initially surprising way. The field grew roughly
+\growthFactor{}-fold in nine quarters (\firstQn{} papers in \firstQ{} to \peakQn{} in
+\peakQ{}), and by conventional standards it evaluates itself diligently: \pctBenchMetric{} of
+the corpus reports benchmark metrics. But only \pctHeldOut{} of papers re-test a selected
+result outside the loop that produced it, \pctAuditNone{} provide no auditability mechanism
+of any kind --- no inspectable traces, no claim-to-evidence provenance, no reproduction
+artifacts, no calibration --- and \pctHumanUnspec{} never state what the humans did.
+
+Conditioning on claim strength separates two things that the aggregates blur. Among the
+\nDiscovery{} papers claiming the AI produced new knowledge about the world, external
+validation is markedly \emph{better} than average (\pctDiscRealWorld{} versus
+\pctRealWorld{} corpus-wide): authors who claim a discovery generally do work to show the
+finding is real. Auditability is markedly \emph{worse} (\pctDiscNoAudit{} provide none,
+versus \pctAuditNone{} overall). The field validates its outputs better than it exposes its
+processes, and the gap is widest exactly where its claims are strongest. A reader can often
+check that a reported finding holds, while having no way to establish how the system reached
+it or what was discarded along the way.
 
 \subsection*{The instrument is also the object}
 

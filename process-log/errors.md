@@ -126,3 +126,28 @@ precisely the records that had been rescued by human expertise — the AI's own 
 quietly nullified a correction made earlier in the project. Systems that appear to be
 reasoning may be reasoning over nothing; only an explicit refuse-on-empty-input check
 turns that from silent corruption into a loud failure.
+
+## #6 — 2026-07-25 — Phase 6 (writing) — Draft thesis contradicted by the AI's own data
+
+**Description.** The first full draft asserted that papers claiming AI-produced discoveries
+were "among the least checkable in the corpus". When the artifact-verification run
+completed and the claim-strength cross-tabulation was computed, the data said something
+different and more interesting: discovery papers report external validation at
+**50% versus 11% corpus-wide** and strong evaluation at 60% versus 29% — markedly *better*
+than average — while providing auditability mechanisms at 36% versus 45% and code
+repositories at 55% versus 61% — worse. The draft's framing was wrong.
+
+**How caught.** The AI computed the cross-tabulation to populate a table and noticed the
+numbers did not support the prose it had already written, rather than filling the table and
+leaving the narrative intact.
+
+**Consequence.** Abstract, introduction, results, and conclusion rewritten around the
+corrected finding: this literature validates outputs better than it exposes process, and
+the dissociation is widest for the strongest claims.
+
+**Why this matters for RQ4.** This is the failure mode most dangerous to AI-conducted
+research and the hardest to detect externally: a fluent, plausible thesis written before
+the evidence was complete, which would have survived review because it sounded right and
+pointed the same direction as the aggregate numbers. Nothing but recomputing and reading
+the specific cross-tabulation caught it. Note also that the corrected finding is
+*sharper* than the wrong one — following the data cost nothing scientifically.

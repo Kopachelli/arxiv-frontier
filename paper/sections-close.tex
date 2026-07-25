@@ -49,11 +49,16 @@ whether any particular system's results are correct.
 
 The literature on autonomous AI research systems grew roughly \growthFactor{}-fold in nine
 quarters and now evaluates itself by the standards of machine-learning benchmarking:
-diligently, at scale, and in a way that mostly does not let a reader check any particular
-claim. \pctHeldOut{} of papers test a result outside the loop that produced it,
-\pctAuditNone{} provide no auditability mechanism at all, and \pctHumanUnspec{} do not say
-what humans did. The papers claiming the AI produced new scientific knowledge are among the
-least checkable in the corpus.
+diligently, at scale, and in a way that mostly does not let a reader reconstruct how any
+particular claim was reached. \pctHeldOut{} of papers test a result outside the loop that
+produced it, \pctAuditNone{} provide no auditability mechanism at all, and \pctHumanUnspec{}
+do not say what humans did.
+
+The pattern is not uniform, and its shape is the finding. Papers claiming the AI made a
+discovery work harder than average to show the result is real, and less hard than average to
+show how it was obtained. Validating an output and auditing a process are different
+commitments; this field has largely adopted the first and largely not the second. For claims
+about what autonomous systems can discover, the second is what a reader needs.
 
 We are not in a position to be superior about this. Conducting the review produced five
 logged failures in one project, including a workflow that reported success having done
