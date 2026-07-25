@@ -32,3 +32,97 @@ caught before screening began.
 **Correction.** Query replaced with three precise phrase queries ("auditable AI
 scientist": 3 hits; "auditable agent": 33; "auditable research": 6); full harvest re-run
 from scratch so `data/HARVEST_MANIFEST.md` reflects only the corrected strategy.
+
+## #2 — 2026-07-25 — Phase 3 (screening) — Silent-empty workflow success
+
+**Description.** The first screening-workflow launch returned success in 106 ms having
+done nothing (0 agents). The orchestration script destructured its arguments assuming an
+object; the runtime delivered a JSON string, so the job-construction loop produced an
+empty list and the workflow "succeeded" with zero work.
+
+**How caught.** The AI noticed the result payload was all zeros. Nothing in the success
+signal itself indicated failure.
+
+**Consequence.** None beyond a wasted launch — caught before any data was produced.
+
+**Correction.** Defensive parsing plus a loud assertion that throws when any required
+argument is missing, so this class of failure fails loudly rather than silently.
+
+**Why this matters for RQ4.** An autonomous research pipeline that reports success
+without doing the work is precisely the failure mode that abstract-level review cannot
+detect. It was caught only because a human-designed reconciliation (expected vs actual
+counts) existed.
+
+## #3 — 2026-07-25 — Phase 3 (screening) — Dropped items in batch outputs
+
+**Description.** 7 of 1,359 papers (0.5%) were missing a screening decision: individual
+agents wrote result files containing fewer entries than the input batch, despite explicit
+instructions to output exactly one entry per paper. Distribution: 5 missing pass B, 2
+missing pass A, spread across different batches.
+
+**How caught.** The merge script reconciles per-paper across passes and reports missing
+entries by ID; it does not assume completeness.
+
+**Consequence.** None: the 7 gaps were re-run individually and merged.
+
+**Why this matters for RQ4.** Silent item-dropping in long structured outputs is a
+quantifiable AI failure mode in systematic-review work (~0.5% here). Without explicit
+per-item reconciliation it would have shown up as a slightly smaller corpus and nothing
+else — invisible in the final paper.
+
+## #4 — 2026-07-25 — Phase 3 (screening) — Underspecified protocol at field boundaries
+
+**Description.** The AI-written protocol v1.0 produced criteria that failed to determine
+21.5% of screening decisions (292/1,359). Two independent frontier models disagreed
+systematically — not randomly — on seven recurring classes of boundary paper.
+
+**How caught.** Layer-1 dual-pass design plus inspection of the disagreement structure
+(the AI examined the actual disagreements rather than treating the agreement rate as a
+single quality number).
+
+**Consequence.** A full re-screen of the corpus (amendment A1) — roughly a doubling of
+screening cost.
+
+**Correction.** Boundary rules BR1–BR7 + refined exclusion codes; entire corpus
+re-screened for internal consistency; both layers preserved and reported.
+
+**Why this matters for RQ4.** The AI wrote a protocol that *looked* rigorous and passed
+human review, yet under-determined a fifth of its own decisions. The gap was invisible in
+the protocol document and surfaced only by running two raters against each other — an
+argument that AI-conducted reviews need redundancy specifically at the definitional layer,
+not just the extraction layer.
+
+## #5 — 2026-07-25 — Phase 3 (re-screen) — Two data-plumbing defects in the AI's own pipeline
+
+**Description.** Two distinct defects in code the AI wrote:
+(a) One paper (2603.06677) present in the input was absent from all re-screen outputs —
+    an item silently dropped by a batch agent (same class as #3, recurring at ~0.07%).
+(b) The re-screen exporter looked up metadata only in `candidates.csv`, so the two
+    expert-identified papers — deliberately added *because* the queries missed them —
+    reached the screener with **empty title and abstract**. One of them
+    (2605.28102) was consequently judged on nothing but a leftover note and flagged
+    `UNDECIDED`; the other (2606.02184, the Ghost Couple study, a motivating paper for
+    this review) was decided blind.
+
+**How caught.** (a) by the merge script's completeness reconciliation against the
+Layer-1 roster; (b) by reading the single `UNDECIDED` justification instead of treating
+it as noise — it said "title/abstract missing", which exposed the plumbing defect.
+
+**Consequence.** Three papers screened on absent or degraded input.
+
+**Correction.** Metadata for expert-identified papers is now fetched into a cached
+`data/expert-identified-meta.json`, and the exporter **refuses to emit any paper with an
+empty abstract** rather than silently passing blanks to a screener. All three papers
+re-screened with full metadata.
+
+**Why this matters for RQ4.** The failure was not in judgment but in plumbing, and it hit
+precisely the records that had been rescued by human expertise — the AI's own pipeline
+quietly nullified the correction the humans-and-AI had made earlier. Systems that look
+like they are reasoning may be reasoning over nothing; only an explicit
+refuse-on-empty-input check turns that from silent corruption into a loud failure.
+
+**Why this matters for RQ4.** The failure was not in judgment but in plumbing, and it hit
+precisely the records that had been rescued by human expertise — the AI's own pipeline
+quietly nullified a correction made earlier in the project. Systems that appear to be
+reasoning may be reasoning over nothing; only an explicit refuse-on-empty-input check
+turns that from silent corruption into a loud failure.

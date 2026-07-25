@@ -57,3 +57,32 @@ reconstructed. Companion files: `errors.md` (AI failures), `human-interventions.
   1,357 in the codable window (≥2024-01-01). Year curve: 14/55/149/508/700 (2026 =
   7 months). All 15 known landmarks present (13 via queries, 2 via expert route).
   Phase 2 complete. Paused for Checkpoint 1: human approval of protocol before screening.
+
+**Checkpoint 1 passed; Phase 3 — screening (same session).**
+
+- Human approved protocol v1.0 unchanged and authorized phase-wise git commits
+  (`human-interventions.md` #3). Phases 1–2 committed (9f0c1b6).
+- Pre-screening enhancement recorded in `screening-prompts.md`: Pass B runs on a
+  different base model (Opus 5) than Pass A (Fable 5) to decorrelate rater error.
+- Screening infrastructure: `code/screen.py` (batching + merge); 1,359 papers
+  (1,357 codable + 2 expert-identified) → 55 batches of ≤25.
+- Workflow launch #1 failed instantly: the orchestration script assumed `args` arrives
+  as an object; it arrived as a JSON string → the job loop silently built 0 jobs. An
+  infrastructure bug (silent-empty failure), not a screening error; fixed with defensive
+  parsing + loud assertion. Relaunched: 110 screening agents (55 batches × 2 passes).
+- Layer-1 screening completed: 110 agents, 13.7 min, 0 failures, ~6.0M subagent tokens.
+  Raw agreement 1,067/1,359 (78.5%); 292 needing adjudication; 646 agreed includes.
+  7 papers had a missing pass (agent wrote fewer entries than the batch contained) —
+  detected by the merge script's per-paper reconciliation, re-run individually
+  (`errors.md` #2).
+- **Inspection of the 292 disagreements produced the session's most consequential
+  finding**: they were not noise. They concentrated on seven recurring boundary classes
+  (assistive tools, automated literature review, self-driving-lab infrastructure,
+  human-AI-usage/detection studies, data-science agents, generic deep-research agents,
+  ethics-of-human-AI-use frameworks) that protocol v1.0 simply did not determine. Two
+  frontier models disagreeing systematically on *what counts as an AI scientist* is a
+  finding about the field, not merely about the raters.
+- Wrote **amendment A1**: boundary rules BR1–BR7 + four refined exclusion codes, and —
+  because applying rules to only the 292 would make the corpus internally inconsistent —
+  a rule-based re-screen of ALL 1,359 candidates as Layer 2. Layer 1 is preserved and
+  reported (its agreement statistics are an RQ4 result). Launched 55 re-screen agents.
