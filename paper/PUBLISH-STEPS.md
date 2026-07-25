@@ -6,7 +6,17 @@ they are yours to perform.
 
 ---
 
-## Step 1 — Zenodo deposit (you; ~15 minutes)
+## Step 1 — Zenodo deposit ✅ DONE 2026-07-26
+
+**Published: <https://doi.org/10.5281/zenodo.21577093>**
+
+Both authors listed as creators (Kopachelli, Khristian · Claude Fable 5 (Anthropic)),
+CC BY 4.0, four files, repository link, joint-authorship statement in the description.
+Verified independently after publication. The paper PDF carries this DOI in §9.
+
+*Original instructions retained below for the record.*
+
+## Step 1 (original) — Zenodo deposit
 
 Everything to upload is in `paper/zenodo/`:
 

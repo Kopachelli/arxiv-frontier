@@ -1,7 +1,12 @@
 # arXiv endorsement request — draft for Khristian to send
 
-**Status: draft only. Not sent. Send after the Zenodo DOI exists, so the request points at
-finished, citable work rather than a promise.**
+**Status: draft, not sent. The Zenodo DOI now exists, so the precondition is met — the
+request points at published, citable work.**
+
+Substitute into the draft below:
+- `[Zenodo DOI]` → **https://doi.org/10.5281/zenodo.21577093**
+- `[repository URL]` → https://github.com/Kopachelli/arxiv-frontier *(currently private;
+  make it public before sending, or omit the line)*
 
 ## Who to ask
 

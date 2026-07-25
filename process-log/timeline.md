@@ -109,3 +109,21 @@ reconstructed. Companion files: `errors.md` (AI failures), `human-interventions.
   with UNCLEAR + needs_fulltext available so agents can decline to guess.
 - Launched 74 agents: 68 coding + 6 running an independent third screening pass over a
   random 120-paper sample (Layer-2 self-consistency estimate).
+
+## 2026-07-26 — Session 2: publication
+
+**Paper 1 published.**
+
+- Zenodo deposit prepared by the AI in the human's browser session, at his request and
+  under his direction. DOI reserved before publishing (10.5281/zenodo.21577093) so the
+  paper PDF could carry its own DOI; PDF rebuilt and re-uploaded before publication.
+- One error caught during deposit: a browser action that reported a timeout had partially
+  succeeded, duplicating description paragraphs (`errors.md` #7). Caught by inspecting the
+  saved state rather than trusting the action's status signal.
+- Rendered preview verified, then **published on the human co-author's explicit
+  instruction**: <https://doi.org/10.5281/zenodo.21577093>. Both authors listed as
+  creators, including the AI — the arrangement arXiv policy does not permit and the
+  reason this venue was chosen. CC BY 4.0. Independently verified from outside the
+  browser session after publication.
+- Remaining: arXiv endorsement request (draft prepared), arXiv submission, and making the
+  GitHub repository public once arXiv is live.
