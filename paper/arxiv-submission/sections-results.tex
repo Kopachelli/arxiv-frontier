@@ -1,0 +1,160 @@
+\section{Results}
+\label{sec:results}
+
+\subsection{The shape and growth of the field}
+
+Quarterly output in the coded corpus rose from \firstQn{} papers in \firstQ{} to \peakQn{} in
+\peakQ{} --- roughly \growthFactor{}-fold in nine quarters (Figure~\ref{fig:growth}). The
+partial quarter \partialQ{} already contains \partialQn{} papers from July alone. Growth of
+this kind means any narrative survey is stale on publication, which is part of why we release
+the pipeline rather than only the findings.
+
+The corpus divides into \nSystem{} system papers, \nBenchmark{} benchmarks, \nFramework{}
+frameworks, \nPosition{} position papers, \nCaseStudy{} case studies, and \nSurvey{} surveys.
+Its centre of gravity is computational: the largest domain is machine learning research itself,
+with materials, biomedicine, and physics forming a substantial experimental minority.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.85\textwidth]{fig1-growth.pdf}
+\caption{Papers on autonomous AI research systems per quarter of first arXiv submission
+(coded corpus, $n=\nCorpus{}$). The final bar covers July 2026 only.}
+\label{fig:growth}
+\end{figure}
+
+\subsection{What these systems do, and how autonomously}
+
+Figure~\ref{fig:stages} shows lifecycle coverage and demonstrated autonomy. Literature
+synthesis is the most commonly automated stage, followed by analysis and ideation; peer
+review is the least. Experiment execution appears in a substantial minority, reflecting the
+self-driving-laboratory subliterature.
+
+Autonomy is more revealing. Of the \nSystemsCoded{} papers presenting a system or case study,
+\nClosedLoop{} demonstrate a closed multi-stage loop with humans monitoring rather than gating,
+and only \nFullAuto{} claim full autonomy from question to manuscript. The modal system
+automates a single stage end to end. The field's rhetoric is dominated by end-to-end
+autonomy; its demonstrated practice is not.
+
+\begin{figure}[b]
+\centering
+\includegraphics[width=\textwidth]{fig2-stages-autonomy.pdf}
+\caption{Left: research-lifecycle stages substantively performed (multi-select). Right:
+highest autonomy level actually demonstrated, among papers presenting a system or case study.}
+\label{fig:stages}
+\end{figure}
+
+\subsection{The evidentiary picture}
+\label{sec:evidence}
+
+Figure~\ref{fig:verification} is the central result. By the conventions of machine-learning
+publication the corpus evaluates itself thoroughly: benchmark metrics are near-universal.
+But the evaluations that would let a reader check a specific claim are rare.
+
+\begin{itemize}\itemsep2pt
+\item \pctHeldOut{} of papers re-test a selected result outside the loop that produced it.
+\item \pctRealWorld{} report any external validation --- wet-lab confirmation, deployment,
+reproduction of established results, or peer-review acceptance of generated work.
+\item \pctHumanExpert{} involve domain experts in assessing outputs, while \pctLLMJudge{} use
+LLM judges; \pctNoEval{} report no empirical evaluation at all.
+\item \pctAuditNone{} --- \nAuditNone{} papers --- provide \emph{no} auditability mechanism:
+no inspectable traces, no claim-to-evidence provenance, no reproduction artifacts, no
+machine-checkable verification, no calibration reporting. Formal verification appears in
+\nFormalVerif{} papers.
+\end{itemize}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{fig3-verification.pdf}
+\caption{Evaluation methods (left) and auditability mechanisms (right) across the corpus
+($n=\nCorpus{}$, multi-select). Highlighted bars mark evaluations that test a claim outside
+the loop that produced it, and the share of papers offering no auditability mechanism.}
+\label{fig:verification}
+\end{figure}
+
+\subsection{Validating a result and auditing a process come apart}
+
+The prespecified operationalisation of the auditability gap --- a strong claim paired with
+evaluation limited to LLM judging or nothing, and no released code --- flags \nWeakStrong{}
+papers (\pctWeakStrong{}). We report that figure as specified, but it is insensitive: it
+treats any benchmark metric as adequate verification, which is precisely the assumption in
+question.
+
+Conditioning on claim strength is more informative, and it separates two things the aggregate
+figures blur together (Figure~\ref{fig:gap}, Table~\ref{tab:gap}). Of particular interest are
+the \nDiscovery{} papers making a \emph{discovery} claim --- an assertion that the AI produced
+new knowledge about the world, rather than that it performed a task well or that a method
+works. These are the claims for which a reader's ability to verify matters most.
+
+Discovery papers evaluate their \emph{results} substantially better than the corpus average.
+Half of them (\pctDiscRealWorld{}) report external validation against \pctRealWorld{}
+corpus-wide, \pctDiscStrongEval{} use at least one evaluation that tests a claim outside the
+loop that produced it against \pctStrongEval{} overall, and they use held-out transfer at
+three times the corpus rate. Authors claiming a discovery evidently feel the burden of proving
+the finding, and many discharge it.
+
+They do not discharge the other burden. The same papers expose their \emph{process} worse than
+average: \pctDiscNoAudit{} provide no auditability mechanism at all, against \pctAuditNone{}
+across the corpus, and \pctDiscRepo{} link a code repository against \pctRepo{} overall.
+
+This dissociation is the sharpest result in our map, and it is not what we expected to find.
+Validation of outputs and auditability of process are different things, and this literature
+does the first considerably better than the second precisely where its claims are strongest.
+A reader of a typical discovery paper can often verify \emph{that} the reported finding holds
+--- a material was synthesised, a known result was reproduced --- while having no way to
+establish \emph{how} the system reached it, whether the route generalises, or whether the
+result survived a selection process over many discarded attempts that is nowhere reported.
+For a claim about what an autonomous system can discover, the second question is the load
+bearing one.
+
+\begin{table}[b]
+\centering
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+Headline claim & $n$ & strong eval. & real-world & any audit & code repo \\
+\midrule
+Discovery   & \nDiscovery{}   & \pctDiscStrongEval{} & \pctDiscRealWorld{} & \pctDiscAudit{} & \pctDiscRepo{} \\
+Capability  & \nCapability{}  & \pctCapStrongEval{}  & \pctCapRealWorld{}  & \pctCapAudit{}  & \pctCapRepo{}  \\
+Method      & \nMethodClaim{} & \pctMethStrongEval{} & \pctMethRealWorld{} & \pctMethAudit{} & \pctMethRepo{} \\
+Conceptual  & \nConceptual{}  & \pctConcStrongEval{} & \pctConcRealWorld{} & \pctConcAudit{} & \pctConcRepo{} \\
+\midrule
+All papers  & \nCorpus{}      & \pctStrongEval{}     & \pctRealWorld{}     & \pctAnyAudit{}  & \pctRepo{}     \\
+\bottomrule
+\end{tabular}
+\caption{Verification and auditability by strength of headline claim. ``Strong eval.''
+means at least one of human-expert assessment, held-out transfer, or real-world validation.
+Code-repository figures are verified from full text, not abstracts.}
+\label{tab:gap}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.85\textwidth]{fig4-claim-vs-evidence.pdf}
+\caption{Share of papers providing strong evaluation, any auditability mechanism, and a
+full-text-verified code repository, by strength of headline claim.}
+\label{fig:gap}
+\end{figure}
+
+\subsection{The missing human}
+
+The dimension we did not expect to be the starkest is the role of humans.
+\pctHumanUnspec{} of the corpus --- \nHumanUnspec{} papers --- either claims no human
+involvement or leaves the human role unstated. Papers that name a specific human function
+(gatekeeper, evaluator, or co-performer) are a minority.
+
+This matters for interpreting every other number here. When a paper reports that a system
+autonomously produced a result, the reader usually cannot tell whether a human selected the
+task, chose the baseline, restarted a failed run, discarded a bad trajectory, or edited the
+output. In our own project --- documented in Section~\ref{sec:reflexive} --- human
+intervention changed the corpus by 183 papers, and a reader who was told only that ``an AI
+conducted a systematic review'' would have no way to know that. We suspect the same is true
+across much of this literature, and note that it is cheap to fix: a sentence stating what
+humans did costs nothing and is currently absent from roughly seven papers in ten.
+
+\subsection{Artifact release, measured rather than inferred}
+
+Full-text verification of \nArtChecked{} papers finds repository links in \pctRepo{}, against
+\pctRepoAbstract{} inferable from abstracts (Section~\ref{sec:artifacts}). Two points follow.
+First, the field releases code more often than abstract-level reading suggests, and we correct
+our own earlier estimate accordingly. Second, systematic reviews that code artifact release
+from abstracts --- a common practice --- should expect a bias of this magnitude.

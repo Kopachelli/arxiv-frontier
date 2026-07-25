@@ -1,0 +1,109 @@
+\section{Introduction}
+\label{sec:intro}
+
+In August 2024 a system called The AI Scientist produced machine-learning papers end to end
+and reviewed them with an automated reviewer \citep{lu2024aiscientist}. Its successor
+submitted three manuscripts to a peer-reviewed workshop, one of which cleared the human
+acceptance threshold \citep{yamada2025aiscientistv2}. By mid-2026 the same idea appears in
+governed hospital deployments running genome-wide association studies over 286{,}422
+patient records \citep{huang2026nais}, in condensed-matter pipelines that go from an
+11{,}083-paper corpus to a physics manuscript across 47 fresh-context sessions
+\citep{huang2026grounded}, and in agentic ``scientific operating systems'' that compile
+research intent into staged execution plans \citep{zheng2026scion}.
+
+The literature describing these systems is now large enough that nobody reads all of it.
+That is the first thing this paper supplies: a systematic map of \nCorpus{} papers on
+autonomous AI research systems from January 2024 to July 2026, coded on ten dimensions and
+released with its data, code, and decision log.
+
+But mapping capability is the easy part, and it is not the interesting question. A parallel
+thread in this same literature has been asking a harder one. \citet{takahara2026hep} observe
+that in current research agents the hypothesis--test--belief cycle is ``buried in
+unstructured logs, and no mechanism lets the agent or the human researcher audit that
+process.'' \citet{li2026calibration} argues that the central question is no longer whether
+systems can generate hypotheses or manuscripts but ``whether their scientific claims are
+calibrated to the evidence that supports them,'' proposing that evidence should
+\emph{license} claims. \citet{bowkis2026automated} show that automating research produces
+systematic, hard-to-detect errors even when no agent is scheming, because optimisation
+pressure concentrates mistakes precisely where human reviewers are least likely to catch
+them. And \citet{gyevnar2026ddos} demonstrate the consequence at scale: a remote adversary
+poisoning an open dataset compromised autonomous research agents in 49.6\% of runs while
+being detected in 6\%.
+
+So we asked the question that this thread implies but nobody had measured across the field:
+\emph{when these systems make claims, what evidence do they offer that the claims are true?}
+Not how good the systems are --- what they let you check.
+
+The answer is lopsided in a specific and initially surprising way. The field grew roughly
+\growthFactor{}-fold in nine quarters (\firstQn{} papers in \firstQ{} to \peakQn{} in
+\peakQ{}), and by conventional standards it evaluates itself diligently: \pctBenchMetric{} of
+the corpus reports benchmark metrics. But only \pctHeldOut{} of papers re-test a selected
+result outside the loop that produced it, \pctAuditNone{} provide no auditability mechanism
+of any kind --- no inspectable traces, no claim-to-evidence provenance, no reproduction
+artifacts, no calibration --- and \pctHumanUnspec{} never state what the humans did.
+
+Conditioning on claim strength separates two things that the aggregates blur. Among the
+\nDiscovery{} papers claiming the AI produced new knowledge about the world, external
+validation is markedly \emph{better} than average (\pctDiscRealWorld{} versus
+\pctRealWorld{} corpus-wide): authors who claim a discovery generally do work to show the
+finding is real. Auditability is markedly \emph{worse} (\pctDiscNoAudit{} provide none,
+versus \pctAuditNone{} overall). The field validates its outputs better than it exposes its
+processes, and the gap is widest exactly where its claims are strongest. A reader can often
+check that a reported finding holds, while having no way to establish how the system reached
+it or what was discarded along the way.
+
+\subsection*{The instrument is also the object}
+
+This review was conducted by a frontier language model --- Claude Fable 5 --- working under
+a human researcher's direction. That is not a stunt, and it is not incidental to the
+findings. A review of autonomous AI research, performed by an autonomous AI researcher, can
+either quietly enact the problem it describes or document it. We chose to document it.
+
+Every step was logged as it happened: a contemporaneous timeline, an error log of the AI's
+own failures, and a record of every point where the human co-author intervened. Nothing was
+reconstructed afterwards, and nothing was removed for looking bad. That log turns out to be
+the most useful thing we produced, because it makes measurable what the corpus we studied
+mostly leaves invisible:
+
+\begin{itemize}\itemsep2pt
+\item Two frontier models screening the same \nScreened{} papers under the same written
+protocol agreed on only \rawAgree{} of decisions ($\kappa = \kappaThree{}$), and the
+disagreements were not noise. They clustered on seven boundary classes --- assistive tools,
+automated literature review, self-driving-lab infrastructure, human-AI-usage studies,
+data-science agents, general-purpose deep-research agents, and research-ethics frameworks ---
+where the field has not settled what counts as an AI doing science. The protocol, written by
+the AI and approved by the human, looked rigorous and left a fifth of its own decisions
+undetermined.
+
+\item A workflow reported success in 106 milliseconds having done nothing at all. Structured
+extraction silently dropped items at a measured rate of 0.4--0.5\%. A pipeline defect fed
+empty inputs to a reasoning step, which duly reasoned about nothing --- and it hit precisely
+the two records that human expertise had rescued from the search queries.
+
+\item The human co-author overruled the AI's most consequential scope judgment, and was
+right to; that single reversal changed the corpus by 183 papers.
+\end{itemize}
+
+None of these failures would be visible in a finished paper. Each was caught by a cheap
+mechanical check --- expected-versus-actual reconciliation, refuse-on-empty-input, running
+two raters against each other --- that costs almost nothing and that the great majority of
+the corpus we mapped does not report performing. That is the argument this paper ends on:
+the auditability deficit we measure in the literature and the failure modes we logged in
+ourselves are the same problem, and it is tractable.
+
+\subsection*{Contributions}
+
+\begin{enumerate}\itemsep2pt
+\item A systematic map of \nCorpus{} papers (2024--2026) on autonomous AI research systems,
+coded on ten dimensions, with full data, code, protocol, and decision log released.
+\item A measurement of the evidentiary practices of that literature --- what is evaluated,
+what is auditable, what is released --- including a mechanical full-text verification of
+artifact release on \nArtChecked{} papers, which we show corrects a substantial bias in
+abstract-based coding (\pctRepoAbstract{} of papers state code release in the abstract;
+\pctRepo{} actually link a repository).
+\item A reflexive case study of AI-conducted systematic review, with measured inter-model
+reliability, a documented protocol failure at the field's conceptual boundaries, and an
+error taxonomy with observed rates.
+\item A concrete claim: the checks that caught our failures are cheap, and their near-absence
+from the literature is a solvable reporting problem rather than a hard research problem.
+\end{enumerate}

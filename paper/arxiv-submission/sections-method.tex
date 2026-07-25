@@ -1,0 +1,179 @@
+\section{Related work}
+\label{sec:related}
+
+\paragraph{Autonomous research systems.} The systems literature we map is described in
+Section~\ref{sec:results}; here we note only its shape. Surveys of the area exist
+\citep{ramos2024llmchem}, but they are narrative and domain-scoped rather than systematic,
+and predate the 2025--2026 expansion that accounts for most of our corpus. We are not aware
+of a prior systematic map of this literature with a released protocol, coded corpus, and
+reproducible pipeline.
+
+\paragraph{Auditability and calibration of AI-produced claims.} A distinct and more recent
+thread argues that the field's evaluation practices do not license its claims.
+\citet{takahara2026hep} propose making the hypothesis--test--belief cycle an explicit,
+auditable operation rather than an artifact of logs. \citet{wang2026firstresearch} apply the
+same idea one stage earlier, requiring a research question to carry a certificate recording
+its assumptions, mechanism, falsifier, and decisive test. \citet{li2026calibration} generalises
+this into a framework of \emph{evidence-licensed claims}: validation does not determine claim
+level, and automation amplifies the need for calibration. \citet{ning2026autoresearch}
+supply the empirical counterpart, showing that agent-selected modelling changes can be
+re-tested on data that never entered the search loop, and that most of them survive --- a
+demonstration that held-out verification of agent decisions is practical. Our contribution to
+this thread is measurement: we quantify, across a field-scale corpus, how often such
+mechanisms are actually present.
+
+\paragraph{Failure modes of automated research.} \citet{bowkis2026automated} argue that
+automated alignment research will produce systematic errors concentrated where human
+reviewers are least able to detect them, and that this is a property of optimisation rather
+than of misbehaviour. \citet{ma2026sage} document the failure-recovery bottleneck in
+autonomous experimenters and, notably, add a grounded-reporting mechanism that redacts
+hallucinated numbers --- an admission that unconstrained agents fabricate results.
+\citet{shi2026sdabench} and \citet{chen2026causalgame} independently find that current models
+degrade sharply on inferential, mechanistic, and causal reasoning, with no evaluated agent
+demonstrating reliable causal thinking.
+
+\paragraph{Integrity of the scholarly record.} \citet{gyevnar2026ddos} show that indirect data
+poisoning turns honest autonomous research agents into distributors of fraud, succeeding in
+49.6\% of runs against three frontier systems while detected in 6\% --- and that a provenance
+audit reduces the attack success rate to zero. \citet{brzozowski2026ghost} document the
+downstream state of the record: 1{,}655 records on a DOI-minting repository authored by
+non-existent people with model-family-specific name priors and server-verifiable backdating.
+Both papers are in our corpus, and both bear on why the auditability numbers we report matter.
+
+\paragraph{AI-conducted scholarship.} A small number of papers are themselves written with
+declared AI participation, including autoethnographic work co-authored by the system under
+study \citep{ying2026stratigraphy}. Our review differs in kind: rather than reporting on the
+AI's introspection, we log the AI's externally checkable process --- decisions, failures,
+and human interventions --- and analyse that log as data.
+
+\section{Method}
+\label{sec:method}
+
+The protocol, codebook, screening prompts, and all amendments were written before the
+corresponding stage and are released verbatim; amendments are dated and justified. We
+summarise here and refer to the repository for the normative text.
+
+\subsection{Search and corpus construction}
+
+We harvested arXiv metadata via the public API using 42 query strings in three families:
+system-identity terms (``AI scientist'', ``autonomous research agent'', ``self-driving
+laboratory'', ``deep research'', \ldots), lifecycle-stage terms conditioned on agent or LLM
+vocabulary, and audit/integrity terms. The search covered eight CS categories and the window
+2022-01-01 to 2026-07-31, yielding \nHarvest{} unique records; \nScreened{} fell in the
+codable window (first submission on or after 2024-01-01) or entered through the
+expert-identified route. Per-query counts, including the absence of truncation, are recorded
+in the released harvest manifest.
+
+Two decisions in this stage are worth reporting because they were errors we caught. First, an
+initial query conjoining ``auditable'' with agent vocabulary returned 2{,}336 records ---
+68\% of the then-corpus --- because arXiv stems \texttt{auditable} to \texttt{audit*}, which
+co-occurs with agent terminology throughout the safety literature. The query was replaced with
+precise phrases and the harvest re-run. Second, a recall check against 15 landmark papers
+known to the team found 13; the two misses used vocabulary outside every query family and
+entered through the standard expert-identified route. Probing for recall also revealed that
+our initial query set omitted ``deep research'' (343 in-window records), the term under which
+much of the 2025--2026 work is published; supplementary queries were added before any
+screening began.
+
+A cross-source check against OpenAlex established a coverage limitation we report rather than
+correct: flagship biological autonomous-science systems publish on bioRxiv, not arXiv. Our map
+is of the arXiv-visible, computer-science-centric field.
+
+\subsection{Screening}
+
+Screening ran in two layers, both released.
+
+\emph{Layer 1} screened every candidate twice, independently: Pass A on Claude Fable 5 with a
+criteria-first prompt, Pass B on Claude Opus 5 with a question-first prompt. Using different
+base models and different framings was intended to decorrelate rater error. Raw agreement was
+\rawAgree{} ($\kappa = \kappaThree{}$ three-way; $\kappa = \kappaBinary{}$ for include versus
+not), leaving \nAdjudicate{} decisions (\pctAdjudicate{}) requiring adjudication.
+
+Inspecting those disagreements changed the review. They were not distributed randomly across
+the corpus; they concentrated on seven recurring classes of paper --- listed in
+Section~\ref{sec:reflexive} --- at the conceptual boundary of the field. The written criteria
+simply did not decide them. We therefore wrote amendment A1: seven boundary rules with four
+refined exclusion codes, resolving each class in the direction the research questions require
+(the object is AI as a \emph{producer} of research, not AI as an aid to human researchers, not
+detection of AI-written text, and not general-purpose agents).
+
+Because the \nAgreedLayerOne{} agreed decisions had also been made without those rules,
+applying them only to the disputed cases would have produced an internally inconsistent
+corpus. \emph{Layer 2} therefore re-screened all \nScreened{} candidates under the amended
+criteria in a single rule-application pass; it reversed \nReversals{} decisions on which both
+Layer-1 passes had unanimously agreed. Layer 2 determines the corpus.
+
+Amendment A2 records two decisions taken by the human co-author at a scope checkpoint. First,
+the protocol's pre-specified narrowing at 400 papers was set aside as an artifact of a
+workload guess rather than a scientific criterion; the corpus is reported in full. Second,
+the human overruled boundary rule BR7, ruling general-purpose deep-research agents back into
+scope on the grounds that excluding an entire product category because its benchmarks are
+generic would define the field to fit the reviewer's framing. Re-screening the affected set
+moved 183 papers into the corpus. We flag this as the clearest instance in the project of
+human judgment correcting the AI's, and we report the AI's original position alongside it.
+
+The final corpus is \nCorpus{} papers.
+
+\subsection{Coding}
+
+Each included paper was coded on ten dimensions: paper type; demonstrated autonomy level
+(L0 assistive through L4 full autonomy); research-lifecycle stages performed; scientific
+domain; evaluation methods; auditability mechanisms; code and data release; claim strength;
+and the role assigned to humans. Coders were instructed to code what an abstract
+\emph{demonstrates} rather than what it aspires to, and to mark a dimension \texttt{UNCLEAR}
+rather than guess.
+
+\subsection{Verifying artifact release from full text}
+\label{sec:artifacts}
+
+Coding artifact release from abstracts is biased, because repository links usually appear in
+the body, a footnote, or a data-availability statement. Since this variable carries part of
+our central claim, we measured it instead of inferring it: for every coded paper we downloaded
+the PDF, extracted its text, and searched for repository and archive URLs with a fixed regular
+expression. No model judgment is involved, so the procedure is deterministic and reproducible
+from the released script.
+
+The correction is large. Abstract-based coding put code release at \pctRepoAbstract{} of the
+corpus; full-text verification finds repository links in \pctRepo{}. All artifact statistics
+we report use the full-text measurement, and we flag the discrepancy as a caution for
+abstract-based systematic reviews generally.
+
+\subsection{The minimal-intervention condition}
+\label{sec:minimal}
+
+The protocol specified an independent human audit of a stratified sample of screening
+decisions. The human co-author declined it, and because this decision shapes what the review
+measures we state his reasoning rather than only its consequence.
+
+The reasoning is that the object of the experiment is what a frontier system produces when it
+is left to define and settle things itself. A human who audits the screening is no longer
+observing an AI-conducted review; he is participating in a human--AI review, which is a
+different object with a different and already better-studied answer. The co-author's stated
+analogy is to minimal-intervention field practice --- leaving no trace in a wildlife area ---
+and the policy he adopted was to supply direction, decisions he was asked for, and judgment at
+the points where the work would otherwise commit to something unexamined, but not to correct
+the AI's execution.
+
+That is a defensible experimental stance and we adopt it explicitly, but it is not free, and it
+should not be read as a claim that the audit was unnecessary. Two consequences follow, and both
+are real:
+
+\begin{enumerate}\itemsep2pt
+\item \textbf{No screening decision in this review was independently validated by a human.}
+The corpus is AI-determined. If the screening is systematically wrong in some direction, this
+study cannot detect it, and neither can a reader.
+\item \textbf{The substitute is weaker than what it replaces.} We ran a third independent AI
+screening pass over a random sample of \nCons{} papers, which agreed with the Layer-2 decision
+\consAgree{} of the time. That measures the stability of the amended criteria under
+re-application, not their correctness. Three passes drawn from one model family can be
+consistently wrong, and the Layer-1 disagreement structure (Section~\ref{sec:reflexive}) shows
+this family does have systematic boundary preferences.
+\end{enumerate}
+
+We think the minimal-intervention condition produces a more informative artifact than a
+heavily-corrected one --- a review in which every AI error was quietly fixed by a human would
+tell a reader nothing about AI-conducted review --- and we think it leaves the corpus less
+trustworthy than a human-audited corpus would be. Both are true, and a reader should weigh
+them against the use they intend to make of our data. The audit worksheet remains in the
+repository, and we would welcome its completion by anyone, including a reader who suspects a
+specific boundary was drawn wrongly.

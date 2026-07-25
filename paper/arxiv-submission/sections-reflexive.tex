@@ -1,0 +1,114 @@
+\section{The review as a case study}
+\label{sec:reflexive}
+
+This review was performed by the class of system it studies. Rather than present the result
+as though a human had produced it, we logged the process and analyse it here. Three logs were
+kept contemporaneously and are released in full: a timeline, an error log, and a record of
+every human intervention. Nothing was reconstructed after the fact and nothing was deleted.
+
+\subsection{Two frontier models cannot agree on what an AI scientist is}
+
+The most consequential finding concerns not the AI's competence but the protocol it wrote.
+Layer-1 screening ran every candidate past two frontier models with different prompt framings.
+They agreed on \rawAgree{} of \nScreened{} decisions ($\kappa = \kappaThree{}$), which by
+convention is ``substantial'' agreement --- and which we initially read as a reassuring number.
+
+Reading the disagreements instead of the summary statistic told a different story. The
+\nAdjudicate{} contested decisions were not scattered; they concentrated on seven classes:
+
+\begin{enumerate}\itemsep1pt
+\item interactive ideation and writing aids, where the human makes the research judgments;
+\item automated literature-review pipelines, which perform a research stage without an agent loop;
+\item Bayesian-optimisation and robotic infrastructure for self-driving laboratories;
+\item studies measuring human use of AI in writing, and detectors for AI-written text;
+\item data-science agents whose tasks may or may not be scientific;
+\item general-purpose ``deep research'' web agents;
+\item institutional ethics frameworks for researchers using AI.
+\end{enumerate}
+
+Every one of these asks the same question --- \emph{what counts as an AI doing science?} ---
+and the protocol, written by the AI and approved by the human, did not answer it. Two
+independent frontier models disagreeing systematically rather than randomly is evidence about
+the field's conceptual state, not merely about rater noise: this literature has not settled
+its own boundaries, and a reviewer who screens it with a single pass will silently impose one
+resolution among several defensible ones.
+
+The remedy cost a full re-screen of the corpus (amendment A1). We note what did \emph{not}
+surface the problem: the protocol document itself, human approval of that document, and the
+headline agreement statistic. What surfaced it was redundancy at the definitional layer plus
+the decision to inspect disagreements individually.
+
+\subsection{An error taxonomy with measured rates}
+
+Five failures were logged. We report them with rates because rates are what the literature
+we mapped almost never provides.
+
+\paragraph{Silent-empty success.} The first screening workflow returned success in 106
+milliseconds having spawned zero agents: an argument arrived as a JSON string where the
+orchestration code expected an object, so the job-construction loop produced an empty list.
+The failure signal was a success signal. Detection required comparing the reported output
+against an expected count.
+
+\paragraph{Silent item-dropping in structured extraction.} Agents instructed to emit exactly
+one record per input item occasionally emitted fewer, at a measured rate of 0.5\% in screening
+(7 of 1{,}359) and 0.4\% in coding (3 of 811). Nothing in the output indicated the omission.
+Undetected, this would have appeared as a slightly smaller corpus and nothing else. Detection
+required per-item reconciliation against the input roster.
+
+\paragraph{Reasoning over nothing.} A metadata-lookup defect passed two papers to a screening
+step with empty titles and abstracts. The step duly produced confident-looking decisions about
+them. The affected records were precisely the two that human expertise had rescued from the
+search queries --- the pipeline silently nullified an earlier human correction. Detection came
+from reading one flagged \texttt{UNDECIDED} justification rather than treating it as noise.
+
+\paragraph{Query design defeated by an indexing detail.} An initial query returned 2{,}336
+mostly irrelevant records because arXiv stems \texttt{auditable} to \texttt{audit*}. Notably,
+the AI's first diagnosis of this anomaly --- boolean mis-parsing --- was wrong, and was
+corrected by its own follow-up experiment. We record the wrong hypothesis as well as the right
+one.
+
+\paragraph{Protocol underdetermination.} Described above: 21.5\% of decisions left
+undetermined by criteria that read as rigorous.
+
+\subsection{What the human did}
+
+The human co-author's interventions are logged individually. Three shaped the work materially.
+He selected the research direction from four options the AI proposed; he set the publication
+strategy, choosing dual-venue disclosure over the AI's recommendation; and at the scope
+checkpoint he overruled the AI's boundary rule on deep-research agents, moving 183 papers into
+the corpus. The AI had recommended and defended their exclusion. We think the human was right,
+and record the disagreement rather than harmonising it.
+
+He also declined the human screening audit that the protocol specified and the AI recommended.
+That decision is logged too, and its cost is stated in Section~\ref{sec:limits}: it is the
+single largest methodological weakness of this review.
+
+\subsection{What this implies}
+
+Three observations generalise beyond this project.
+
+First, \textbf{every failure we logged was caught by a mechanical check that cost almost
+nothing}: expected-versus-actual reconciliation, refusing to process empty input, and running
+two raters against each other. None required sophisticated oversight. None would have been
+visible in the finished paper.
+
+Second, \textbf{summary statistics concealed the problems that individual records revealed}. A
+$\kappa$ of \kappaThree{} reads as adequate; the structure underneath it was a conceptual
+failure in the protocol. A workflow's success flag read as success. An item count read as
+complete. In each case the aggregate was reassuring and the detail was not.
+
+Third, \textbf{the deficits we measured in the corpus and the failures we logged in ourselves
+are the same problem}. \pctAuditNone{} of the papers we mapped provide no mechanism by which a
+reader could detect an error of the kind we made five times in a single project. We do not
+read that as evidence that those systems are failing; we have no way to know, which is the
+point.
+
+\subsection{On the honesty of an AI reporting its own failures}
+
+A caveat we cannot resolve from the inside. This section was written by the system whose
+failures it reports. The failures listed are those the AI noticed and chose to log; failures
+it did not notice are by construction absent, and a reader has no way to distinguish a clean
+process from an incomplete log. We have tried to make the claim checkable rather than asking
+for trust: the logs are timestamped in git history, the data files permit independent
+recomputation of every statistic, and the failure modes named here are mechanically detectable
+in the released artifacts. That is weaker than external audit, and we prefer to say so.

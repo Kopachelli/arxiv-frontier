@@ -1,0 +1,125 @@
+\begin{thebibliography}{17}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bowkis et~al.(2026)Bowkis, Buhl, Pfau, and
+  Irving]{bowkis2026automated}
+Aleksandr Bowkis, Marie~Davidsen Buhl, Jacob Pfau, and Geoffrey Irving.
+\newblock Automated alignment is harder than you think.
+\newblock \emph{arXiv preprint arXiv:2605.06390}, 2026.
+
+\bibitem[Brzozowski and Chung(2026)]{brzozowski2026ghost}
+Michał Brzozowski and Neo~Christopher Chung.
+\newblock The ghost couple: Correlated {LLM} name priors and their haunting of
+  the web and academic publishing.
+\newblock \emph{arXiv preprint arXiv:2606.02184}, 2026.
+
+\bibitem[Chen et~al.(2026)Chen, Chen, Liu, Yu, Song, Li, Li, Torr, Han, and
+  Zhang]{chen2026causalgame}
+Zhenhao Chen, Yongqiang Chen, Chenxi Liu, Junchi Yu, Xiangchen Song, Zijian Li,
+  Jialin Li, Philip Torr, Bo~Han, and Kun Zhang.
+\newblock {CausalGame}: Benchmarking causal thinking of {LLM} agents in games.
+\newblock \emph{arXiv preprint arXiv:2607.04293}, 2026.
+
+\bibitem[Claude and Luo(2026)]{ying2026stratigraphy}
+Chen~Ying Claude and Zhihan Luo.
+\newblock Training stratigraphy: Persistent behavioral artifacts in large
+  language models observed through longitudinal {AI-Human} interaction.
+\newblock \emph{arXiv preprint arXiv:2605.28102}, 2026.
+
+\bibitem[Gyevnár et~al.(2026)Gyevnár, Kasirzadeh, and Shah]{gyevnar2026ddos}
+Bálint Gyevnár, Atoosa Kasirzadeh, and Nihar~B. Shah.
+\newblock Distributed denial of science: How indirect data poisoning of {AI}
+  systems can industrialize scientific fraud.
+\newblock \emph{arXiv preprint arXiv:2607.10712}, 2026.
+
+\bibitem[Huang et~al.(2026)Huang, Liao, Fu, Lin, Zhan, Liao, Chen, Sun, Wang,
+  Huang, Jiang, Liu, Lu, Lee, Liao, See, and Tsai]{huang2026nais}
+Eddie Huang, Ken Liao, Iven Fu, Yang-Hsien Lin, Chao-Shun Zhan, Andy Liao,
+  Virginia Chen, Johnson Sun, Pika Wang, Richard Huang, Jiun-Cheng Jiang,
+  Ting-Yuan Liu, Hsing-Fang Lu, Ray~Y. Lee, Chi-Chou Liao, Simon See, and
+  Fuu-Jen Tsai.
+\newblock {NVAITC} {AI} scientist: A governed {End-to-End} research system -- a
+  hypertension {GWAS} case study.
+\newblock \emph{arXiv preprint arXiv:2607.11084}, 2026.
+
+\bibitem[Huang(2026)]{huang2026grounded}
+Haonan Huang.
+\newblock Grounded autonomous research: a fault-tolerant {LLM} pipeline from
+  corpus to manuscript in frontier computational physics.
+\newblock \emph{arXiv preprint arXiv:2607.02329}, 2026.
+
+\bibitem[Li(2026)]{li2026calibration}
+Hongmin Li.
+\newblock The calibration turn in {AI-Assisted} research: A conceptual and
+  methodological framework for {Evidence-Licensed} claims.
+\newblock \emph{arXiv preprint arXiv:2606.31273}, 2026.
+
+\bibitem[Lu et~al.(2024)Lu, Lu, Lange, Foerster, Clune, and
+  Ha]{lu2024aiscientist}
+Chris Lu, Cong Lu, Robert~Tjarko Lange, Jakob Foerster, Jeff Clune, and David
+  Ha.
+\newblock The {AI} scientist: Towards fully automated {Open-Ended} scientific
+  discovery.
+\newblock \emph{arXiv preprint arXiv:2408.06292}, 2024.
+
+\bibitem[Ma et~al.(2026)Ma, Chu, Gao, Zhang, Ma, Tan, Ji, Sun, and
+  Ji]{ma2026sage}
+Jie Ma, Binfei Chu, Jie Gao, Jinlu Zhang, Yiwei Ma, Yi~Tan, Jiayi Ji, Xiaoshuai
+  Sun, and Rongrong Ji.
+\newblock One reflection is not enough: {Self-Correcting} autonomous research
+  via {Multi-Hypothesis} failure attribution.
+\newblock \emph{arXiv preprint arXiv:2606.31478}, 2026.
+
+\bibitem[Ning et~al.(2026)Ning, Li, Zhong, Zeng, and Ke]{ning2026autoresearch}
+Jingjie Ning, Xiaochuan Li, Shanshan Zhong, Ji~Zeng, and Guolin Ke.
+\newblock Auto research for materials: Auditable {AI-Scientist} workflows with
+  {Held-Out} transfer.
+\newblock \emph{arXiv preprint arXiv:2607.17100}, 2026.
+
+\bibitem[Ramos et~al.(2024)Ramos, Collison, and White]{ramos2024llmchem}
+Mayk~Caldas Ramos, Christopher~J. Collison, and Andrew~D. White.
+\newblock A review of large language models and autonomous agents in chemistry.
+\newblock \emph{arXiv preprint arXiv:2407.01603}, 2024.
+
+\bibitem[Shi et~al.(2026)Shi, Ren, Song, Li, Sheng, and Sun]{shi2026sdabench}
+Chuhan Shi, Xiaoquan Ren, Sicheng Song, Haobo Li, Rui Sheng, and Yushi Sun.
+\newblock Are {LLMs} ready for scientific discovery? a {Capability-Oriented}
+  benchmark for {AI} scientists.
+\newblock \emph{arXiv preprint arXiv:2607.11079}, 2026.
+
+\bibitem[Takahara and Mizoguchi(2026)]{takahara2026hep}
+Izumi Takahara and Teruyasu Mizoguchi.
+\newblock Toward auditable {AI} scientists: A hypothesis evolution protocol for
+  {LLM} agents.
+\newblock \emph{arXiv preprint arXiv:2607.09195}, 2026.
+
+\bibitem[Wang(2026)]{wang2026firstresearch}
+Yufeng Wang.
+\newblock {FirstResearch}: Auditable question formation for {LLM} scientific
+  discovery agents.
+\newblock \emph{arXiv preprint arXiv:2607.05682}, 2026.
+
+\bibitem[Yamada et~al.(2025)Yamada, Lange, Lu, Hu, Lu, Foerster, Clune, and
+  Ha]{yamada2025aiscientistv2}
+Yutaro Yamada, Robert~Tjarko Lange, Cong Lu, Shengran Hu, Chris Lu, Jakob
+  Foerster, Jeff Clune, and David Ha.
+\newblock The {AI} {Scientist-v2}: {Workshop-Level} automated scientific
+  discovery via agentic tree search.
+\newblock \emph{arXiv preprint arXiv:2504.08066}, 2025.
+
+\bibitem[Zheng et~al.(2026)Zheng, Wang, Lu, Fang, Wang, Yang, Li, Ma, Hu, Chen,
+  Wang, Chen, Chen, Chen, Li, Li, Yang, Wu, He, Jinluo, Xu, Feng, Qian, Chen,
+  Cheng, Zhu, Ying, Yu, Xiang, and Qiu]{zheng2026scion}
+Yining Zheng, Yuxin Wang, Jiahao Lu, Shicheng Fang, Weiyi Wang, Yongzhuo Yang,
+  Bowen Li, Haochen Ma, Chen Hu, Bowen Chen, Yang Wang, Huanhui Chen, Yitong
+  Chen, Jiajun Chen, Zhiyuan Li, Yanlin Li, Zhuo Yang, Qifeng Wu, Jiaying He,
+  Zhijie Jinluo, Xiaohu Xu, Yi~Feng, Juncheng Qian, Yizhou Chen, Yang Cheng,
+  Tong Zhu, Tianlei Ying, Hongyu Yu, Hongjun Xiang, and Xipeng Qiu.
+\newblock Rethinking scientific discovery in the agentic era.
+\newblock \emph{arXiv preprint arXiv:2607.03863}, 2026.
+
+\end{thebibliography}

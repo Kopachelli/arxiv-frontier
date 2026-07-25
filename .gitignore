@@ -6,3 +6,7 @@ paper/*.blg
 paper/*.log
 paper/*.out
 paper/*.synctex.gz
+paper/arxiv-submission/*.aux
+paper/arxiv-submission/*.log
+paper/arxiv-submission/*.out
+paper/arxiv-submission/*.pdf
