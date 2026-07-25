@@ -1,0 +1,47 @@
+qf1_ai_scientist: total=118 fetched=118
+qf1_ai_scientists: total=118 fetched=118
+qf1_co_scientist: total=40 fetched=40
+qf1_auto_research_agent: total=22 fetched=22
+qf1_research_agent: total=259 fetched=259
+qf1_research_agents: total=259 fetched=259
+qf1_auto_sci_discovery: total=43 fetched=43
+qf1_automated_sci_discovery: total=55 fetched=55
+qf1_agentic_sci_discovery: total=4 fetched=4
+qf1_autonomous_experimentation: total=43 fetched=43
+qf1_self_driving_lab: total=18 fetched=18
+qf1_self_driving_laboratory: total=44 fetched=44
+qf1_autonomous_research: total=69 fetched=69
+qf1_automated_research: total=54 fetched=54
+qf1_research_automation: total=17 fetched=17
+qf1_autonomous_scientist: total=2 fetched=2
+qf1_agent_laboratory: total=6 fetched=6
+qf1_deep_research: total=343 fetched=343
+qf1_science_agent: total=33 fetched=33
+qf1_ai_research_assistant: total=9 fetched=9
+qf1_autonomous_discovery: total=55 fetched=55
+qf1_closed_loop_discovery: total=11 fetched=11
+qf2_hypothesis_generation: total=197 fetched=197
+qf2_research_ideation: total=33 fetched=33
+qf2_scientific_ideation: total=19 fetched=19
+qf2_idea_generation_sci: total=16 fetched=16
+    retry 1 after error: [WinError 10054] An existing connection was forcibly closed by the remote host
+qf2_automated_ideation: total=3 fetched=3
+qf2_paper_generation: total=13 fetched=13
+qf2_scientific_writing_agent: total=51 fetched=51
+qf2_experiment_design_agent: total=67 fetched=67
+qf2_automated_peer_review: total=17 fetched=17
+qf2_automated_lit_review: total=10 fetched=10
+qf2_research_idea_generation: total=12 fetched=12
+qf3_ai_generated_research: total=13 fetched=13
+qf3_ai_generated_papers: total=11 fetched=11
+qf3_research_integrity_ai: total=40 fetched=40
+qf3_auditable_ai_scientist: total=3 fetched=3
+qf3_auditable_agent_phrase: total=33 fetched=33
+qf3_auditable_research: total=6 fetched=6
+qf3_ai4science_agent: total=20 fetched=20
+qf3_scientific_fraud: total=4 fetched=4
+qf3_paper_mills: total=11 fetched=11
+qf3_research_misconduct: total=3 fetched=3
+qf3_ai_generated_scientific: total=14 fetched=14
+
+Done: 1426 unique candidates -> data/candidates.csv
