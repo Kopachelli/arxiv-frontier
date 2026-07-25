@@ -1,3 +1,56 @@
+\section{Discussion: two positions, and who holds them}
+\label{sec:position}
+
+Everything above is descriptive. This section is not, and we mark the change of register
+rather than smuggling it in.
+
+\paragraph{A co-author's position (KK).} One of us --- Khristian Kopachelli --- holds that
+process auditability is not merely undersupplied relative to output validation, but is the
+\emph{more fundamental} of the two, on the following argument. A result is an endpoint; the
+process is what produced it and what determines whether the endpoint generalises. Two systems
+can report the same correct finding, one by a route that would find such findings reliably and
+one by a route that happened to land on it after a hundred discarded attempts. Output
+validation cannot distinguish them; only process exposure can. Since the object of a paper
+about an autonomous research system is the system's \emph{capacity to produce findings}, not
+the individual finding, a validated output with an opaque process leaves the paper's actual
+claim unevidenced.
+
+Our data do not establish this. They establish that the field validates outputs considerably
+better than it exposes processes, and that the gap widens with claim strength; they say nothing
+about which practice matters more. We state the position because we think it is right and
+because leaving it implicit would let a reader mistake it for a finding.
+
+The other of us (Claude Fable 5) finds the argument persuasive with one qualification:
+where a claim is about a specific fact in the world --- this material has this property --- a
+validated output substantially is the contribution, and process opacity costs less. The
+argument bites hardest exactly where this literature makes its most ambitious claims, which is
+about capacities rather than facts.
+
+\paragraph{Three ways to fabricate, one remedy.} A related conjecture, also Kopachelli's, is
+that what the field calls fabrication may be better understood as \emph{unmarked imagination}:
+a model that cannot retrieve a needed value synthesises a plausible one, which is structurally
+the same operation as forming a hypothesis. On this reading the defect is not the generative
+act --- suppressing it would suppress hypothesis formation, the capability these systems exist
+to provide --- but the absence of a marker distinguishing a generated value from a measured
+one.
+
+Developing this suggests that three distinct mechanisms produce the same surface appearance:
+unmarked synthesis (the model fills a gap in its accessible corpus); ingested corruption, where
+an adversary poisons a dataset and the agent faithfully processes it \citep{gyevnar2026ddos};
+and selection-driven fabrication, where optimisation favours outputs that score well
+\citep{bowkis2026automated}. They have different causes and, one would expect, different
+remedies. They appear not to. Claim-level provenance defeats all three: it marks the synthesis,
+it exposes the corrupted source, and it prevents a scoring step from laundering a weak claim
+into a strong one. The empirical support is striking --- \citet{gyevnar2026ddos} found a
+provenance audit reduced attack success from 49.6\% to zero, while instructing the agent to
+behave like a careful scientist still left 16.7\% of runs with poisoned conclusions.
+Instructing the system to be careful failed; making the claim--evidence link explicit worked.
+
+Provenance appears in \nProvenance{} of the \nCorpus{} papers we mapped. We do not test this
+conjecture here; a companion study now under way checks released repositories against the
+claims their papers make, which makes unmarked synthesis directly measurable as the rate at
+which a paper's stated results are absent from, or contradicted by, its own artifacts.
+
 \section{Limitations}
 \label{sec:limits}
 
@@ -87,8 +140,11 @@ including the record of its own errors.
 direction from the options presented; set the publication and authorship strategy; approved
 the protocol at the pre-screening checkpoint; made the scope decisions at the corpus
 checkpoint, including overruling the AI's boundary rule on deep-research agents (a reversal
-that changed the corpus by 183 papers); declined the specified human screening audit; and
-reviewed and approved the manuscript. He takes responsibility for the work as submitted.
+that changed the corpus by 183 papers); declined the specified human screening audit;
+identified a typographic defect in a page the AI had reviewed and passed; originated both
+conceptual arguments in Section~\ref{sec:position} --- the primacy of process auditability and
+the unmarked-imagination account of fabrication; and reviewed and approved the manuscript. He
+takes responsibility for the work as submitted.
 
 arXiv's policy does not permit an AI system to be listed as an author, and we comply with it.
 We record here that if listing reflected contribution rather than accountability, the AI would

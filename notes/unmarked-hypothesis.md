@@ -101,12 +101,17 @@ would turn "AI imagination" from a conceptual claim into a measured rate.
 
 Option C is the strongest, and it is compatible with A.
 
-## 6. Open questions for the human co-author
+## 6. Decisions (Khristian, 2026-07-25)
 
-1. Does the correction in §2 (poisoning ≠ imagination, but same remedy) match what you meant,
-   or have I narrowed your idea in a way you disagree with?
-2. Option A, B, or C — and if C, does it become the framing of the whole repo-verification
-   programme rather than one paper within it?
-3. Your normative claim — *"process shapes output, so process matters more than results"* —
-   is stronger than our data supports on its own. Do you want it stated as an explicit
-   co-author position (attributed, argued) or kept implicit?
+1. **Correction accepted.** The three-mechanism distinction stands, with the convergence on
+   claim-level provenance as the strengthening result rather than a hedge.
+2. **Option C chosen: measure it in Phase R.** The unmarked-hypothesis question becomes the
+   framing of the repository-verification programme, not a standalone essay. Operationally:
+   a claim that is absent from, or contradicted by, its own released artifact is a measured
+   instance of unlicensed synthesis. Phase R therefore reports a *rate*, not a position.
+   A condensed statement of the argument also appears as a Discussion section in Paper 1
+   (`paper/sections-close.tex`, §Discussion), attributed to Khristian, and explicitly marked
+   as conjecture rather than finding.
+3. **Normative position: stated and attributed.** Written into Paper 1 as an argued
+   co-author position, separated from the descriptive results, with the AI's qualified
+   agreement recorded alongside it.

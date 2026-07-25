@@ -36,9 +36,17 @@ and to our knowledge it has not been measured in the systematic-review setting.
 - Produce both conditions from the *same* inputs so the comparison is like-for-like: e.g.
   re-run screening/coding on an identical sample with each model as producer.
 
-**Open design question for Khristian:** does "verify" mean (i) re-do the work independently and
-compare, (ii) audit the existing decisions for correctness, or (iii) both? These give different
-statistics — (i) yields inter-model reliability, (ii) yields error detection rate.
+**Decided (Khristian, 2026-07-25): both, as two separate arms.**
+
+- **Arm 1 — independent re-doing.** Each model re-runs screening and coding on an identical
+  sample without seeing prior decisions. Yields inter-model reliability, and supports the
+  self-preference test (blinded, does a model rate its own prior output more favourably?).
+- **Arm 2 — audit of existing decisions.** Each model is given the recorded decisions and
+  asked to find errors. Yields an error-detection rate against our released corpus, and tells
+  us directly whether Paper 1 contains mistakes.
+
+The two arms answer different questions — *do models agree?* and *do models catch mistakes?* —
+and a model can score well on one and badly on the other. Report both; do not average them.
 
 ## Phase R — Repository verification programme (multi-paper)
 
@@ -63,9 +71,16 @@ That is the sampling frame; no new harvesting is needed to begin.
 6. Report per-area rates with the full claim ledger released.
 
 **Why this is the strongest continuation.** Paper 1 measures what the field *reports*. Phase R
-measures whether the reports are *true*. It also operationalises the unmarked-hypothesis
-question (see `notes/unmarked-hypothesis.md` §5, option C): a claim absent from its own artifact
-is a directly measured instance of unlicensed synthesis.
+measures whether the reports are *true*.
+
+**Framing decided (Khristian, 2026-07-25):** the unmarked-hypothesis question is the
+programme's organising frame, not a side essay. Every area paper reports, alongside its
+domain findings, the rate at which claims are **supported / divergent / absent / contradicted**
+relative to the paper's own released artifacts. "Absent" and "contradicted" are the measured
+instances of unlicensed synthesis. The synthesising paper aggregates these into a
+field-level rate and tests whether papers reporting provenance mechanisms (D6) differ from
+those that do not — which turns the remedy claim in `notes/unmarked-hypothesis.md` §3 into a
+falsifiable prediction rather than an argument.
 
 **Open design questions for Khristian.**
 - How to define the 7–10 areas: by scientific domain (materials / biomed / ML / …), by system
