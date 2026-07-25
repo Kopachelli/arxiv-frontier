@@ -1,0 +1,580 @@
+arxiv_id,status,n_pages,repo_urls,has_repo,has_data_archive,availability_statement
+2607.09195,ok,17,,0,0,1
+2504.08066,ok,69,github.com/HKUDS/AI-Researcher | github.com/SakanaAI/AI-Scientist-ICLR2025-Works | github.com/SakanaAI/AI-Scientist-v2,1,0,1
+2607.02329,ok,39,,0,1,0
+2402.00071,ok,22,,0,0,1
+2402.04247,ok,26,,0,0,0
+2402.05200,ok,30,github.com/M3RG-IITD/MatSci-LLM,1,0,1
+2402.12391,ok,16,github.com/Liu-Hy/GenoMAS,1,0,1
+2402.14424,ok,14,,0,0,1
+2403.13815,ok,11,github.com/lbl-camera/gpCAM,1,0,0
+2404.02831,ok,49,,0,0,1
+2404.04326,ok,23,,0,0,0
+2404.07738,ok,30,github.com/JinheonBaek/ResearchAgent,1,0,0
+2404.08680,ok,28,github.com/peterjhwang/slr-helper,1,0,0
+2404.12899,ok,23,github.com/Slautin/2024_Co-navigation | github.com/ramav87/FerroSim | github.com/ziatdinovmax/gpax,1,0,1
+2405.06724,ok,32,github.com/lun-ai/BMLP_active,1,0,1
+2405.12300,ok,16,,0,0,0
+2405.13352,ok,15,github.com/MatthewFilipovich/pycharge | github.com/MilesCranmer/PySR | github.com/flaport/fdtd,1,0,0
+2405.17631,ok,50,github.com/Significant-Gravitas/Auto-GPT | github.com/snap-stanford/BioDiscoveryAgent,1,0,0
+2405.20477,ok,22,github.com/tatsu-lab/stanford_alpaca | huggingface.co/docs/transformers,1,0,0
+2406.06769,ok,29,github.com/allenai/discoveryworld | github.com/allenai/discoveryworld.1,1,1,1
+2406.10291,ok,19,github.com/cxcscmu/ResearchArena,1,0,1
+2406.13163,ok,22,,0,0,1
+2407.00466,ok,66,github.com/langchain-ai/langgraph | github.com/westlake-autolab/BioKGBench,1,0,1
+2407.08940,ok,32,github.com/TsinghuaC3I/LLM4BioHypoGen | github.com/nomic-ai/nomic,1,0,0
+2407.10362,ok,40,huggingface.co/datasets/futurehouse/lab-bench,1,0,0
+2407.12857,ok,21,github.com/ZhaolinGao/Reviewer2,1,0,0
+2407.12888,ok,51,github.com/Yijia-Xiao/Know2BIO.gitcdKnow2BIO | github.com/pinglab-utils/RUGGED,1,0,0
+2407.13993,ok,10,github.com/cyharyanto/llassist,1,0,1
+2407.16083,ok,26,,0,0,0
+2408.05086,ok,35,github.com/huggingface/transformers | github.com/kanishkamisra/minicons | huggingface.co/kanishka/smolm-aochildes-vocab,1,0,1
+2408.06292,ok,186,github.com/SakanaAI/AI-Scientist | github.com/Sea-Snell/grokking | github.com/danielmamay/grokking | github.com/fedebotu/ICLR20 | github.com/karpathy/nanoGPT | github.com/paul-gauthier/aider,1,0,1
+2408.14033,ok,11,github.com/du-nlp-lab/MLR-Copilot | huggingface.co/spaces/du-lab,1,0,0
+2408.14487,ok,9,,0,0,0
+2409.02604,ok,38,,0,0,1
+2409.04109,ok,94,github.com/NoviScl/AI-Researcher,1,1,0
+2409.05258,ok,16,,0,0,0
+2409.05556,ok,79,github.com/lamm-mit/GraphReasoning | github.com/lamm-mit/SciAgentsDiscovery,1,0,1
+2409.11363,ok,30,github.com/siegelz/core-bench,1,1,1
+2409.14913,ok,58,,0,0,0
+2409.16876,ok,27,github.com/Guoxs/TR-Agent,1,0,0
+2410.05080,ok,60,github.com/All-Hands-AI/OpenHands | github.com/bndr/pipreqs | github.com/jazzband/pip-tools | github.com/neuropsychology/NeuroKit,1,0,0
+2410.06384,ok,22,github.com/croningp/acra | gitlab.com/croningroup/chemputer/xdl,1,0,1
+2410.09403,ok,40,,0,0,1
+2410.13185,ok,30,github.com/DAMO-NLP-SG/CoI-Agent | huggingface.co/spaces/DAMO-NLP-SG,1,0,0
+2410.17309,ok,37,,0,0,1
+2411.00816,ok,41,,0,0,1
+2411.02382,ok,17,,0,0,1
+2411.02429,ok,44,anonymous.4open.science/r/IdeaBench-,1,0,1
+2411.03743,ok,24,,0,1,0
+2411.06590,ok,20,,0,0,0
+2411.11910,ok,36,github.com/AgentForceTeamOfficial/Baby-AIGS | github.com/hiyouga/LLaMA-Factory | github.com/karpathy/nanoGPT | github.com/lm-sys/FastChat | github.com/openai/openai-python | github.com/vllm-project/vllm,1,0,0
+2411.14456,ok,36,huggingface.co/sentence-transformers/all-MiniLM-L6-v2,1,0,0
+2411.18583,ok,6,huggingface.co/datasets/allenai/scitldr,1,0,0
+2412.07978,ok,37,github.com/EvoEvolver/k_agents | github.com/ShuxiangCao/LeeQ | huggingface.co/NousResearch/Nous-Hermes-2-Yi-34B,1,0,0
+2412.09429,ok,27,github.com/XMUDM/BioResearcher,1,0,1
+2412.12347,ok,15,,0,0,0
+2412.13612,ok,14,anonymous.4open.science/r/Eval_LLM_,1,0,1
+2412.14141,ok,45,,0,0,1
+2412.14626,ok,21,,0,0,0
+2412.16270,ok,31,github.com/jsvine/pdfplumber | github.com/pdfminer/pdfminer.six | github.com/py-pdf/pypdf,1,0,0
+2412.17596,ok,48,github.com/x66ccff/liveideabench,1,1,1
+2501.01451,ok,13,,0,0,1
+2501.04227,ok,84,,0,0,0
+2501.04306,ok,37,github.com/du-nlp-lab/LLM4SR,1,0,0
+2501.08120,ok,53,github.com/lamm-mit/PRefLexOR,1,0,1
+2501.10385,ok,53,github.com/M3RG-IITD/AILA,1,0,1
+2501.16084,ok,7,,0,0,0
+2502.04644,ok,15,,0,0,0
+2502.05151,ok,46,github.com/NL2G/TransformingScienceLLMs,1,1,0
+2502.06851,error: HTTPError,0,,0,0,0
+2502.09858,ok,65,,0,0,1
+2502.12510,ok,45,,0,0,0
+2502.14297,ok,16,github.com/SakanaAI/AI-Scientist,1,1,0
+2502.14499,ok,35,github.com/KellerJordan/modded-nanogpt | github.com/RobertTLange/gymnax-blines | github.com/facebookresearch/MLGym,1,0,1
+2502.16487,ok,18,,0,0,1
+2502.18864,ok,157,huggingface.co/datasets/Idavidrein/gpqa,1,0,0
+2503.01508,ok,31,,0,0,0
+2503.05712,ok,35,github.com/NikeHop/OpenReviewParser | github.com/NikeHop/automatic_ | github.com/kermitt2/grobid | huggingface.co/allenai/specter2_base | huggingface.co/datasets/nhop,1,0,0
+2503.08506,ok,17,github.com/titipata/scipdf_parser,1,0,0
+2503.08979,ok,14,,0,0,0
+2503.13399,ok,47,github.com/jmhb0/microvqa | huggingface.co/datasets/jmhb/microvqa,1,0,1
+2503.16041,ok,12,,0,0,0
+2503.18102,ok,29,,0,0,0
+2503.18865,ok,20,,0,0,0
+2503.19257,ok,50,,0,0,0
+2503.19309,ok,21,,0,0,0
+2503.22444,ok,33,,0,0,0
+2503.22708,ok,98,github.com/allenai/codescientist,1,0,0
+2503.23170,ok,24,github.com/amirgroup-codes/AstroAgents,1,0,1
+2503.24047,ok,68,,0,0,0
+2504.01848,ok,30,,0,0,1
+2504.01911,ok,21,,0,0,0
+2504.03160,ok,19,github.com/GAIR-NLP/DeepResearcher | github.com/camel-ai/owl | github.com/mannaandpoem/OpenManus | github.com/volcengine/verl | huggingface.co/Qwen/Qwen2.5-7B-Instruct,1,0,1
+2504.03810,ok,50,huggingface.co/docs/transformers,1,0,0
+2504.05496,ok,11,,0,0,0
+2504.08762,ok,10,github.com/TechnicolorGUO/InteractiveSurvey,1,0,0
+2504.08810,ok,19,,0,0,1
+2504.09702,ok,45,github.com/yunx-z/MLRC-Bench | huggingface.co/spaces/launch,1,0,1
+2504.10415,ok,35,github.com/PingchuanMa/SGA | github.com/deep-symbolic-mathematics/llm-srbench,1,0,0
+2504.11524,ok,32,,0,0,0
+2504.12345,ok,25,github.com/quao627/Urban-CI-LitReview,1,0,1
+2504.12976,ok,19,github.com/UniverseTBD/hypogen-cs | huggingface.co/datasets/UniverseTBD/hypogen-dr1,1,0,1
+2504.13344,ok,24,github.com/polybot-nexus/robo_advisor_dashboard,1,0,1
+2504.14191,ok,57,github.com/titipata/scipdf_parser,1,0,0
+2504.18736,ok,35,github.com/EvidenceBench/EvidenceBench,1,1,1
+2504.19017,ok,71,github.com/lamm-mit/Sparks,1,0,1
+2504.21776,ok,41,github.com/RUC-NLPIR/WebThinker | github.com/project-numina/aimo-progress-prize | huggingface.co/AI-MO/NuminaMath-1.5 | huggingface.co/datasets/glaiveai,1,0,1
+2505.03049,ok,33,github.com/gradio-app/gradio | github.com/rahulnyk/graph_maker | github.com/unslothai/unsloth | huggingface.co/datasets/shangzhu/ChemQA,1,1,0
+2505.04638,ok,43,github.com/HelloWorldLTY/ARIEL | huggingface.co/datasets/iLOVE2D/ARIEL_DATA,1,0,0
+2505.04649,ok,15,,0,0,1
+2505.04651,ok,60,github.com/meta-llama/llama3,1,0,0
+2505.08341,ok,13,github.com/EperLuo/BAISBench | huggingface.co/datasets/EperLuo/BaisBench,1,0,0
+2505.11718,ok,18,,0,0,1
+2505.11855,ok,40,github.com/guijinSON/ai4s_r2.git | huggingface.co/datasets/amphora/SPOT-MetaData,1,0,0
+2505.12039,ok,36,,0,0,0
+2505.13400,ok,30,,0,0,1
+2505.14599,ok,16,github.com/Teddy-XiongGZ/TruthHypo,1,0,1
+2505.14963,ok,26,github.com/shan23chen/MedBrowseComp | huggingface.co/datasets/AIM-Harvard/MedBrowseComp | huggingface.co/datasets/AIM-Harvard/MedBrowseComp_Meta,1,1,0
+2505.15047,ok,40,,0,0,0
+2505.15998,ok,24,,0,0,1
+2505.16100,ok,29,github.com/cbioportal/cbioportal,1,0,0
+2505.16982,ok,6,,0,0,0
+2505.17873,ok,23,github.com/wanhaoliu/MOOSE-Chem3.git,1,0,0
+2505.18705,ok,38,github.com/HKUDS/AI-Researcher | github.com/langchain-ai/langchain | github.com/microsoft/autogen,1,0,0
+2505.19209,ok,25,github.com/ZonglinY/MOOSE-Chem2,1,0,0
+2505.19955,ok,49,github.com/chchenhui/mlrbench | huggingface.co/datasets/chchenhui,1,0,1
+2505.20246,ok,26,github.com/CharlesQ9/HistAgent | github.com/huggingface/smolagents | huggingface.co/datasets/jiahaoq/HistBench,1,0,0
+2505.20466,ok,34,,0,0,0
+2505.20538,ok,20,github.com/astro-datalab/notebooks-latest | github.com/spacetelescope/jdat_notebooks,1,0,1
+2505.20779,ok,35,github.com/allenai/scispacy | github.com/mistralai/mistral-finetune | github.com/mistralai/mistral-inference | github.com/sunnweiwei/RankGPT,1,0,0
+2505.21396,ok,25,github.com/assafelovic/gpt-researcher,1,0,0
+2505.21935,ok,25,,0,0,0
+2505.22648,ok,24,github.com/Alibaba-NLP/WebAgent | github.com/QwenLM/Qwen-Agent | github.com/RUC-NLPIR/WebThinker | github.com/RUCAIBox/SimpleDeepSear | github.com/camel-ai/owl,1,0,0
+2505.23559,ok,30,github.com/ulab-uiuc/tiny-scientist,1,0,1
+2505.23852,ok,28,github.com/microsoft/autogen | github.com/ndobb/nacc_paper_llm_reproducer2,1,0,1
+2506.01372,ok,21,github.com/ResearAI/Awesome-AI-Scientist,1,0,0
+2506.02454,ok,48,,0,0,0
+2506.03444,ok,17,anonymous.4open.science/r/correlation_prior-3473,1,0,1
+2506.05999,ok,34,github.com/jarlsanna/gps-for-magnetron-sputtering | github.com/pywinauto/pywinauto,1,0,0
+2506.06287,ok,29,,0,0,1
+2506.06881,ok,20,,0,0,0
+2506.08140,ok,23,github.com/bndr/pipreqs | github.com/en/graphql,1,0,1
+2506.11113,ok,21,github.com/Lin-TzuLing/Break | github.com/QData/TextAttack,1,0,0
+2506.11763,ok,31,github.com/Ayanami0730/deep_research_bench,1,0,0
+2506.12312,ok,30,,0,0,1
+2506.12317,ok,13,,0,0,1
+2506.12385,ok,13,github.com/akastrin/ida2025lbd,1,0,0
+2506.12594,ok,95,github.com/AI-secure/RedCode | github.com/AI4ChemS/Eunomia | github.com/Agent-RL/ReSearch | github.com/AutoBench/AutoBench | github.com/DISL-Lab/UniSumEval-v1.0 | github.com/DataForScience/LLM4DS,1,0,0
+2506.12937,ok,26,huggingface.co/amazon/MistralLite,1,0,0
+2506.13784,ok,8,huggingface.co/datasets/PKU-DS-,1,0,1
+2506.14345,ok,6,,0,0,0
+2506.18096,ok,31,github.com/0russwest0/Agent-R1 | github.com/Fosowl/agenticSeek | github.com/MiroMindAI/MiroRL | github.com/ai-agents-2030/awesome-deep-research- | github.com/ai-agents-2030/awesome-deep-research-agent | github.com/bytedance/deer-flow,1,0,1
+2506.18348,ok,12,github.com/vvvlun/IDVSCI,1,0,0
+2506.18959,ok,18,,0,0,0
+2506.19613,ok,18,,0,0,1
+2506.19724,ok,27,github.com/j1mk1m/AutoExperiment,1,0,0
+2506.20249,ok,93,github.com/BlinkDL/RWKV-LM | github.com/EleutherAI/lm-evaluation-harness | github.com/allenai/genesys | github.com/fla-org/flash-linear-attention | github.com/patrick-kidger/torchtyping | github.com/state-spaces/mamba,1,0,1
+2506.21506,ok,51,github.com/Stigmatoz/web-activity-time-tracker | huggingface.co/blog/open-deep-research,1,0,0
+2506.21763,ok,21,,0,0,0
+2506.22026,ok,18,github.com/simra-shahid/idea_novelty_checker,1,0,0
+2506.22419,ok,39,github.com/Aider-AI/aider | github.com/IntologyAI/Zochi | github.com/KellerJordan/modded-nanogpt | github.com/facebookresearch/llm-speedrunner | github.com/google-research/rliable | github.com/karpathy/nanoGPT,1,0,1
+2506.23692,ok,10,,0,0,0
+2507.00048,ok,12,,0,0,1
+2507.00310,ok,37,github.com/allenai/autodiscovery,1,0,0
+2507.01485,ok,28,github.com/AlexandreQ27/BioMARS,1,0,1
+2507.02083,ok,61,github.com/h4duan/SciGym | huggingface.co/datasets/h4duan/scigym-eval | huggingface.co/datasets/h4duan/scigym-sbml,1,0,1
+2507.02379,ok,16,,0,0,0
+2507.04410,ok,7,,0,0,0
+2507.05241,ok,15,github.com/sjtu-sai-agents/ML-Master | github.com/sjtu-sai-agents/X-Master | huggingface.co/deepseek-ai/DeepSeek-R1-0528,1,0,0
+2507.05495,ok,8,github.com/cxcscmu/Deep-Research-,1,0,1
+2507.06185,ok,6,,0,0,1
+2507.07155,ok,14,github.com/CMBAgents/cmbagent | github.com/CMBAgents/scirag | huggingface.co/datasets/ASTROANTS/CosmoPaperQA,1,0,0
+2507.07257,ok,27,github.com/CMBAgents/cmbagent | github.com/ag2ai/ag2 | huggingface.co/spaces/astropilot-ai,1,0,1
+2507.08038,ok,45,,0,0,0
+2507.08350,ok,16,,0,0,0
+2507.08870,ok,19,,0,0,0
+2507.10522,ok,19,github.com/sciknoworg/deep-research,1,0,1
+2507.11330,ok,46,github.com/kermitt2/grobid | github.com/njust-winchy/method,1,1,0
+2507.11810,ok,34,,0,0,0
+2507.15617,ok,9,github.com/Future-House/data-analysis-crow | github.com/edlowther/automated-epidemiology,1,0,1
+2507.15759,ok,30,,0,0,0
+2507.16075,ok,24,github.com/Su-Sea/ydc-deep-research-evals | github.com/assafelovic/gpt-researcher | github.com/bytedance/deer-flow | github.com/langchain-ai/open_deep_ | huggingface.co/blog/open-deep-research,1,0,0
+2507.16248,ok,9,,0,0,0
+2507.16280,ok,22,github.com/GAIR-NLP/ResearcherBench,1,0,1
+2507.18074,ok,44,,0,0,1
+2507.21184,ok,46,github.com/block/goose | github.com/codelion/openevolve | github.com/sst/opencode | github.com/superagent-ai/grok-cli,1,0,0
+2507.23276,ok,44,github.com/ResearAI/Awesome-AI-Scientist,1,0,0
+2508.00414,ok,21,github.com/MoonshotAI/Kimi-K2 | github.com/Tencent/CognitiveKernel-Pro | github.com/verl-project/verl,1,0,0
+2508.01746,ok,12,,0,0,0
+2508.03444,ok,28,github.com/deltawave-tech/delta,1,0,1
+2508.03963,ok,26,github.com/nuuuh/SymbolBench,1,0,1
+2508.04183,ok,27,github.com/bytedance/deer-flow | github.com/dzhng/deep-research | github.com/microsoft/LiveDRBench,1,0,1
+2508.04575,ok,32,github.com/NuoJohnChen/Idea2Proposal,1,0,0
+2508.05366,ok,17,github.com/SamyAteia/bioasq2025,1,0,0
+2508.05660,ok,9,github.com/Kamaleswaran-Lab/Agentic-Hybrid-Rag,1,0,0
+2508.05668,ok,35,github.com/FoundationAgents/OpenManus | github.com/langchain-ai/open_ | github.com/nickscamara/open-deep-research,1,0,0
+2508.06600,ok,25,huggingface.co/datasets/HuggingFaceFW/fineweb-edu,1,0,1
+2508.06642,ok,19,github.com/kabrownlab/benchmarking,1,0,1
+2508.06960,ok,25,github.com/GAIR-NLP/DatasetResearch,1,0,1
+2508.07955,ok,33,github.com/allenai/s2orc-doc2json,1,0,0
+2508.10152,ok,12,github.com/EngDoLabadi/odrplus | github.com/nickscamara/ope | github.com/nickscamara/open-deep-research,1,0,1
+2508.11860,ok,24,github.com/ninglab/LARC,1,1,1
+2508.11987,ok,51,github.com/Significant-Gravitas/AutoGPT | github.com/huggingface/smolagents | github.com/langchain-ai/langchain | github.com/yoheinakajima/babyagi | huggingface.co/blog/open-deep-research,1,0,0
+2508.12800,ok,18,github.com/antgroup/Research-Venus,1,0,0
+2508.13421,ok,116,github.com/Aider-AI/aider,1,1,0
+2508.14111,ok,84,github.com/AgenticScience/Awesome-Agent-Scientists | github.com/InternLM/Intern-S1,1,0,0
+2508.14146,ok,29,,0,0,0
+2508.14880,ok,13,github.com/shibing624/MedicalGPT | huggingface.co/Qwen/Qwen2-72B,1,0,1
+2508.15126,ok,60,,0,0,0
+2508.15804,ok,18,github.com/ByteDance-BandAI/ReportBench,1,0,1
+2508.16153,ok,28,github.com/Agent-on-the-Fly/Memento | github.com/camel-ai/owl | github.com/inclusionAI/AWorld | github.com/searxng/searxng-docker | github.com/unclecode/crawl4ai,1,0,1
+2508.16571,ok,10,,0,0,0
+2508.19113,ok,37,,0,0,0
+2508.19200,ok,21,github.com/colinzhaoust/ramon | github.com/tatsu-lab/alpaca,1,0,0
+2508.19383,ok,14,,0,0,0
+2508.20254,ok,16,github.com/rbulanadi/INS2ANE,1,0,1
+2509.00244,ok,16,,0,0,0
+2509.00375,ok,19,,0,0,0
+2509.01396,ok,23,,0,0,0
+2509.03036,ok,26,,0,0,1
+2509.04499,ok,19,,0,0,0
+2509.05351,ok,10,github.com/An-xu/SDL_LCST_OP,1,0,1
+2509.06283,ok,13,github.com/0russwest0/Agent-R1,1,1,0
+2509.06733,ok,39,github.com/MiroMindAI/MiroFlow | github.com/bytedance/deer-flow | github.com/dzhng/deep-research | github.com/wenjunli-0/deepresearch-survey | github.com/willccbb/verifiers,1,0,0
+2509.06917,ok,25,github.com/google-deepmind/alphagenome | github.com/jmiao24/Paper2Agent | github.com/scverse/scanpy | github.com/sunericd/TISSUE | huggingface.co/spaces/Paper2Agent,1,0,1
+2509.08713,ok,26,github.com/niharshah/AIScientistPitfalls,1,0,1
+2509.10248,ok,11,,0,0,0
+2509.12282,ok,13,github.com/gsasikiran/TIB-webapp,1,0,0
+2509.13309,ok,19,github.com/Alibaba-NLP/DeepResearch | github.com/MiroMindAI/MiroThinker,1,0,0
+2509.13310,ok,32,github.com/Alibaba-NLP/DeepResearch | github.com/MiroMindAI/MiroThinker | github.com/bytedance/deer-flow | huggingface.co/Qwen/Qwen3-30B-A3B-Base | huggingface.co/deepseek-ai/DeepSeek-V3.1,1,0,0
+2509.13312,ok,43,github.com/Alibaba-NLP/DeepResearch | github.com/QwenLM/Qwen-Agent | github.com/Su-Sea/ydc-deep-research-evals | github.com/assafelovic/gpt-researcher | github.com/langchain-ai/open_dee | huggingface.co/blog/open-d,1,0,0
+2509.14778,ok,11,github.com/jarrycyx/openlens-ai,1,0,1
+2509.21553,ok,7,github.com/Ajaberr/AutoClimDS,1,0,0
+2509.23426,ok,35,github.com/QwenLM/qwen-code | github.com/deepset-ai/haystack | github.com/google-gemini/gemini-cli | github.com/langchain-ai/langchain | github.com/mims-harvard/ToolUniverse,1,1,1
+2509.24978,ok,70,github.com/MaxNaeg/S | github.com/MaxNaeg/Sci | github.com/jax-ml/jax,1,0,1
+2509.25106,ok,33,github.com/MiroMindAI/MiroFlow | github.com/OPPO-PersonalAI/PersonalizedDeepResearchBench,1,0,0
+2509.25189,ok,24,,0,0,0
+2509.25281,ok,23,,0,0,1
+2509.25651,ok,39,github.com/pnnl/autolabs,1,0,1
+2509.26603,ok,19,github.com/ResearAI/DeepScientist,1,0,0
+2510.00172,ok,69,github.com/All-Hands-AI/OpenHands | github.com/FoundationAgents/OpenManus | github.com/ServiceNow/drbench | github.com/huggingface/smolagents | github.com/zilliztech/deep-searcher,1,0,1
+2510.00620,ok,65,,0,0,0
+2510.01283,ok,10,,0,0,0
+2510.01293,ok,28,,0,0,0
+2510.02190,ok,22,github.com/QwenLM/Qwen-Agent | github.com/evigbyen/drbench,1,0,1
+2510.04935,ok,22,github.com/QwenLM/Qwen-Agent | github.com/bytedance/SandboxFusion | github.com/sgl-project/sglang | github.com/vllm-project/vllm | github.com/volcengine/verl | huggingface.co/datasets/GeneralReasoning/GeneralThought-430K,1,0,0
+2510.04997,ok,5,,0,0,0
+2510.05138,ok,13,github.com/lira-workflow/auto-review-writing,1,0,0
+2510.05145,ok,20,github.com/assafelovic/gpt-researcher | github.com/langchain-ai/open | github.com/openai/swarm | huggingface.co/spaces/Ayanami0730,1,0,0
+2510.06056,ok,25,github.com/codelion/openevolve | github.com/liugangcode/deepevolve,1,0,1
+2510.06135,ok,17,,0,0,0
+2510.06186,ok,29,,0,0,0
+2510.06579,ok,37,github.com/Aider-AI/aider | github.com/ICLR/Master-Template | github.com/acl-org/acl-style-files | github.com/ulab-uiuc/tiny-scientist,1,0,1
+2510.07733,ok,14,github.com/akBear23/SurveyG.git,1,0,0
+2510.08521,ok,32,github.com/FoundationAgents/MetaGPT | github.com/MiroMindAI/MiroFlow,1,0,1
+2510.08619,ok,46,,0,0,0
+2510.10472,ok,25,github.com/qrzou/FML-bench | github.com/sicara/easy-few-sho,1,0,1
+2510.10931,ok,11,github.com/vibrantlabsai/ragas,1,0,0
+2510.10994,ok,41,github.com/langchain-ai/open_deep_resear,1,0,1
+2510.11661,ok,25,github.com/GAIR-NLP/SR-Scientist | github.com/SymposiumOrganization/NeuralSymbolicRegressionThatS | github.com/anthropics/claude-code | github.com/deep-symbolic-mathematics/llm-srbench | github.com/dso-org/deep-symbolic-optimization | github.com/facebookresearch/symbolicregression,1,0,1
+2510.11851,ok,28,,0,0,0
+2510.12194,ok,10,github.com/ResearAI/ResearStudio,1,0,1
+2510.12367,ok,31,github.com/PlusLabNLP/LLM-REVal,1,0,0
+2510.12979,ok,16,huggingface.co/Qwen/Qwen2.5-7B-Instruct,1,0,1
+2510.13081,ok,8,github.com/openai/swarm,1,0,0
+2510.13913,ok,23,,0,0,0
+2510.13936,ok,25,github.com/confident-ai/deepeval,1,0,0
+2510.14240,ok,48,github.com/langchain-ai/open_deep_,1,1,1
+2510.14438,ok,32,github.com/Tencent/CognitiveKernel-Pro | github.com/Tencent/WebAggregator | github.com/huggingface/s,1,0,0
+2510.14861,ok,19,,0,0,0
+2510.15280,ok,16,,0,0,1
+2510.15624,ok,37,github.com/ltjed/freephdlabor,1,0,0
+2510.15862,ok,19,,0,0,0
+2510.16080,ok,12,github.com/CellFace/TriAgent,1,0,0
+2510.16082,ok,32,,0,0,1
+2510.16234,ok,38,,0,0,0
+2510.16844,ok,24,anonymous.4open.science/r/FinSight-6739 | github.com/akfamily/akshare,1,0,0
+2510.16872,ok,23,,0,0,1
+2510.17797,ok,21,github.com/SalesforceAIResearch/enterprise-deep-research | huggingface.co/datasets/Salesforce/EDR-200,1,0,1
+2510.17853,ok,17,,0,0,1
+2510.18003,ok,16,,0,0,0
+2510.18104,ok,9,,0,0,0
+2510.18939,ok,31,github.com/Alibaba-NLP/DeepResearch | github.com/RUC-NLPIR/Search-o1 | github.com/assafelovic/gpt-researcher | github.com/howard-yen/SLIM | github.com/huggingface/smolagents | github.com/unclecode/crawl4ai,1,0,1
+2510.20809,ok,53,,0,0,0
+2510.20844,ok,6,github.com/valleysprings/TrustResearcher,1,0,1
+2510.21603,ok,13,github.com/MMDocRAG/MMDocIR,1,0,0
+2510.21652,ok,88,github.com/UKGovernmentBEIS/inspect_ai | github.com/allenai/agent-baselines | github.com/allenai/agent-eval | github.com/allenai/asta-bench | github.com/allenai/asta-paper-finder | github.com/allenai/codescientist,1,1,1
+2510.22312,ok,10,,0,0,0
+2510.23045,ok,20,github.com/Mr-Tieguigui/Survey-for-AI-Scientist,1,0,0
+2510.24694,ok,26,,0,0,0
+2510.24701,ok,23,github.com/Alibaba-NLP/DeepResearch | huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B | huggingface.co/Qwen/Qwen3-30B-A3B-Base,1,0,1
+2510.24760,ok,46,,0,0,0
+2510.24891,ok,44,,0,0,1
+2510.26144,ok,31,github.com/codelion/openevolve | github.com/deepreinforce-ai/CUDA-L1 | huggingface.co/datasets/SakanaAI/AI-CUDA-Engineer-Archive,1,0,0
+2510.26887,ok,273,github.com/AstroPilot-AI/Denario | github.com/AstroPilot-AI/DenarioApp | github.com/AstroPilot-AI/DenarioExamplePapers | github.com/CMBAgents/cmbagent | github.com/NeuroDiffGym/neurodiffeq | huggingface.co/spaces/astropilot-ai,1,0,1
+2510.27598,ok,35,,0,0,0
+2511.02071,ok,47,github.com/flatironinstitute/mountainsort,1,0,0
+2511.02238,ok,23,github.com/kyZhao-1/Deep-Ideation,1,0,1
+2511.02824,ok,42,github.com/EdisonScientific/kosmos-figures,1,0,1
+2511.04583,ok,76,github.com/Agent4Science-UTokyo/Jr.AI-Scientist,1,0,0
+2511.05498,ok,30,github.com/IlyaTyagin/HGCR | github.com/meta-llama/llama-models,1,0,1
+2511.05524,ok,28,,0,0,0
+2511.06309,ok,55,github.com/dualverse-ai/station,1,0,1
+2511.06701,ok,33,github.com/karsar/ai-,1,0,1
+2511.07262,ok,50,github.com/Qile-J/AgenticSciML | github.com/jdtoscano94/Learning-Scientific_Machine_Learning_Residual_,1,0,1
+2511.07327,ok,31,github.com/THUDM/slime | github.com/bytedance/SandboxFusion,1,0,0
+2511.07448,ok,75,,0,0,0
+2511.07685,ok,27,,0,0,1
+2511.08522,ok,15,github.com/answers111/alpha-research | github.com/codelion/openevolve | huggingface.co/docs/transformers,1,0,0
+2511.08866,ok,24,github.com/Fuyi-Yang/BioVerge,1,0,0
+2511.09325,ok,14,,0,0,0
+2511.11558,ok,40,github.com/sumner-harris/RAGAgent_AutonomousMaterialsSynthesis.git | github.com/sumner-harris/alchemy.git,1,0,1
+2511.11752,ok,24,,0,0,0
+2511.11793,ok,19,github.com/MiroMindAI/MiroFlow | github.com/MiroMindAI/MiroThinker | huggingface.co/datasets/khaimaitien | huggingface.co/datasets/zjunlp | huggingface.co/miromind-ai/MiroThinker-v1.0-72B,1,0,1
+2511.13288,ok,17,github.com/AQ-MedAI/MrlX | github.com/THUDM/slime,1,0,0
+2511.13825,ok,13,,0,0,0
+2511.14631,ok,17,github.com/AstroPilot-AI/Denario | github.com/CMBAgents/cmbagent,1,0,1
+2511.14819,ok,10,,0,0,0
+2511.15342,ok,10,,0,0,0
+2511.15593,ok,19,,0,0,0
+2511.16931,ok,40,,0,0,0
+2511.16997,ok,26,,0,0,0
+2511.18259,ok,24,,0,0,0
+2511.18303,ok,112,github.com/langchain-ai/local-deep-researcher | github.com/ruiding-uchicago/DToR_deep_research,1,0,1
+2511.18743,ok,19,github.com/Su-Sea/ydc-deep-research-evals | github.com/assafelovic/gpt-researcher | github.com/langchain-ai/open_dee,1,0,1
+2511.19399,ok,56,github.com/Alibaba-NLP/DeepResearch | github.com/Ayanami0730/deep_research_bench | github.com/RUC-NLPIR/WebThinker | github.com/allenai/asta-bench | github.com/hkust-nlp/WebExplorer | github.com/inclusionAI/ASearcher,1,0,1
+2511.19423,ok,10,github.com/jsvine/pdfplumber,1,0,0
+2511.19730,ok,17,,0,0,0
+2511.21444,ok,13,,0,0,0
+2512.00986,ok,55,,0,0,0
+2512.01089,ok,9,github.com/cognitiveailab/codedistiller,1,0,1
+2512.01948,ok,34,github.com/MiroMindAI/MiroThinker | github.com/OPPO-PersonalAI/FINDER_DEFT,1,1,0
+2512.02038,ok,87,github.com/mangopy/Deep-Research-Survey | github.com/volcengine/verl,1,0,0
+2512.03887,ok,16,github.com/SauravP97/Static-Deep-Research | github.com/langchain-ai/open_deep_research | huggingface.co/spaces/muset-ai,1,0,0
+2512.04716,ok,24,,0,0,1
+2512.05989,ok,22,github.com/aimat-lab/SDL_electrochromic,1,0,1
+2512.07849,ok,15,,0,0,1
+2512.08935,ok,20,github.com/RisingDate/FSTS,1,0,1
+2512.13059,ok,13,github.com/efficient-deep-research/efficient-deep-research | huggingface.co/Qwen/Qwen3-Next-80B-A3B-Thinking | huggingface.co/Qwen/Qwen3-Reranker-0.6B,1,0,1
+2512.15567,ok,63,github.com/HowieHwong/sde-harness | huggingface.co/deep-principle/datasets,1,1,1
+2512.15736,ok,63,github.com/artificial-scientist-lab/ai-mandel | github.com/rithvik1122/Anubuddhi,1,0,0
+2512.16969,ok,156,github.com/InternScience/SGI-Bench | github.com/huggingface/smolagents | huggingface.co/collections/InternScience | huggingface.co/deepseek-ai/DeepSeek-,1,0,0
+2512.17776,ok,45,github.com/hanjanghoon/DEER,1,1,1
+2512.19753,ok,20,,0,0,0
+2512.19799,ok,32,,0,0,0
+2512.20469,ok,42,,0,0,0
+2512.20491,ok,27,github.com/langchain-ai/open_deep_research | github.com/stepfun-ai/StepDeepResearch | huggingface.co/datasets/PleIAs/SYNTH,1,0,0
+2512.21623,ok,100,,0,0,0
+2512.22145,ok,22,github.com/akhilpandey95/LMRSD,1,0,1
+2512.22334,ok,37,github.com/InternScience/SciEvalKit,1,0,1
+2512.22396,ok,9,,0,0,0
+2512.23707,ok,119,github.com/volcengine/verl | huggingface.co/datasets/facebook/research-plan-gen,1,0,1
+2601.01357,ok,5,github.com/sst/opencode,1,0,0
+2601.01678,ok,33,github.com/mlbio-epfl/heurekabench,1,0,0
+2601.03260,ok,18,,0,0,0
+2601.03261,ok,7,,0,0,0
+2601.03315,ok,30,github.com/Lossfunk/ai-scientist-artefacts-v1,1,0,1
+2601.03540,ok,15,github.com/Kwai-Klear/DeepSynth-Eval,1,0,1
+2601.03743,ok,22,github.com/Alibaba-NLP/DeepResearch | github.com/jina-ai/node-DeepResearch,1,0,0
+2601.04577,ok,22,github.com/AmberLJC/Sci-Reasoning,1,0,1
+2601.04879,ok,26,github.com/Melmaphother/Mind2Report | github.com/MiroMindAI/MiroFlow,1,0,1
+2601.05039,ok,44,,0,0,1
+2601.05356,ok,43,github.com/ramanathanlab/PRISM,1,0,1
+2601.06021,ok,21,github.com/THUDM/CaRR,1,0,1
+2601.06117,ok,21,,0,0,1
+2601.06676,ok,17,,0,0,0
+2601.06943,ok,17,github.com/QuantaAlpha/VideoDR-Benchmark | huggingface.co/datasets/strike20023/VideoDR | huggingface.co/zai-org/GLM-4.6V-Flash,1,0,0
+2601.06978,ok,12,,0,0,0
+2601.07966,ok,24,github.com/DataScribe-Cloud/datascribe_api,1,1,1
+2601.08185,ok,33,,0,0,0
+2601.08536,ok,30,github.com/imlrz/DeepResearch-Bench-IIto,1,0,1
+2601.09465,ok,14,github.com/QuantaAlpha/EvoFSM,1,0,0
+2601.09688,ok,22,github.com/Infinity-AILab/DeepResearchEval,1,0,0
+2601.09714,ok,7,,0,0,0
+2601.09858,ok,10,,0,0,0
+2601.10504,error: TimeoutError,0,,0,0,0
+2601.11374,ok,42,huggingface.co/ibm-granite/granite-3,1,0,0
+2601.11560,ok,40,github.com/RyanWangZf/BioDSA,1,0,1
+2601.11825,ok,47,,0,0,1
+2601.12030,ok,15,,0,0,0
+2601.12369,ok,50,github.com/KongLongGeFDU/TaxoBench,1,0,1
+2601.12542,ok,40,github.com/bio-xyz/BioAgents,1,0,0
+2601.12910,ok,31,github.com/HPMolSim/FastSpecSoG.jl | github.com/bowenc0221/panoptic-deeplab | github.com/concavegit/kfda | github.com/en/rest | github.com/nz-gravity/sgvb_psd | github.com/saitta-s/INRs-4DFlowMRI,1,0,1
+2601.13217,ok,42,github.com/BaleChen/Mr-Dre,1,0,0
+2601.13508,ok,25,github.com/q734738781/CatMaster,1,0,1
+2601.13614,ok,19,,0,0,0
+2601.14288,ok,11,github.com/pengzy-cosmo/DeepInflation,1,0,1
+2601.15808,ok,14,github.com/Tencent/CognitiveKernel-Pro | github.com/yxwan123/DeepVerifier,1,0,1
+2601.16282,ok,21,github.com/allenai/asta-paper-finder | github.com/allenai/asta-theorizer,1,0,0
+2601.16344,ok,37,github.com/fannie1208/DSGym,1,0,1
+2601.17879,ok,24,github.com/ylXuu/ParallelAgent,1,0,0
+2601.17920,ok,10,,0,0,0
+2601.18207,ok,19,github.com/Future-House/paper-qa | github.com/jmhb0/PaperSearchQA | huggingface.co/collections/jmhb,1,0,1
+2601.18467,ok,24,github.com/Ralph-Zhou/OffSeeker | github.com/rllm-org/rllm,1,0,1
+2601.19578,ok,20,github.com/MiroMindAI/MiroFlow | github.com/Tencent-BAC/YunqueAgent,1,0,1
+2601.19916,ok,37,github.com/NeuroDong/Ai-Review | github.com/TU2021/PaperAudit,1,0,0
+2601.20843,ok,11,github.com/SauravP97/deep-researcher-reflect-evolve | github.com/assafelovic/gpt-researcher | huggingface.co/spaces/muse,1,0,0
+2601.20975,ok,16,,0,0,0
+2601.20996,ok,22,github.com/diffractivelabs/MADE | github.com/facebookresearch/hydra,1,0,0
+2601.21654,ok,21,,0,0,1
+2601.21937,ok,28,huggingface.co/zai-org/GLM-4.6,1,0,1
+2601.22060,ok,12,,0,0,0
+2601.22638,ok,44,,0,0,0
+2601.22984,ok,29,,0,0,0
+2601.23265,ok,49,github.com/BIT-DataLab/Edit-Banana | github.com/OpenDCAI/Paper2Any,1,0,0
+2602.00733,ok,27,,0,0,0
+2602.00953,ok,32,github.com/FlagOpen/FlagEmbedding,1,0,1
+2602.01331,ok,33,github.com/camel-ai/owl,1,0,1
+2602.01566,ok,22,github.com/Ignoramus0817/FS-Researcher | huggingface.co/blog/open-deep-research,1,0,0
+2602.01590,ok,18,github.com/WangShao2000/Wiki_Live_Challenge | github.com/langchain-ai/open_deep_research,1,0,1
+2602.01815,ok,24,anonymous.4open.science/r/debate_scientist-AACB,1,0,0
+2602.02139,ok,26,github.com/Batorskq/EvoMU,1,0,1
+2602.02185,ok,12,,0,0,0
+2602.02486,ok,18,huggingface.co/MiniMaxAI/MiniMax-M2,1,0,0
+2602.02636,ok,62,huggingface.co/Qwen/Qwen3-Embedding-0.6B,1,0,0
+2602.02905,ok,34,github.com/All-Hands-AI/OpenHands,1,0,1
+2602.03468,ok,31,,0,0,0
+2602.03849,ok,16,,0,0,0
+2602.04496,ok,32,,0,0,0
+2602.04850,ok,89,,0,0,1
+2602.05975,ok,16,github.com/HughieHu/Sage,1,0,0
+2602.06540,ok,22,github.com/OpenBMB/AgentCPM | github.com/facebookresearch/faiss | huggingface.co/openbmb/AgentCPM-Report | huggingface.co/openbmb/AgentCPM-Report-GGUF | huggingface.co/openbmb/MiniCPM-Embedding-Light,1,0,0
+2602.06855,ok,49,github.com/anomalyco/opencode | github.com/facebookresearch/airs-bench,1,0,1
+2602.07040,ok,25,,0,0,0
+2602.07359,ok,11,,0,0,0
+2602.07491,ok,24,github.com/datalab-to/marker | github.com/ggml-org/llama.cpp | github.com/meta-llama/llama3,1,0,1
+2602.07652,ok,11,,0,0,1
+2602.07943,ok,25,,0,0,0
+2602.07983,ok,52,github.com/QwenLM/Qwen-Agent,1,0,0
+2602.08990,ok,64,github.com/Aider-AI/aider | github.com/InternScience/InternAgent | github.com/MiroMindAI/MiroFlow,1,0,0
+2602.09723,ok,61,,0,1,1
+2602.10177,ok,42,github.com/google-deepmind/superhuman | github.com/teorth/erdosproblems,1,0,0
+2602.11238,ok,34,github.com/TechnicolorGUO/SurveyLens,1,0,0
+2602.11685,ok,38,github.com/The-LLM-Data-Company/rubric,1,0,1
+2602.12056,ok,15,github.com/yxy-919/LawThinker-agent,1,0,1
+2602.12852,ok,21,,0,0,1
+2602.13769,ok,34,github.com/qiliuchn/OR-Agent,1,0,1
+2602.13855,ok,11,,0,0,0
+2602.15019,ok,14,,0,0,0
+2602.15039,ok,43,github.com/just5034/GRACE_whitepaper_data,1,0,1
+2602.15061,ok,30,,0,0,0
+2602.18446,ok,33,github.com/OpenRLHF/OpenRLHF,1,0,1
+2602.18453,ok,35,github.com/kubotaso/AI_Social_Replication,1,0,1
+2602.18920,ok,25,github.com/HKUDS/DeepInnovator | github.com/MiniMax-AI/MiniMax-M2.1,1,0,1
+2602.18940,ok,26,huggingface.co/blog/open-deep-research | huggingface.co/datasets/Salesforce,1,0,0
+2602.19526,ok,19,,0,0,0
+2602.19810,ok,41,github.com/MoonshotAI/Kimi-K2 | github.com/bio-xyz/ClawdLab | github.com/karlrupp/microprocessor-trend-data | github.com/moleculeprotocol/science.beach | github.com/openclaw/openclaw | huggingface.co/datasets/SimulaMet/moltbook-observatory-archive,1,1,0
+2602.21143,ok,22,,0,0,1
+2602.21201,ok,41,github.com/google-deepmind/superhuman,1,0,1
+2602.21230,ok,11,,0,0,0
+2602.21351,ok,33,github.com/CliDyn/pangaeaGPT,1,0,1
+2602.22215,ok,15,github.com/Pengzhen97/GYWI,1,0,1
+2602.22675,ok,30,github.com/huggingface/smolagents | github.com/langchain-ai/open_deep_research,1,0,0
+2602.22808,ok,26,github.com/huggingface/smolagents | github.com/openai/prm800k,1,0,1
+2602.22842,ok,13,,0,0,1
+2602.23271,ok,19,,0,0,0
+2602.23716,ok,13,,0,0,0
+2603.00582,ok,37,github.com/langchain-ai/langchain | github.com/meta-llama/llama-models,1,0,1
+2603.00612,ok,10,github.com/baksho/CoDHy | huggingface.co/meta-llama/Llama-3,1,0,0
+2603.01050,ok,20,,0,0,1
+2603.01152,ok,8,huggingface.co/datasets/artillerywu/DeepResearch-,1,0,1
+2603.03655,ok,32,huggingface.co/datasets/OpenMol/DD100,1,0,0
+2603.04751,ok,32,github.com/TIMMY-CHAN/Mind-ParaWorld,1,0,1
+2603.05912,ok,31,,0,0,0
+2603.05972,error: HTTPError,0,,0,0,0
+2603.06739,ok,14,github.com/No-518/ResearchEnvBench,1,0,1
+2603.06942,ok,18,,0,0,0
+2603.07241,ok,13,,0,0,0
+2603.07416,ok,12,,0,0,0
+2603.07444,ok,10,github.com/SocialCatalystLab/ape-papers | github.com/maxwell2732/hler-working-papers,1,0,1
+2603.07853,ok,22,github.com/unclecode/crawl4ai | huggingface.co/Qwen/Qwen3-8B,1,0,1
+2603.08117,ok,21,github.com/camel-ai/owl | huggingface.co/datasets/UIS-Digger/UIS-QA,1,0,0
+2603.08127,ok,21,,0,0,0
+2603.11987,ok,31,,0,0,0
+2603.12226,ok,16,,0,0,0
+2603.12608,ok,11,github.com/BerriAI/litellm | github.com/bopan3/InterDeepResearch | github.com/d3/d3 | github.com/facebook/react | github.com/kieler/elkjs | github.com/xyflow/xyflow,1,0,0
+2603.12618,ok,14,github.com/arpanbiswas52/papers-code-proxyBO,1,0,1
+2603.13327,ok,10,,0,0,0
+2603.13840,ok,15,github.com/i-am-bee/beeai-framework | github.com/joaomdmoura/crewai | github.com/langchain-ai/langgraph,1,0,0
+2603.14575,ok,23,github.com/algorithmicsuperintelligence/openevolve,1,0,0
+2603.15164,ok,7,,0,0,0
+2603.15712,ok,27,,0,1,1
+2603.15726,ok,23,github.com/MiniMax-AI/MiniMax-M2.5 | github.com/MiroMindAI/MiroFlow | github.com/MiroMindAI/MiroThinker | huggingface.co/deepseek-ai/DeepSeek-V3.2 | huggingface.co/miromind-ai/MiroThinker-1.7 | huggingface.co/moonshotai/Kimi-K2.5,1,0,0
+2603.15914,ok,31,github.com/AxiomMath/putnam2025 | github.com/IST-DASLab/gptq | github.com/ZIB-IOL/The-Agentic-Researcher | github.com/anomalyco/opencode,1,0,1
+2603.16120,ok,35,github.com/UKGovernmentBEIS/inspect_ai,1,0,1
+2603.16289,ok,25,github.com/ZhengboZhang/VisBrowse-Bench,1,0,0
+2603.17179,ok,10,,0,0,0
+2603.17216,ok,28,,0,0,0
+2603.18115,error: URLError,0,,0,0,0
+2603.18273,ok,18,github.com/aiming-lab/AutoResearchClaw | github.com/cgpan/edm-ars-public | github.com/cgpan/edm-ars-public.git,1,0,1
+2603.19044,ok,32,,0,0,0
+2603.19782,ok,17,,0,0,0
+2603.20101,ok,38,,0,0,1
+2603.20256,ok,20,github.com/OSU-NLP-Group/SciNav | huggingface.co/deepseek-ai/DeepSeek-R1,1,0,1
+2603.20278,ok,37,github.com/TIGER-AI-Lab/OpenResearcher,1,0,1
+2603.21152,ok,189,,0,0,1
+2603.21728,ok,17,huggingface.co/RedHatAI/Llama-3,1,0,0
+2603.22363,ok,75,github.com/gepa-ai/gepa | github.com/karpathy/autoresearch | github.com/skydiscover-ai/skydiscover,1,0,0
+2603.23951,ok,22,,0,0,0
+2603.24402,ok,21,github.com/autoproflab-debug/AI-Supervisor,1,0,1
+2603.25342,ok,28,github.com/tzq1999/CDR,1,0,1
+2603.25780,ok,36,github.com/integritynoble/Physics_World_Model,1,0,1
+2603.26177,ok,16,,0,0,0
+2603.26499,ok,28,github.com/openai/mle-bench,1,1,0
+2603.27416,ok,9,github.com/DeepRobotics/rl | github.com/isaac-sim/IsaacLab | github.com/karpathy/autoresearch,1,0,0
+2603.28336,ok,12,,0,0,0
+2603.28361,ok,37,github.com/MiroMindAI/MiroFlow,1,0,0
+2603.28376,ok,17,github.com/AIDC-AI/Marco-DeepResearch | github.com/khaimt/qa_expert,1,0,0
+2603.28407,ok,40,github.com/MiroMindAI/MiroEval,1,0,0
+2603.28589,ok,30,github.com/Significant-Gravitas/AutoGPT | github.com/XzwHan/CARD | github.com/crewAIInc/crewAI | github.com/ermongroup/ddim | github.com/ge-xing/Diff-UNet | github.com/hojonathanho/diffus,1,0,1
+2603.28651,ok,54,github.com/BUPT-Reasoning-Lab/ScholScan | huggingface.co/datasets/BUPT-Reasoning-Lab/ScholScan,1,0,0
+2603.29557,ok,30,,0,0,0
+2603.29632,ok,12,github.com/karpathy/autoresearch | github.com/waltstephen/ArgusBot | github.com/wanshuiyin/Auto-claude-code-research- | github.com/yshenfab/MAAR,1,0,1
+2604.00248,ok,12,github.com/huggingface/trl,1,0,1
+2604.00550,ok,4,github.com/qinheming/BIoClaw,1,0,1
+2604.01007,ok,21,github.com/aiming-lab/AutoResearchClaw | github.com/aiming-lab/SimpleMem,1,0,0
+2604.01195,ok,34,github.com/castorini/orbit | github.com/deedy5/ddgs | huggingface.co/BAAI/bge-large-en-v1.5 | huggingface.co/BAAI/bge-m3 | huggingface.co/Qwen/Qwen3-4B | huggingface.co/Qwen/Qwen3-4B-Instruct-2507,1,0,1
+2604.01354,ok,19,github.com/openai/moderati,1,0,1
+2604.02592,ok,24,github.com/haiwen-li/cn-ai-writer,1,0,1
+2604.02988,ok,12,github.com/zetaalphavector/platform | github.com/zou-group/textgrad,1,0,0
+2604.03159,ok,37,github.com/zotero/translation-server,1,0,1
+2604.03173,ok,25,,0,0,1
+2604.03338,ok,21,,0,0,1
+2604.04017,ok,45,github.com/ornamentt/GeoBrowse | huggingface.co/meta-llama/Llama-3.2-90B-,1,0,1
+2604.04324,ok,8,,0,0,0
+2604.04503,ok,34,github.com/ECNU-SII/MIA | huggingface.co/LightningCreeper/MIA | huggingface.co/datasets/LightningCreeper/MIA,1,0,0
+2604.05550,ok,43,github.com/karpathy/autoresearch,1,0,1
+2604.05557,ok,25,,0,0,0
+2604.05587,ok,20,github.com/DataLab-atom/EvoAny,1,0,0
+2604.05854,ok,8,github.com/Xiangyue-Zhang/auto- | github.com/Xiangyue-Zhang/auto-deep-researcher-24x7 | github.com/slopus/happy,1,0,1
+2604.05952,ok,20,github.com/langchain-ai/open_,1,0,0
+2604.06474,ok,38,,0,0,0
+2604.07720,ok,11,github.com/MiniMax-AI/MiniMax-M2 | github.com/langchain-ai/langgraph | github.com/langchain-ai/open_,1,0,0
+2604.07927,ok,5,github.com/camel-ai/eigent_search | huggingface.co/blog/open-,1,0,0
+2604.08590,ok,43,github.com/KellerJordan/modded-nanogpt | github.com/karpathy/autoresearch | huggingface.co/datasets/PleIAs/SYNTH,1,0,1
+2604.09251,ok,20,github.com/BerriAI/litellm,1,0,0
+2604.09554,ok,13,,0,0,1
+2604.09584,ok,15,,0,0,0
+2604.09590,ok,45,,0,0,0
+2604.09621,ok,21,github.com/AstroPilot-AI/Denario | github.com/CMBAgents/cmbagent | github.com/CMBAgents/contextmaker | github.com/ag2ai/ag2 | github.com/jmdelouis/FOSCAT,1,0,1
+2604.09793,ok,27,github.com/joyheyueya/giants | github.com/karpathy/autoresearch,1,0,1
+2604.10696,ok,53,github.com/karpathy/autoresearch | github.com/yifangao112/camyla,1,0,1
+2604.10741,ok,41,,0,0,1
+2604.10938,ok,42,github.com/google/A2A,1,0,0
+2604.11307,ok,26,github.com/CherYou/PaperScope | huggingface.co/OpenSearch-AI/Ops-MM-,1,0,1
+2604.11753,ok,33,github.com/princeton-pli/AggAgent | github.com/unclecode/crawl4ai | huggingface.co/MiniMaxAI/MiniM | huggingface.co/blog/open-deep-research,1,0,1
+2604.11924,ok,22,github.com/datalab-to/marker,1,0,0
+2604.11957,ok,56,,0,0,1
+2604.12144,ok,43,github.com/LucZot/veritas,1,0,1
+2604.12243,ok,15,github.com/TaoJinkai/ckm-hypogen,1,0,0
+2604.13418,ok,19,github.com/huggingface/smolagents,1,0,0
+2604.13699,ok,4,github.com/IMMS-Ewha/MIND,1,0,1
+2604.14518,ok,30,huggingface.co/spaces/muset-ai,1,0,0
+2604.14615,ok,67,,0,0,1
+2604.14683,ok,35,github.com/MiroMindAI/MiroFlow | github.com/NJU-LINK/DR3-Eval | github.com/xai-org/grok-1 | huggingface.co/CometAPI/Claude_Sonnet4 | huggingface.co/CometAPI/gemini2.5_pro_ | huggingface.co/Qwen/Qwen3-235B-A22B,1,0,1
+2604.15145,ok,16,huggingface.co/datasets/pwc-archive/papers-with-abstracts,1,0,1
+2604.15411,ok,15,huggingface.co/datasets/AdrianMiao/PRL_Bench,1,0,1
+2604.15456,ok,37,,0,0,0
+2604.16387,ok,46,,0,0,0
+2604.16723,ok,41,github.com/assafelovic/gpt-researcher | github.com/mnsalimi/Debate-as-Reward-A-Multi-Agent-Reward-System-for-Scientific-Ideation-via-RL-Post-Training,1,0,0
+2604.16982,ok,26,,0,0,0
+2604.17072,ok,28,,0,0,1
+2604.17143,ok,30,,0,0,0
+2604.17406,ok,44,github.com/sjtu-sai-agents/EvoMaster,1,0,0
+2604.17745,ok,29,github.com/KOU-199024/HiRAS,1,0,0
+2604.17931,ok,32,github.com/MiroMindAI/MiroRL | github.com/simplexai-labs/LiteResearcher | huggingface.co/simplex-ai-inc/LiteResearcher-4B,1,0,0
+2604.18805,ok,109,huggingface.co/datasets/jablonkagroup/corral-QAs-topic_reports | huggingface.co/datasets/jablonkagroup/corral-intervention-reports | huggingface.co/datasets/jablonkagroup/corral-oss-trace-logprobs | huggingface.co/datasets/jablonkagroup/corral-reasoning-annotations | huggingface.co/datasets/jablonkagroup/corral_lfm_binomial_results | huggingface.co/datasets/jablonkagroup/questions4manual_annotation,1,1,1
+2604.19502,ok,38,,0,0,1
+2604.19792,ok,36,,0,0,0
+2604.19803,ok,13,github.com/algorithmicsuperintelligence/openevolve | github.com/nvlabs/the-ai-telco-engineer,1,0,0
+2604.19859,ok,16,github.com/inclusionAI/DR-Venus | github.com/verl-project/verl | huggingface.co/Qwen/Qwen3-4B-Thinking-2507 | huggingface.co/collections/inclusionAI | huggingface.co/datasets/Zchu/REDSearcher_RL_1K | huggingface.co/datasets/Zchu/REDSearcher_SFT_10K,1,0,1
+2604.20441,ok,20,github.com/aipoch/medical-research-skillsunder,1,0,1
+2604.20548,ok,43,github.com/ChenShuai00/MAGenIdeas | github.com/NoviScl/AI-Researcher | huggingface.co/sentence-transformers/all-MiniLM-L6-v2 | huggingface.co/spaces/cshuai20,1,0,1
+2604.20622,ok,34,github.com/PoggioAI/PoggioAI_MSc | github.com/google-deepmind/alphaevolve_repository_of_problems | github.com/math-inc/strongpnt,1,1,0
+2604.20855,ok,37,github.com/assafelovic/gpt-researcher | github.com/mem0ai/mem0,1,0,0
+2604.21006,ok,28,,0,0,0
+2604.21068,ok,17,,0,0,1
+2604.22026,ok,34,,0,0,0
+2604.22861,ok,42,,0,0,1

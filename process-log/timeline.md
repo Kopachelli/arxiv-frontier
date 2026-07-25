@@ -86,3 +86,26 @@ reconstructed. Companion files: `errors.md` (AI failures), `human-interventions.
   because applying rules to only the 292 would make the corpus internally inconsistent —
   a rule-based re-screen of ALL 1,359 candidates as Layer 2. Layer 1 is preserved and
   reported (its agreement statistics are an RQ4 result). Launched 55 re-screen agents.
+- Layer-2 re-screen complete (55 agents, 8 min): **628 included / 731 excluded**.
+  Largest exclusion class: generic deep-research agents (175, BR7). 65 reversals of
+  unanimous Layer-1 includes. Two plumbing defects found and fixed (`errors.md` #5).
+  Measured Layer-1 reliability: raw agreement 0.833, Cohen's κ 0.715 (3-way) / 0.804
+  (binary include-vs-not).
+
+**Scope checkpoint and human override (same session).**
+
+- AI presented the corpus, the >400 narrowing trigger, a 40-item audit worksheet, and
+  the BR7 judgment for human review. Outcomes (`human-interventions.md` #4):
+  code all 628 (A2a); **human declined the screening audit** (recorded as a design
+  weakness, with an AI-self-consistency pass substituted and described honestly);
+  **human overruled BR7**, ruling deep-research agents back into scope (A2b).
+- A2b applied: 253 affected papers re-screened under revised BR7 (the 175 EC9 exclusions
+  plus 78 more found by a text-match sweep for deep-research vocabulary routed to other
+  codes); 183 flipped to include. **Final corpus: 811 papers.**
+
+**Phase 4 — coding (same session).**
+
+- 811 papers → 68 batches of 12; coding prompt derived from the normative codebook,
+  with UNCLEAR + needs_fulltext available so agents can decline to guess.
+- Launched 74 agents: 68 coding + 6 running an independent third screening pass over a
+  random 120-paper sample (Layer-2 self-consistency estimate).

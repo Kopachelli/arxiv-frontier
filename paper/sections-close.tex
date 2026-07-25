@@ -1,0 +1,110 @@
+\section{Limitations}
+\label{sec:limits}
+
+We state these in order of how much they should change a reader's confidence.
+
+\paragraph{No human validated any screening decision.} The protocol specified an independent
+human audit of a stratified sample; the human co-author declined it. The corpus is therefore
+entirely AI-determined. The substitute we ran --- a third independent AI pass agreeing
+\consAgree{} of the time on \nCons{} papers --- measures stability under re-application, not
+correctness. Three passes drawn from one model family can share a systematic error, and the
+Layer-1 disagreement structure shows this family does have systematic boundary preferences.
+This is the weakness most likely to matter, and the audit worksheet remains in the repository
+for anyone who wishes to perform it.
+
+\paragraph{The coders and the screeners share a base model family.} Pass A ran on Claude
+Fable 5 and Pass B on Claude Opus 5, which reduces but does not eliminate correlated error;
+coding used a single pass. A review of AI research conducted by AI is exposed to exactly the
+correlated-error problem \citet{bowkis2026automated} describe.
+
+\paragraph{Abstract-based coding.} Nine of ten dimensions were coded from titles and
+abstracts, with \nNeedsFulltext{} papers flagged as warranting full text. Abstracts
+systematically understate implementation detail; we demonstrated the magnitude for one
+dimension by measuring artifact release from full text instead, where the correction was
+large (Section~\ref{sec:artifacts}). Dimensions we did not verify this way --- particularly
+auditability mechanisms --- are likely to be understated in the same direction. Our
+auditability figures should therefore be read as lower bounds on what these systems provide,
+and the interesting quantity is not the absolute level but which papers report it at all.
+
+\paragraph{arXiv-only, computer-science-centric.} A cross-check against OpenAlex confirmed
+that flagship biological autonomous-science systems publish on bioRxiv. Our map describes the
+arXiv-visible field; wet-lab-heavy work is under-represented, which probably biases our
+external-validation rate downward.
+
+\paragraph{Corpus boundaries are contested, and we chose one resolution.} The 21.5\%
+disagreement rate is itself evidence that reasonable reviewers would draw this corpus
+differently. We have released the boundary rules, the excluded classes with counts, and every
+decision with its justification, so that a reader who disagrees can recompute the map under
+different rules rather than take ours on faith.
+
+\paragraph{Right-censoring and version drift.} The final quarter is partial, and we coded the
+latest version of each paper available at harvest; papers revised after 2026-07-25 may no
+longer match their codes.
+
+\paragraph{Descriptive, not causal.} Every statistic here is a frequency. We make no claim
+about whether auditability practices are improving, whether they affect research quality, or
+whether any particular system's results are correct.
+
+\section{Conclusion}
+
+The literature on autonomous AI research systems grew roughly \growthFactor{}-fold in nine
+quarters and now evaluates itself by the standards of machine-learning benchmarking:
+diligently, at scale, and in a way that mostly does not let a reader check any particular
+claim. \pctHeldOut{} of papers test a result outside the loop that produced it,
+\pctAuditNone{} provide no auditability mechanism at all, and \pctHumanUnspec{} do not say
+what humans did. The papers claiming the AI produced new scientific knowledge are among the
+least checkable in the corpus.
+
+We are not in a position to be superior about this. Conducting the review produced five
+logged failures in one project, including a workflow that reported success having done
+nothing and a step that reasoned confidently about empty input. Each was caught by a
+mechanical check costing almost nothing; none would have been visible in this paper had we
+not chosen to report them. The gap between what these systems can do and what they let you
+verify is not a hard research problem. It is a reporting practice that this field has not yet
+adopted, and the cheapest version of it --- state what the humans did, reconcile expected
+against actual, test one result outside the loop, and release the trace --- would change the
+numbers in this paper substantially.
+
+\section{Contribution statement}
+\label{sec:contrib}
+
+This paper is the product of a human--AI collaboration, and we state the division of labour
+precisely rather than in general terms.
+
+\textbf{Claude Fable 5 (Anthropic)} proposed the research direction from a survey of the
+July 2026 literature; wrote the review protocol, codebook, screening prompts, and both
+amendments; wrote all software (harvest, screening, coding, analysis, figures, artifact
+verification, citation verification); executed the search, screening, coding, and analysis;
+generated the figures; drafted the entire manuscript; and maintained the process logs,
+including the record of its own errors.
+
+\textbf{Khristian Kopachelli} initiated and framed the project; selected the research
+direction from the options presented; set the publication and authorship strategy; approved
+the protocol at the pre-screening checkpoint; made the scope decisions at the corpus
+checkpoint, including overruling the AI's boundary rule on deep-research agents (a reversal
+that changed the corpus by 183 papers); declined the specified human screening audit; and
+reviewed and approved the manuscript. He takes responsibility for the work as submitted.
+
+arXiv's policy does not permit an AI system to be listed as an author, and we comply with it.
+We record here that if listing reflected contribution rather than accountability, the AI would
+be a co-author of this paper. The companion deposit (Section~\ref{sec:avail}) carries a joint
+authorship statement to that effect.
+
+We note the obvious circularity --- an AI-conducted study of AI-conducted research, reporting
+on its own reliability --- and refer readers to Section~\ref{sec:reflexive} for what we did to
+make the claims checkable and to Section~\ref{sec:limits} for where we could not.
+
+\section{Data, code, and artifact availability}
+\label{sec:avail}
+
+Everything needed to reproduce this paper is released: the harvest script and manifest, the
+full candidate corpus, both layers of screening decisions with per-paper justifications, the
+coded corpus, the artifact-verification results, the analysis and figure scripts, the protocol
+with all amendments, and the three process logs. Every number in the paper is generated into a
+macro file by the analysis script; none is transcribed by hand. Every reference was verified
+against live arXiv and Crossref metadata by a script included in the repository.
+
+\begin{itemize}\itemsep1pt
+\item Repository: \url{https://github.com/kopachelli/arxiv-frontier}
+\item Companion deposit with joint-authorship statement and archived data: (DOI on deposit)
+\end{itemize}

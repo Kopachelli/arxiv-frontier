@@ -165,8 +165,141 @@ def main():
 
     text = "\n".join(out) + "\n"
     (DATA / "RESULTS.md").write_text(text, encoding="utf-8")
+    write_macros(cand, l1, fin, inc)
     print(text[:3000])
     print("...\n[full output in data/RESULTS.md]")
+
+
+def write_macros(cand, l1, fin, inc):
+    """Emit paper/numbers.tex so no number in the paper is hand-transcribed."""
+    m = {}
+    coded_path = DATA / "coded-corpus.csv"
+    art_path = DATA / "artifact-verification.csv"
+
+    def thousands(n):
+        return f"{n:,}".replace(",", "{,}")  # LaTeX-safe thousands separator
+
+    m["nHarvest"] = thousands(len(cand) - 2)
+    m["nExpert"] = 2
+    m["nScreened"] = thousands(len(fin))
+    m["nCorpus"] = len(inc)
+    m["nExcluded"] = len(fin) - len(inc)
+
+    pairs = [(r["passA_decision"], r["passB_decision"]) for r in l1]
+    m["kappaThree"] = f"{cohens_kappa(pairs):.2f}"
+    m["kappaBinary"] = f"{cohens_kappa([('include' if a == 'include' else 'n', 'include' if b == 'include' else 'n') for a, b in pairs]):.2f}"
+    m["rawAgree"] = f"{sum(1 for a, b in pairs if a == b) / len(pairs):.1%}".replace("%", "\\%")
+    nadj = sum(1 for r in l1 if r["agreement"] == "needs_adjudication")
+    m["nAdjudicate"] = nadj
+    m["nAgreedLayerOne"] = len(l1) - nadj
+    m["pctAdjudicate"] = f"{nadj / len(l1):.1%}".replace("%", "\\%")
+    m["nReversals"] = sum(1 for r in fin if r["reverses_unanimous_include"] == "1")
+
+    if (DATA / "screening-consistency.csv").exists():
+        cons = load("screening-consistency.csv")
+        m["consAgree"] = f"{sum(int(r['agree']) for r in cons) / len(cons):.1%}".replace("%", "\\%")
+        m["nCons"] = len(cons)
+
+    if coded_path.exists():
+        coded = load("coded-corpus.csv")
+        n = len(coded)
+        m["nCoded"] = n
+
+        def pct(k):
+            return f"{k / n:.0%}".replace("%", "\\%")
+
+        d1 = Counter(r["D1"] for r in coded)
+        for k, v in d1.items():
+            m["n" + k.title().replace("_", "")] = v
+        d2 = Counter(r["D2"] for r in coded)
+        m["nClosedLoop"] = d2.get("L3_CLOSED_LOOP", 0)
+        m["nFullAuto"] = d2.get("L4_FULL", 0)
+        m["nSystemsCoded"] = sum(v for k, v in d2.items() if k not in ("NA", "UNCLEAR"))
+
+        def multi(dim, code):
+            return sum(1 for r in coded if code in r[dim].split(";"))
+
+        m["nAuditNone"] = multi("D6", "NONE")
+        m["pctAuditNone"] = pct(m["nAuditNone"])
+        m["nBenchMetric"] = multi("D5", "BENCHMARK_METRIC")
+        m["pctBenchMetric"] = pct(m["nBenchMetric"])
+        m["nNeedsFulltext"] = sum(1 for r in coded if r["needs_fulltext"] == "1")
+        # prespecified auditability-gap operationalization (protocol codebook)
+        weak = [r for r in coded
+                if r["D8"] in ("DISCOVERY", "CAPABILITY")
+                and set(r["D5"].split(";")) <= {"NONE", "LLM_JUDGE"}
+                and r["D7_code"] != "YES"]
+        m["nWeakStrong"] = len(weak)
+        m["pctWeakStrong"] = pct(len(weak))
+        m["nHeldOut"] = multi("D5", "HELD_OUT_TRANSFER")
+        m["pctHeldOut"] = pct(m["nHeldOut"])
+        m["nRealWorld"] = multi("D5", "REAL_WORLD")
+        m["pctRealWorld"] = pct(m["nRealWorld"])
+        m["nHumanExpert"] = multi("D5", "HUMAN_EXPERT")
+        m["pctHumanExpert"] = pct(m["nHumanExpert"])
+        m["nLLMJudge"] = multi("D5", "LLM_JUDGE")
+        m["pctLLMJudge"] = pct(m["nLLMJudge"])
+        m["nNoEval"] = multi("D5", "NONE")
+        m["pctNoEval"] = pct(m["nNoEval"])
+        m["nTraces"] = multi("D6", "TRACES")
+        m["nProvenance"] = multi("D6", "PROVENANCE")
+        m["nFormalVerif"] = multi("D6", "FORMAL_VERIF")
+
+        d9 = Counter(r["D9"] for r in coded)
+        unspec = d9.get("NONE_CLAIMED", 0) + d9.get("UNSPECIFIED", 0)
+        m["nHumanUnspec"] = unspec
+        m["pctHumanUnspec"] = pct(unspec)
+
+        d8 = Counter(r["D8"] for r in coded)
+        m["nDiscovery"] = d8.get("DISCOVERY", 0)
+        m["nCapability"] = d8.get("CAPABILITY", 0)
+        m["nMethodClaim"] = d8.get("METHOD", 0)
+        m["nConceptual"] = d8.get("CONCEPTUAL", 0)
+
+        disc = [r for r in coded if r["D8"] == "DISCOVERY"]
+        if disc:
+            m["nDiscNoAudit"] = sum(1 for r in disc if r["D6"] == "NONE")
+            m["pctDiscNoAudit"] = f"{m['nDiscNoAudit'] / len(disc):.0%}".replace("%", "\\%")
+            m["nDiscRealWorld"] = sum(1 for r in disc if "REAL_WORLD" in r["D5"].split(";"))
+            m["pctDiscRealWorld"] = f"{m['nDiscRealWorld'] / len(disc):.0%}".replace("%", "\\%")
+
+        # growth
+        def quarter(d):
+            return f"{d[:4]}Q{(int(d[5:7]) - 1) // 3 + 1}" if len(d) >= 7 else None
+        qc = Counter(q for q in (quarter(r["first_submitted"]) for r in coded) if q)
+        ks = sorted(qc)
+        m["firstQ"] = ks[0].replace("Q", "\\,Q")
+        m["firstQn"] = qc[ks[0]]
+        m["peakQ"] = ks[-2].replace("Q", "\\,Q")
+        m["peakQn"] = qc[ks[-2]]
+        m["growthFactor"] = f"{qc[ks[-2]] / qc[ks[0]]:.0f}"
+        m["partialQ"] = ks[-1].replace("Q", "\\,Q")
+        m["partialQn"] = qc[ks[-1]]
+
+        # artifact verification (full text, mechanical)
+        if art_path.exists():
+            art = {r["arxiv_id"]: r for r in load("artifact-verification.csv")}
+            ok = [r for r in coded if art.get(r["arxiv_id"], {}).get("status") == "ok"]
+            if ok:
+                m["nArtChecked"] = len(ok)
+                repo = sum(1 for r in ok if art[r["arxiv_id"]]["has_repo"] == "1")
+                m["nRepo"] = repo
+                m["pctRepo"] = f"{repo / len(ok):.0%}".replace("%", "\\%")
+                abs_yes = sum(1 for r in ok if r["D7_code"] == "YES")
+                m["pctRepoAbstract"] = f"{abs_yes / len(ok):.0%}".replace("%", "\\%")
+                dok = [r for r in ok if r["D8"] == "DISCOVERY"]
+                if dok:
+                    dr = sum(1 for r in dok if art[r["arxiv_id"]]["has_repo"] == "1")
+                    m["nDiscChecked"] = len(dok)
+                    m["nDiscRepo"] = dr
+                    m["pctDiscRepo"] = f"{dr / len(dok):.0%}".replace("%", "\\%")
+
+    lines = ["% Auto-generated by code/analyze.py — do not edit by hand.",
+             "% Every number in the paper is defined here and derived from data/."]
+    for k, v in m.items():
+        lines.append(f"\\newcommand{{\\{k}}}{{{v}}}")
+    (ROOT / "paper" / "numbers.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"\n[wrote paper/numbers.tex with {len(m)} macros]")
 
 
 if __name__ == "__main__":

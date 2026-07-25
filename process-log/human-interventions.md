@@ -35,3 +35,24 @@ Trigger: AI presented final corpus (1,426 candidates; 1,357 codable) and the pro
 package for the formal pre-screening gate. Human approved protocol v1.0 as-is and
 authorized phase-wise git commits (history as process evidence).
 Effect: protocol locked; screening authorized; later changes require logged amendments.
+
+## #4 — 2026-07-25 — Scope checkpoint: three decisions, one overruling the AI (AI-requested)
+
+Trigger: AI presented the screened corpus (628 included), the boundary rules, the
+pre-specified >400 narrowing trigger, and a 40-item audit worksheet.
+
+1. **Corpus size** — human chose to code all 628 rather than narrow (AI's recommendation;
+   amendment A2a).
+2. **Human screening audit** — human declined the audit, stating trust in the rules. The
+   AI had recommended doing it. **Consequence, recorded plainly: this review has no
+   independent human validation of its screening decisions.** Reported in Limitations, and
+   the AI substituted a third independent AI screening pass on a random sample to estimate
+   Layer-2 self-consistency — which measures stability, not correctness, and is described
+   as such.
+3. **Deep-research agents (BR7)** — human **overruled the AI**, ruling the 175 excluded
+   "generic deep research" papers back into scope, on the grounds that deep research is
+   how the field productized autonomous research and excluding it would define the field
+   to fit the reviewer's framing. AI had recommended and defended exclusion. Amendment A2b.
+
+Effect: corpus retained in full and enlarged; the AI's largest scope judgment reversed;
+one methodological safeguard (human screening audit) removed from the design.

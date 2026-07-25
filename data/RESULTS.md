@@ -6,8 +6,8 @@
 - Records identified by other methods (expert-identified): **2**
 - Records in codable window (first submitted >= 2024-01-01): **1357**
 - Records screened (window + expert-identified): **1359**
-- Records excluded: **731**
-- **Papers included in the corpus: 628**
+- Records excluded: **548**
+- **Papers included in the corpus: 811**
 
 ## Layer 1 — dual-pass screening reliability (RQ4)
 
@@ -38,18 +38,17 @@ Inclusion reasons:
 
 | code | n |
 |---|---|
-| IC1 | 362 |
-| IC2 | 148 |
-| IC3 | 118 |
+| IC1 | 483 |
+| IC2 | 204 |
+| IC3 | 124 |
 
 Exclusion reasons:
 
 | code | n |
 |---|---|
-| EC1 | 274 |
-| EC9_GENERIC_DEEPRESEARCH | 175 |
-| EC2 | 106 |
-| EC8_GENERIC_ANALYSIS | 67 |
+| EC1 | 272 |
+| EC2 | 105 |
+| EC8_GENERIC_ANALYSIS | 62 |
 | EC7_HUMAN_AI_USE | 57 |
 | EC6_ASSISTIVE | 48 |
 | EC3 | 4 |
@@ -58,14 +57,14 @@ Boundary rule invoked (all decisions):
 
 | rule | included | excluded |
 |---|---|---|
-| BR1 | 39 | 52 |
-| BR2 | 115 | 27 |
+| BR1 | 39 | 50 |
+| BR2 | 115 | 26 |
 | BR3 | 29 | 10 |
 | BR4 | 87 | 54 |
-| BR5 | 62 | 60 |
-| BR6 | 27 | 67 |
-| BR7 | 50 | 176 |
-| none | 219 | 285 |
+| BR5 | 62 | 59 |
+| BR6 | 27 | 60 |
+| BR7 | 233 | 0 |
+| none | 219 | 289 |
 
 ## RQ3 — corpus growth
 
@@ -75,15 +74,15 @@ Included papers by quarter of first submission:
 |---|---|
 | 2024-Q1 | 6 |
 | 2024-Q2 | 14 |
-| 2024-Q3 | 16 |
+| 2024-Q3 | 17 |
 | 2024-Q4 | 23 |
-| 2025-Q1 | 26 |
-| 2025-Q2 | 65 |
-| 2025-Q3 | 55 |
-| 2025-Q4 | 82 |
-| 2026-Q1 | 111 |
-| 2026-Q2 | 187 |
-| 2026-Q3 | 42 |
+| 2025-Q1 | 28 |
+| 2025-Q2 | 74 |
+| 2025-Q3 | 79 |
+| 2025-Q4 | 115 |
+| 2026-Q1 | 164 |
+| 2026-Q2 | 241 |
+| 2026-Q3 | 49 |
 
 All harvested candidates by year (trend context, includes pre-2024):
 
@@ -99,16 +98,134 @@ All harvested candidates by year (trend context, includes pre-2024):
 
 | category | n |
 |---|---|
-| cs.AI | 289 |
-| cs.CL | 138 |
-| cs.LG | 70 |
+| cs.AI | 361 |
+| cs.CL | 214 |
+| cs.LG | 80 |
+| cs.IR | 21 |
 | cond-mat.mtrl-sci | 20 |
-| cs.MA | 15 |
-| cs.CY | 12 |
-| cs.IR | 12 |
+| cs.MA | 19 |
+| cs.CY | 13 |
 | cs.DL | 11 |
+| cs.CV | 10 |
 | cs.SE | 10 |
 | cs.HC | 6 |
 | cs.RO | 5 |
-| q-bio.QM | 4 |
 
+## Coded corpus (811 papers)
+
+
+### D1
+
+| code | n |
+|---|---|
+| SYSTEM | 392 |
+| BENCHMARK | 212 |
+| FRAMEWORK | 119 |
+| POSITION | 36 |
+| SURVEY | 26 |
+| CASE_STUDY | 26 |
+
+### D2
+
+| code | n |
+|---|---|
+| NA | 393 |
+| L3_CLOSED_LOOP | 148 |
+| L1_STAGE | 144 |
+| L2_PIPELINE | 86 |
+| L4_FULL | 19 |
+| L0_ASSISTIVE | 15 |
+| UNCLEAR | 6 |
+
+### D3
+
+| code | n |
+|---|---|
+| LITERATURE | 342 |
+| ANALYSIS | 280 |
+| IDEATION | 262 |
+| EXECUTION | 233 |
+| EXP_DESIGN | 182 |
+| NA | 162 |
+| WRITING | 159 |
+| REVIEW | 87 |
+| UNCLEAR | 1 |
+
+### D4
+
+| code | n |
+|---|---|
+| GENERAL_ML | 361 |
+| MULTI | 110 |
+| OTHER | 101 |
+| BIOMED | 88 |
+| MATERIALS | 53 |
+| PHYSICS | 39 |
+| SOCIAL_SCI | 30 |
+| CHEMISTRY | 13 |
+| MATH_FORMAL | 8 |
+| UNCLEAR | 6 |
+| SOFTWARE | 2 |
+
+### D5
+
+| code | n |
+|---|---|
+| BENCHMARK_METRIC | 575 |
+| LLM_JUDGE | 170 |
+| HUMAN_EXPERT | 135 |
+| NONE | 110 |
+| REAL_WORLD | 87 |
+| HELD_OUT_TRANSFER | 37 |
+| UNCLEAR | 3 |
+
+### D6
+
+| code | n |
+|---|---|
+| NONE | 445 |
+| REPRO_ARTIFACTS | 190 |
+| PROVENANCE | 136 |
+| TRACES | 110 |
+| UNCERTAINTY | 39 |
+| FORMAL_VERIF | 10 |
+
+### D7_code
+
+| code | n |
+|---|---|
+| NO | 610 |
+| YES | 157 |
+| PARTIAL | 44 |
+
+### D7_data
+
+| code | n |
+|---|---|
+| NO | 667 |
+| YES | 98 |
+| PARTIAL | 46 |
+
+### D8
+
+| code | n |
+|---|---|
+| METHOD | 371 |
+| CAPABILITY | 320 |
+| CONCEPTUAL | 62 |
+| DISCOVERY | 58 |
+
+### D9
+
+| code | n |
+|---|---|
+| NONE_CLAIMED | 287 |
+| UNSPECIFIED | 286 |
+| EVALUATOR | 136 |
+| CO_PERFORMER | 72 |
+| GATEKEEPER | 30 |
+
+## RQ2 — auditability gap (prespecified)
+
+- Strong-claim / weak-verification papers: **36** (4.4% of coded corpus)
+- Papers with at least one strong verification mechanism: **388** (47.8%)

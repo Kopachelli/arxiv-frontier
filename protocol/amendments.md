@@ -94,3 +94,51 @@ papers do not make AI research claims at all. The excluded classes are not disca
 silently: each is counted by reason code and reported as a boundary-class table, since the
 contested boundary is itself a finding about a field that has not settled what counts as an
 "AI scientist".
+
+---
+
+## A2 — 2026-07-25 — Corpus retained in full; BR7 revised by the human co-author
+
+**Stage.** After the Layer-2 re-screen, before coding. Both changes decided by the human
+co-author (Khristian Kopachelli) at the scope checkpoint; see
+`process-log/human-interventions.md` #4.
+
+### A2a — No further scope narrowing (>400 threshold set aside)
+
+Protocol §5 pre-specified a documented narrowing if the corpus exceeded 400 papers; it
+reached 628. The threshold is **set aside rather than applied**, with the reasoning stated
+openly: 400 was an a priori guess at manageable workload written before the field's size
+was known, not a scientific criterion. Narrowing at this point would remove in-scope work
+for convenience and would understate the field. The study is reported as a systematic
+**map**, for which completeness of the identified corpus is a strength, and all included
+papers are coded.
+
+### A2b — BR7 revised: "deep research" agents are in scope
+
+**Original BR7 (A1).** General-purpose deep-research/web-QA agents evaluated primarily on
+generic browsing benchmarks were excluded (`EC9_GENERIC_DEEPRESEARCH`; 175 papers — the
+largest single exclusion class).
+
+**Revised BR7.** Deep-research agents — systems that perform multi-step information
+seeking, evidence synthesis, and report generation — **are in scope** (IC1: literature
+synthesis and/or scientific writing stages), whether or not their benchmarks are
+science-specific. Still excluded as `EC1`: transactional or navigational web agents
+(shopping, booking, form filling, UI automation) and single-hop question answering without
+a synthesis or report-production step.
+
+**Rationale (human co-author's, recorded as given).** "Deep research" is how the field
+actually productized autonomous research; a map that excludes it misses where the
+attention and engineering went. Excluding an entire product category because its
+benchmarks are generic risks defining the field to match the reviewer's preferred framing
+rather than its real composition.
+
+**Note on provenance and RQ4.** This reverses a judgment the AI made and defended. It is
+the clearest instance in this project of the human co-author changing a substantive
+scientific decision, and it is reported as such: the AI's original rule, the human's
+override, the reasoning on both sides, and the effect on the corpus (n changes from 628).
+
+**Application.** Every excluded paper decided under BR7 or coded
+`EC9_GENERIC_DEEPRESEARCH`, plus every excluded paper whose title or abstract mentions
+"deep research"/"deep researcher" (to catch cases routed to `EC1` instead), is re-screened
+under revised BR7. No other decisions are disturbed. Set membership is computed by script
+so the affected set is reproducible.

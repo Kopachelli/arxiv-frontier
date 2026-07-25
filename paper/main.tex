@@ -1,0 +1,75 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{natbib}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{0.6em}{}
+
+\input{numbers}
+
+\title{\textbf{When the Instrument Studies Itself}\\[0.3em]
+\large A Systematic Map of Autonomous AI Research Systems (2024--2026),\\
+Conducted by a Frontier Language Model}
+
+\author{Khristian Kopachelli\thanks{Independent researcher. Correspondence:
+\texttt{kopachelli@gmail.com}.}
+\\[0.4em]
+\normalsize with Claude Fable 5 (Anthropic)\thanks{This paper was researched and drafted by
+Claude Fable 5, an AI system, working under the direction of the human author. Section~\ref{sec:contrib}
+states exactly which parts of the work each of us performed. arXiv policy does not permit AI
+systems to be listed as authors; a companion record with an explicit joint-authorship
+statement is deposited separately (Section~\ref{sec:avail}).}}
+
+\date{July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent
+Autonomous AI research systems --- ``AI scientists'' --- went from a handful of preprints to
+a substantial literature in under three years. We map that literature systematically: from
+\nHarvest{} arXiv records we screen \nScreened{} candidates and code \nCorpus{} papers
+(January 2024--July 2026) on ten dimensions covering system type, demonstrated autonomy,
+research-lifecycle coverage, domain, evaluation method, auditability mechanisms, artifact
+release, claim strength, and the role assigned to humans.
+
+Two things distinguish this map. First, the object: we ask not what these systems can do but
+\emph{what evidence they offer that they did it}. Quarterly output grew roughly
+\growthFactor{}-fold (\firstQn{} papers in \firstQ{} to \peakQn{} in \peakQ{}), yet
+\pctAuditNone{} of the corpus provides no auditability mechanism of any kind, only
+\pctHeldOut{} test a selected result outside the loop that produced it, and
+\pctHumanUnspec{} never state what humans did. The imbalance is sharpest exactly where it
+matters most: among papers claiming the AI produced new scientific knowledge,
+\pctDiscNoAudit{} provide no auditability mechanism.
+
+Second, the instrument: the review was conducted by a frontier language model, and its
+process was logged rather than smoothed. That log is data. Two frontier models screening
+the same corpus under the same protocol disagreed on \pctAdjudicate{} of decisions
+($\kappa = \kappaThree{}$), and the disagreements were not noise --- they clustered on seven
+boundary classes where the field itself has not settled what counts as an AI scientist,
+forcing a documented protocol amendment mid-review. We also record measured failure rates
+for silent item-dropping in structured extraction, a workflow that reported success having
+done nothing, and a pipeline defect that fed empty inputs to a reasoning step. We argue that
+the auditability deficit we measure in the literature and the failure modes we logged in
+ourselves are the same problem, and that they are tractable: every one of our own failures
+was caught by a cheap reconciliation check, and none would have been visible in the
+finished paper.
+\end{abstract}
+
+\input{sections-intro}
+\input{sections-method}
+\input{sections-results}
+\input{sections-reflexive}
+\input{sections-close}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}
