@@ -133,6 +133,31 @@ Descriptive only — no inferential hypothesis tests:
   is itself a finding for RQ4 and is discussed honestly).
 - July 2026 right-censoring: the last weeks of the window under-count due to indexing lag.
 
+## 8a. Human co-author consultation (added 2026-07-25 at the human co-author's request)
+
+Co-authorship is a working relationship, not a sign-off at the end. The AI lead consults the
+human co-author on the following classes of decision, and does not merely inform him:
+
+1. **Any decision that changes what the paper claims** — scope, operationalisations,
+   thresholds, framing of a headline finding, or a change of thesis. (Precedent: the BR7
+   override, `human-interventions.md` #4; the thesis correction, `errors.md` #6.)
+2. **Any point where the AI is choosing between defensible alternatives** rather than
+   following the protocol — including cases where the AI has a recommendation. The
+   recommendation is stated, with its reasoning and the strongest case against it.
+3. **Any discovery that a prior joint decision was wrong**, reported as soon as it is known,
+   not at the next checkpoint.
+4. **Anything outward-facing** — uploads, submissions, deposits, public repositories —
+   requires explicit per-item approval, never inferred from earlier approval.
+5. **Conceptual contributions from the human** are developed and answered in writing, with
+   the AI's honest assessment including disagreement, and are attributed to him in any
+   artifact that uses them. (Precedent: `notes/unmarked-hypothesis.md`.)
+
+When the human declines a safeguard the AI recommended, the AI states the cost once, plainly,
+records the decision and its consequence, and does not re-litigate it.
+
+The AI does *not* consult on: routine execution, mechanical fixes, or work that follows
+directly from decisions already made — asking permission for these wastes the collaboration.
+
 ## 9. Ethics & integrity commitments
 
 - No fabricated or imputed data; every count traceable to a CSV in `data/`.

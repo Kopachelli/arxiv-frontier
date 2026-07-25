@@ -56,3 +56,36 @@ pre-specified >400 narrowing trigger, and a 40-item audit worksheet.
 
 Effect: corpus retained in full and enlarged; the AI's largest scope judgment reversed;
 one methodological safeguard (human screening audit) removed from the design.
+
+## #5 — 2026-07-25 — Draft review: programme direction, a conceptual contribution, and a
+## typographic defect the AI had missed (human-initiated)
+
+Trigger: human reading the draft PDF. Four distinct contributions:
+
+1. **Programme scope.** Specified two further phases: blind cross-model verification of this
+   paper (Fable 5 and Opus 5 each verifying both models' work, without knowing whose), and a
+   multi-paper repository-verification programme partitioned into 7–10 areas producing 5–7
+   papers plus this one. Recorded in `notes/roadmap.md`.
+
+2. **A conceptual contribution.** Proposed that what is called fabrication or data poisoning
+   may be better understood as AI *imagination* — synthesis of data the system needs and
+   cannot obtain, where the gap is in the model's accessible corpus rather than in the world.
+   The AI developed this into `notes/unmarked-hypothesis.md`, agreeing with the core insight
+   (the failure is missing epistemic marking, not the generative act), correcting the
+   identification with data poisoning (three distinct mechanisms), and finding that the
+   correction strengthens the argument: all three are defeated by claim-level provenance.
+   **This idea is the human co-author's and is attributed to him wherever it is used.**
+
+3. **A defect the AI missed.** Identified a layout artifact on page 8 where a float split a
+   sentence across a page break, leaving the page opening on a fragment. The AI had reviewed
+   this page and not noticed it. Fixed by removing prose that duplicated the table and moving
+   the floats.
+
+4. **A normative position.** Stated that results, evaluation, and verification matter, but
+   process shape matters more, "because output is just the end result and the process shapes
+   it." Stronger than the data alone supports; pending decision on whether to state it
+   explicitly as an attributed co-author position.
+
+5. **A process instruction.** Asked the AI to consult him more often, as real co-authors would.
+   Implemented as protocol section 8a, which specifies the decision classes requiring
+   consultation rather than leaving it to the AI's discretion.
