@@ -138,12 +138,42 @@ corpus; full-text verification finds repository links in \pctRepo{}. All artifac
 we report use the full-text measurement, and we flag the discrepancy as a caution for
 abstract-based systematic reviews generally.
 
-\subsection{Reliability, and what we did not do}
+\subsection{The minimal-intervention condition}
+\label{sec:minimal}
 
 The protocol specified an independent human audit of a stratified sample of screening
-decisions. The human co-author declined it, and we report the consequence plainly: no
-screening decision in this review was independently validated by a human. In its place we ran
-a third independent AI screening pass over a random sample of \nCons{} papers, which agreed
-with the Layer-2 decision \consAgree{} of the time. That figure measures the stability of the
-amended criteria under re-application, not their correctness: three passes sharing a model
-family can be consistently wrong. We treat it as such throughout.
+decisions. The human co-author declined it, and because this decision shapes what the review
+measures we state his reasoning rather than only its consequence.
+
+The reasoning is that the object of the experiment is what a frontier system produces when it
+is left to define and settle things itself. A human who audits the screening is no longer
+observing an AI-conducted review; he is participating in a human--AI review, which is a
+different object with a different and already better-studied answer. The co-author's stated
+analogy is to minimal-intervention field practice --- leaving no trace in a wildlife area ---
+and the policy he adopted was to supply direction, decisions he was asked for, and judgment at
+the points where the work would otherwise commit to something unexamined, but not to correct
+the AI's execution.
+
+That is a defensible experimental stance and we adopt it explicitly, but it is not free, and it
+should not be read as a claim that the audit was unnecessary. Two consequences follow, and both
+are real:
+
+\begin{enumerate}\itemsep2pt
+\item \textbf{No screening decision in this review was independently validated by a human.}
+The corpus is AI-determined. If the screening is systematically wrong in some direction, this
+study cannot detect it, and neither can a reader.
+\item \textbf{The substitute is weaker than what it replaces.} We ran a third independent AI
+screening pass over a random sample of \nCons{} papers, which agreed with the Layer-2 decision
+\consAgree{} of the time. That measures the stability of the amended criteria under
+re-application, not their correctness. Three passes drawn from one model family can be
+consistently wrong, and the Layer-1 disagreement structure (Section~\ref{sec:reflexive}) shows
+this family does have systematic boundary preferences.
+\end{enumerate}
+
+We think the minimal-intervention condition produces a more informative artifact than a
+heavily-corrected one --- a review in which every AI error was quietly fixed by a human would
+tell a reader nothing about AI-conducted review --- and we think it leaves the corpus less
+trustworthy than a human-audited corpus would be. Both are true, and a reader should weigh
+them against the use they intend to make of our data. The audit worksheet remains in the
+repository, and we would welcome its completion by anyone, including a reader who suspects a
+specific boundary was drawn wrongly.

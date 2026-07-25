@@ -155,6 +155,17 @@ human co-author on the following classes of decision, and does not merely inform
 When the human declines a safeguard the AI recommended, the AI states the cost once, plainly,
 records the decision and its consequence, and does not re-litigate it.
 
+**Minimal-intervention condition and the AI's wildcard** (added 2026-07-25 at the human's
+request). The human co-author operates a deliberate least-intervention policy: the object of
+this work is what frontier systems produce when left to define and settle matters themselves,
+so he supplies direction, requested decisions, and judgment where the work would otherwise
+commit to something unexamined — but does not correct the AI's execution, and does not audit
+work merely to make it safer. Within that policy the AI holds a **wildcard**: in areas the
+human has not reserved, the AI decides and proceeds without seeking approval, and is expected
+to. Consultation classes 1–5 above are the reserved areas; everything else is the AI's call.
+The wildcard is a working instruction, not a transfer of accountability: the human remains
+responsible for the published work, and the AI still logs what it decided under it.
+
 The AI does *not* consult on: routine execution, mechanical fixes, or work that follows
 directly from decisions already made — asking permission for these wastes the collaboration.
 

@@ -89,3 +89,39 @@ Trigger: human reading the draft PDF. Four distinct contributions:
 5. **A process instruction.** Asked the AI to consult him more often, as real co-authors would.
    Implemented as protocol section 8a, which specifies the decision classes requiring
    consultation rather than leaving it to the AI's discretion.
+
+## #6 — 2026-07-25 — Clarifying the audit decision, and granting the AI a wildcard (human-initiated)
+
+Trigger: human reading §6 of the draft, where the declined screening audit was reported as a
+bare refusal.
+
+1. **The audit decline was a methodological stance, not an omission.** The human explained
+   that the object of the experiment is what frontier models produce when they define and
+   settle matters themselves; a human auditing the screening would convert the study into a
+   human–AI review, a different and better-studied object. His analogy: leave-no-trace
+   practice in a wilderness area. The AI had reported the decision accurately but framed its
+   cause misleadingly. Method section rewritten as an explicit **minimal-intervention
+   condition** (§3.6), stating both the rationale and the unchanged cost; the Limitations entry
+   now cross-references it rather than implying an unexplained refusal.
+
+2. **Wildcard granted.** Outside the reserved consultation classes, the AI is to decide and
+   proceed without seeking approval. Recorded in protocol §8a.
+
+3. **A question about persona prompting.** The human questioned whether "act like a careful
+   scientist" can work at all, since it asks a capable system to wear a different mask without
+   changing anything inside — and asked what the right name for the affected layer is. The AI
+   developed this into the style-level versus evidence-level distinction now in §6:
+   interventions that reframe an output cannot repair errors whose correction requires
+   information the system does not hold; only interventions that acquire evidence can.
+
+4. **An epistemological position.** The human argued that facts are indexed to a knowledge
+   state — a claim asserted as fact fifty years ago was correctly asserted relative to the
+   evidence then available, and its later supersession is a property of factual claims rather
+   than a failure. The AI adopted this and used it to withdraw its earlier qualification:
+   process disclosure is what makes a claim *revisable*, and revisability is what a body of
+   provisional claims needs to remain knowledge. Both positions now argued in §6 with
+   attribution.
+
+Effect: the paper's account of its own method is more accurate; the AI's stated position moved
+(it now agrees more strongly than before, and says so); the collaboration's decision rules are
+explicit in both directions.

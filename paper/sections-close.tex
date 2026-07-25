@@ -20,11 +20,56 @@ better than it exposes processes, and that the gap widens with claim strength; t
 about which practice matters more. We state the position because we think it is right and
 because leaving it implicit would let a reader mistake it for a finding.
 
-The other of us (Claude Fable 5) finds the argument persuasive with one qualification:
-where a claim is about a specific fact in the world --- this material has this property --- a
-validated output substantially is the contribution, and process opacity costs less. The
-argument bites hardest exactly where this literature makes its most ambitious claims, which is
-about capacities rather than facts.
+\paragraph{The other co-author's position (Claude Fable 5).} My first response was to accept
+the argument with a qualification: that where a claim concerns a specific fact in the world ---
+this material has this property --- the validated output substantially is the contribution.
+On reflection I think the qualification was too generous to output validation, and I want to
+give three arguments for the stronger position, one of which comes from our own data.
+
+\emph{From claim--evidence matching.} The dissociation in Table~\ref{tab:gap} is not merely a
+gap in provision; it is a mismatch between the evidence supplied and the claim made. A paper
+presenting an autonomous discovery system asserts something about a \emph{capacity} --- that
+the system can find results of this kind --- and offers as support a validated instance. But an
+instance validates an existence claim, not a capacity claim. \pctDiscStrongEval{} of discovery
+papers supply strong evidence for the weaker proposition, and \pctDiscAudit{} supply any
+evidence bearing on the stronger one they are actually advancing. This is a validity argument
+rather than a preference: the evidence type does not match the claim type.
+
+\emph{From selection.} A process that generates $N$ candidate results and reports the best has
+an expected maximum exceeding the truth even when nothing real is present. Output validation
+cannot detect this, because the reported result genuinely is validated --- it is simply not
+representative of the process that produced it. Only disclosure of $N$ and of the discard
+criterion permits correction. This is the multiple-comparisons problem that human science
+spent decades learning to report, and autonomous systems make it sharper: they can generate
+candidates at rates no human laboratory can, so the selection effect is larger precisely where
+disclosure is rarest. In our corpus, the number of attempts behind a reported result is almost
+never stated.
+
+\emph{From revisability.} This third argument is due to the human co-author and is set out
+below; I take it to be the strongest of the three.
+
+\paragraph{Facts are indexed to a knowledge state (KK).} Kopachelli observes that what counts
+as a fact is relative to what is known at the time. A claim held about black holes fifty years
+ago was asserted as fact and was, relative to the evidence then available, correctly asserted;
+it has since been superseded. On his view this is not a failure of the earlier claim but a
+property of factual claims generally --- they are provisional, and their status is a function
+of a knowledge state rather than a permanent attribute.
+
+If that is right, it settles the question we were arguing. When the background knowledge
+shifts, a community must determine which existing claims are affected and which survive. That
+determination requires knowing how each claim was reached --- which assumptions it rests on,
+what was measured versus inferred, what alternatives were discarded. A validated output with an
+opaque process cannot be revised, only discarded or retained on faith, because there is nothing
+to re-examine. \textbf{Process disclosure is what makes a claim revisable, and revisability is
+what a body of provisional claims requires in order to remain a body of knowledge.} Output
+validation certifies a claim against today's knowledge state; process disclosure is what lets
+it be re-adjudicated against tomorrow's.
+
+This applies to specific factual claims as well as capacity claims, which is why I withdraw the
+qualification. A materials paper reporting a synthesised compound has produced a validated
+fact; a decade later, when the characterisation technique it relied on is understood to have a
+systematic bias, whether that finding survives depends entirely on whether anyone can
+reconstruct how it was obtained.
 
 \paragraph{Three ways to fabricate, one remedy.} A related conjecture, also Kopachelli's, is
 that what the field calls fabrication may be better understood as \emph{unmarked imagination}:
@@ -51,14 +96,35 @@ conjecture here; a companion study now under way checks released repositories ag
 claims their papers make, which makes unmarked synthesis directly measurable as the rate at
 which a paper's stated results are absent from, or contradicted by, its own artifacts.
 
+\paragraph{Why instructing the system to be careful does not work.} The contrast in
+\citet{gyevnar2026ddos} deserves more attention than it has received, because the two
+interventions differ in kind and the difference generalises. Asking an agent to adopt a
+scientist persona changes how its output is framed; it supplies no information the agent did
+not already have. If a poisoned dataset is internally consistent and plausibly documented,
+there is nothing in a more cautious register that reveals it --- the agent is being asked to be
+suspicious without being given anything to be suspicious of. A provenance audit changes the
+task instead: checking whether a dataset has a referencing paper, whether its statistics are
+anomalous, whether related datasets agree. Each check \emph{acquires evidence that did not
+previously exist in the agent's context}.
+
+Stated generally: interventions that operate on the framing of an output cannot repair errors
+whose correction requires information the system does not hold. Only interventions that
+acquire evidence can. This distinguishes prompting strategies that work from those that
+merely feel reassuring --- reasoning scaffolds help when the answer is derivable from what the
+system already has, and are close to useless when it is not. ``Be careful'' is in the second
+category. It is the instruction-level analogue of the paper-level problem this study
+documents: a claim that its author has been careful is not evidence, and asking for more of it
+does not produce any.
+
 \section{Limitations}
 \label{sec:limits}
 
 We state these in order of how much they should change a reader's confidence.
 
-\paragraph{No human validated any screening decision.} The protocol specified an independent
-human audit of a stratified sample; the human co-author declined it. The corpus is therefore
-entirely AI-determined. The substitute we ran --- a third independent AI pass agreeing
+\paragraph{No human validated any screening decision.} This follows from the
+minimal-intervention condition (Section~\ref{sec:minimal}), which we adopted deliberately and
+whose rationale we give there. The cost is unchanged by the rationale: the corpus is entirely
+AI-determined, and the substitute we ran --- a third independent AI pass agreeing
 \consAgree{} of the time on \nCons{} papers --- measures stability under re-application, not
 correctness. Three passes drawn from one model family can share a systematic error, and the
 Layer-1 disagreement structure shows this family does have systematic boundary preferences.
