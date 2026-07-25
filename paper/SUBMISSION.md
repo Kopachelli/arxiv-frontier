@@ -15,19 +15,42 @@ explicit per-item approval (protocol §8a.4).
 
 ## arXiv submission
 
-**Category.** Primary `cs.DL` (Digital Libraries) — the paper is a bibliometric/systematic
-map of a literature, which is squarely cs.DL. Cross-list `cs.AI` and `cs.CY`.
-Rationale for not making cs.AI primary: the contribution is about the literature's evidentiary
-practices, not a new AI method; cs.DL moderation is also a more natural fit and historically a
-more accessible endorsement path for a first-time submitter.
+**Category — CORRECTED 2026-07-26.** Primary **`cs.AI`**; cross-list `cs.DL` and `cs.CY`.
 
-**Endorsement.** Khristian is a first-time arXiv submitter, so cs.DL will require endorsement
-by an established author in that category. Options, in order of likely success:
-1. Ask a corresponding author of a paper we cite whose work we engage substantively — the
-   auditability thread (Takahara & Mizoguchi; Li; Ning et al.) is the natural approach, since
-   our results directly extend their argument.
-2. Ask a cs.DL-active researcher in scientometrics/meta-science.
-3. Post to Zenodo first (no endorsement required), then request endorsement citing the DOI.
+The original plan named `cs.DL` primary. That was wrong on a dimension the AI had not
+checked: **arXiv endorsement is category-specific**, and none of the candidate endorsers whose
+work this paper most directly extends publish in cs.DL. Verified with
+`code/find_endorsers.py`:
+
+| candidate | categories | can endorse cs.DL? |
+|---|---|---|
+| Takahara & Mizoguchi (2607.09195) | cs.AI, cond-mat.mtrl-sci | no |
+| Ning et al. (2607.17100) | cs.MA, cs.AI, cs.SE | no |
+| Li (2606.31273) | cs.LG | no |
+| Wang (2607.05682) | cs.AI | no |
+| Brzozowski & Chung (2606.02184) | **cs.DL**, cs.LG | yes |
+| Gyevnár, Kasirzadeh & Shah (2607.10712) | cs.CR, cs.AI, **cs.DL** | yes |
+
+Choosing cs.AI primary is defensible on the merits, not merely on convenience: the object of
+the study is AI systems and their evidentiary practices, and cs.AI is where the mapped
+literature lives and where the audience that should act on the findings reads. Cross-listing
+to cs.DL preserves reach into scientometrics and meta-research.
+
+**Endorsement (cs.AI).** Two drafts prepared in Gmail on 2026-07-26, not sent:
+1. **Takahara & Mizoguchi** (`kougen@iis.u-tokyo.ac.jp`, `teru@iis.u-tokyo.ac.jp`) — closest
+   intellectual neighbours; our results are the field-scale evidence for their argument.
+2. **Jingjie Ning et al.** (`jening@cs.cmu.edu`, cc `kegl@dp.tech`) — their held-out-transfer
+   method is one of the positive exemplars in our findings.
+
+Addresses were read from the papers' own PDFs (`code/find_endorsers.py`), not guessed.
+
+A third option worth considering if both decline: **Nihar B. Shah** (CMU), co-author of
+arXiv:2607.10712, is prominent in peer-review and meta-science and is cs.DL-active — which
+would also make a cs.DL primary submission viable. No email appears in that PDF, so his
+address would need to be looked up rather than inferred.
+
+If no cs.AI endorsement materialises, the fallback is cs.DL primary with Brzozowski & Chung or
+Shah as endorser; the Zenodo DOI means the work is public and citable either way.
 
 **Authorship compliance.** arXiv does not permit AI systems as authors. Khristian is the sole
 listed author; the AI's role is disclosed in the title-page footnote, §8 Contribution

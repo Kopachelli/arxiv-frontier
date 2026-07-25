@@ -152,6 +152,33 @@ pointed the same direction as the aggregate numbers. Nothing but recomputing and
 the specific cross-tabulation caught it. Note also that the corrected finding is
 *sharper* than the wrong one — following the data cost nothing scientifically.
 
+## #8 — 2026-07-26 — Phase 7 (submission) — Recommendation made without checking a
+## necessary condition
+
+**Description.** The AI recommended `cs.DL` as the arXiv primary category and, in the same
+document, recommended Takahara & Mizoguchi as the preferred endorsers. Both recommendations
+were reasonable in isolation and jointly impossible: arXiv endorsement is category-specific,
+and those authors publish in cs.AI and cond-mat, not cs.DL. The same defect applied to two of
+the three named candidates.
+
+**How caught.** Before drafting the request, the AI checked the candidates' actual arXiv
+categories mechanically (`code/find_endorsers.py`) rather than relying on its own earlier
+reasoning. Four of six candidates could not have endorsed for the recommended category.
+
+**Consequence.** None realised — caught before any request was sent. Had it not been, the
+human co-author would have written to researchers who were unable to help, in his own name.
+
+**Correction.** Primary category changed to cs.AI (defensible on the merits: it is where the
+mapped literature and its audience live), cs.DL retained as a cross-list, and the endorser
+analysis rebuilt from verified category data.
+
+**Why this matters for RQ4.** The failure is not a hallucinated fact but an **unchecked
+precondition**: two individually sound recommendations that could not both hold. This kind of
+error survives review easily, because each half reads as correct and nothing in the text
+signals that a joint constraint exists. It is also a case where the cost would have been borne
+by the human — the AI's error would have reached third parties under his signature. That
+asymmetry is worth naming: an AI collaborator's mistakes are not always paid for by the AI.
+
 ## #7 — 2026-07-26 — Phase 7 (deposit) — A failed action that partially succeeded
 
 **Description.** While filling the Zenodo deposit form, a long description was typed into
