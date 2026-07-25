@@ -58,7 +58,7 @@ links in both records resolve.
 
 ## Before any of this: things worth your eyes
 
-1. **Read §3.6 and §6.** §3.6 is the minimal-intervention condition — I rewrote it after your
+1. **Read §3.5 and §6.** §3.5 is the minimal-intervention condition — I rewrote it after your
    explanation, and you should check that it represents your reasoning accurately rather than
    my paraphrase of it. §6 puts two arguments in your name; make sure you actually hold them
    as stated.

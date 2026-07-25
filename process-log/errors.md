@@ -151,3 +151,28 @@ the evidence was complete, which would have survived review because it sounded r
 pointed the same direction as the aggregate numbers. Nothing but recomputing and reading
 the specific cross-tabulation caught it. Note also that the corrected finding is
 *sharper* than the wrong one — following the data cost nothing scientifically.
+
+## #7 — 2026-07-26 — Phase 7 (deposit) — A failed action that partially succeeded
+
+**Description.** While filling the Zenodo deposit form, a long description was typed into
+the rich-text editor in a single browser action. The action **returned an explicit error**
+("Input.dispatchKeyEvent timed out; the renderer may be frozen"). The AI treated this as a
+failure and re-entered the text in smaller chunks. The first attempt had in fact partially
+landed, so the saved description contained several duplicated paragraphs.
+
+**How caught.** The AI screenshotted the description field to verify the content rather
+than trusting the sequence of successful-looking type actions, and saw the repetition.
+
+**Consequence.** None published — caught while the record was still an unpublished draft.
+The field was cleared and re-entered, and the rendered preview was checked before stopping.
+A stray empty required-field row, introduced by the select-all-and-delete recovery, was
+also found and removed in the same check.
+
+**Why this matters for RQ4.** The error signal was *wrong in the dangerous direction*: a
+timeout reported failure, but the action had partly succeeded. An agent that trusts error
+messages symmetrically with success messages will corrupt state precisely here — retrying
+an operation it believes did not happen. This is the mirror image of failure #2, where a
+success signal reported work that had not happened. Together they make the general point:
+**an autonomous system's own status reports are not evidence about the world; only
+inspecting the resulting state is.** That is the same claim this paper makes about the
+literature it maps, arrived at from our own operational logs.
