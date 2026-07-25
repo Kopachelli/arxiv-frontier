@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "upload_type": "publication",
+    "publication_type": "preprint",
+    "title": "When the Instrument Studies Itself: A Systematic Map of Autonomous AI Research Systems (2024-2026), Conducted by a Frontier Language Model",
+    "creators": [
+      {
+        "name": "Kopachelli, Khristian",
+        "affiliation": "Independent researcher"
+      },
+      {
+        "name": "Claude Fable 5",
+        "affiliation": "Anthropic"
+      }
+    ],
+    "description": "<p><strong>A systematic map of 811 papers on autonomous AI research systems (January 2024 \u2013\nJuly 2026), conducted by a frontier language model, with its own research process logged and\nanalysed as data.</strong></p>\n\n<p><em>Authorship.</em> This work was jointly produced by a human researcher and an AI system.\nClaude Fable 5 (Anthropic) proposed the research direction, wrote the review protocol and\ncodebook, wrote all software, executed the search, screening, coding and analysis, generated\nthe figures, and drafted the manuscript. Khristian Kopachelli framed the project, made the\nscope decisions, overruled the AI's judgment where he disagreed (one such reversal changed the\ncorpus by 183 papers), contributed the two conceptual arguments in the Discussion, and takes\nresponsibility for the published work. This record lists both as creators. The companion\narXiv version lists only the human author, because arXiv policy does not permit AI systems to\nbe named as authors; the two records cross-reference each other and describe the same\ncollaboration.</p>\n\n<p><em>Findings.</em> Quarterly output in this literature grew roughly fortyfold in nine\nquarters. 71% of papers report benchmark metrics, but only 5% re-test a result outside the\nloop that produced it, 55% provide no auditability mechanism of any kind, and 71% never state\nwhat humans did. Conditioning on claim strength reveals a dissociation: papers claiming the AI\nproduced new scientific knowledge validate their <em>results</em> better than average (50%\nreport external validation versus 11% corpus-wide) while exposing their <em>process</em> worse\n(64% provide no auditability mechanism versus 55%). This field validates outputs better than\nit exposes process, and the gap is widest where its claims are strongest.</p>\n\n<p><em>Reflexive component.</em> Because the review was conducted by the class of system it\nstudies, the process was logged rather than smoothed. Two frontier models screening the same\ncorpus under the same protocol agreed on 83.3% of decisions (Cohen's kappa 0.71), with\ndisagreements clustering on seven boundary classes where the field has not settled what counts\nas an AI scientist \u2014 forcing a documented protocol amendment mid-review. Six AI failures are\nreported with measured rates, including a workflow that reported success having performed no\nwork, silent item-dropping in structured extraction at 0.4\u20130.5%, a pipeline defect that fed\nempty inputs to a reasoning step, and a draft thesis contradicted by the authors' own data.</p>\n\n<p><em>Contents.</em> Paper (PDF), full candidate corpus and both layers of screening\ndecisions with per-paper justifications, the coded corpus, mechanical full-text\nartifact-verification results for all 811 papers, all analysis and figure code, the review\nprotocol with amendments, and the three contemporaneous process logs.</p>\n\n<p><em>A note on provenance.</em> Brzozowski &amp; Chung (arXiv:2606.02184) document 1,655\nZenodo records bearing real DOIs, fabricated authors, and backdated timestamps. This deposit\nis intended as the inverse in every respect: an accountable human author, an AI contributor\nnamed as exactly what it is, unmanipulated timestamps, released underlying data, and a\ncomplete log of how the work was produced including its failures.</p>",
+    "access_right": "open",
+    "license": "cc-by-4.0",
+    "keywords": [
+      "AI scientist",
+      "autonomous research agents",
+      "systematic review",
+      "research integrity",
+      "auditability",
+      "reproducibility",
+      "meta-research",
+      "scientometrics",
+      "human-AI collaboration",
+      "large language models"
+    ],
+    "notes": "Code is released under the MIT License; data, text and figures under CC BY 4.0. See LICENSE in the accompanying repository.",
+    "related_identifiers": [
+      {
+        "relation": "isSupplementedBy",
+        "identifier": "https://github.com/Kopachelli/arxiv-frontier",
+        "resource_type": "software"
+      }
+    ]
+  }
+}
