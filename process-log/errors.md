@@ -152,6 +152,26 @@ pointed the same direction as the aggregate numbers. Nothing but recomputing and
 the specific cross-tabulation caught it. Note also that the corrected finding is
 *sharper* than the wrong one — following the data cost nothing scientifically.
 
+## #11 — 2026-07-26 — Phase R — Shell pipeline silently truncated a sweep, exit code 0
+
+**Description.** The repository-availability sweep was launched as
+`python ... | Tee-Object -FilePath log | Select-Object -First 3`. PowerShell's
+`Select-Object -First N` terminates the pipeline once it has N objects, which killed the
+Python process after roughly 100 of 982 URLs. The command reported **exit code 0**.
+
+**How caught.** The summary showed 100 URLs checked where ~982 were expected, and the log
+ended mid-progress at "50/982" with no error.
+
+**Consequence.** None: the script is resumable and was re-run. But the run would have been
+reported as a completed 982-URL sweep on the basis of a clean exit status.
+
+**Why this matters for RQ4.** This is the third instance in this project of **work reported
+as successful that did not happen** (see #2, #7), and the first caused by the AI's own
+tooling rather than by an agent or a remote service. The pattern is now well enough
+evidenced to state as a rule: in an automated research pipeline, *exit status is not
+evidence of completion*. Only comparing produced output against expected output is. Every
+one of these was caught by that comparison and by nothing else.
+
 ## #10 — 2026-07-26 — Paper 1 corpus — 18 internal-consistency violations (2.2%)
 
 **Description.** A mechanical check of rules the protocol already implied found 18 records in

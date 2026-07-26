@@ -1,0 +1,23 @@
+982 repo URLs; 0 done; 982 to check
+using GITHUB_TOKEN (5000 req/hr)
+  50/982
+982 repo URLs; 100 done; 882 to check
+using GITHUB_TOKEN (5000 req/hr)
+  50/882
+  100/882
+  150/882
+  200/882
+  250/882
+  300/882
+  350/882
+  400/882
+  450/882
+  500/882
+  550/882
+  600/882
+  650/882
+  700/882
+  750/882
+  800/882
+  850/882
+done -> data/phase-r-availability.csv
