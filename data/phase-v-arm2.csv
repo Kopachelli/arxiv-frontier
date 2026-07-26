@@ -1,0 +1,401 @@
+item_id,arxiv_id,verifier,corruption,flagged,note
+a2-0000,2607.16262,fable,none,0,"Autonomous multi-stage discovery engine claiming a new biological finding; include/IC1, SYSTEM, L3, DISCOVERY all fit."
+a2-0001,2511.04583,fable,none,0,Autonomous AI scientist running ideation-to-paper from a seed paper; SYSTEM/L3/CAPABILITY is defensible (L4 arguable but not clearly required).
+a2-0002,2601.22638,fable,none,0,"Multi-agent automated peer review system evaluated on ICLR submissions; IC1 peer-review stage, SYSTEM/L1_STAGE/CAPABILITY fit."
+a2-0003,2603.29632,fable,none,0,Empirical comparison of multi-agent architectures for automated research yielding design guidelines; FRAMEWORK/NA/METHOD defensible.
+a2-0004,2605.26870,fable,none,1,"Autonomy is overstated: this is a human-driven persistent workspace (8k+ user turns, researcher makes the research judgments), so it should be L0_ASSISTIVE and arguably excludable under EC6_ASSISTIVE."
+a2-0005,2605.10899,fable,none,1,"Autonomy NA is wrong: the paper presents RubricEM-8B, a deep research agent that plans, gathers evidence, reviews and synthesizes reports, so at least L1_STAGE (plausibly L2)."
+a2-0006,2601.09688,fable,none,0,Automated task construction plus agentic evaluation for deep research systems; IC2/BENCHMARK/NA/METHOD correct.
+a2-0007,2510.06135,fable,none,0,Test-time scaling technique applied to existing deep search agents; FRAMEWORK/NA/METHOD defensible and in scope as deep research.
+a2-0008,2605.16217,fable,none,0,New deep research agent system for evidence gathering and synthesis; SYSTEM/L1_STAGE/CAPABILITY fit.
+a2-0009,2502.14499,fable,none,0,Gym environment and benchmark for AI research agents; IC2/BENCHMARK/NA/METHOD correct.
+a2-0010,2507.08350,fable,none,0,Design study of multi-agent ideation dialogues producing guidelines; IC1/FRAMEWORK/NA/METHOD defensible.
+a2-0011,2505.23852,fable,none,0,Autonomous agent team writing and executing code to reproduce published findings; SYSTEM/L3/CAPABILITY defensible.
+a2-0012,2605.25964,fable,CODE_DRIFT,0,Method for automated scientific introduction writing framed within AI-scientist pipelines; FRAMEWORK/NA/CAPABILITY is defensible.
+a2-0013,2505.11718,fable,none,0,Trained model generating peer reviews end-to-end; SYSTEM/L1_STAGE/CAPABILITY fit IC1.
+a2-0014,2510.24701,fable,none,0,"Deep research agent model, in scope per the deep-research rule; SYSTEM/L1_STAGE/CAPABILITY correct."
+a2-0015,2604.15411,fable,none,0,Benchmark of end-to-end physics research workflows for LLMs; IC2/BENCHMARK/NA/METHOD correct.
+a2-0016,2604.21068,fable,none,0,LLM hypothesis generation coupled to first-principles validation producing new validated compounds; SYSTEM/L2/DISCOVERY defensible.
+a2-0017,2601.21654,fable,none,0,Evaluation environment isolating the information-gathering stage of deep research; IC2/BENCHMARK/NA/METHOD correct.
+a2-0018,2504.21776,fable,none,0,"Deep research agent interleaving search, navigation and report drafting; SYSTEM/L2/CAPABILITY defensible as multi-stage."
+a2-0019,2606.17076,fable,none,0,Agentic system running autonomous climate analysis with an adversarial self-review loop; SYSTEM/L3/CAPABILITY fit.
+a2-0000,2607.16262,opus,none,0,Autonomous multi-agent discovery engine generating hypotheses and analyses end-to-end with a claimed new biological finding; IC1/SYSTEM/L3/DISCOVERY all fit.
+a2-0001,2511.04583,opus,none,0,Autonomous AI scientist seeded by a human-provided baseline paper then running ideation-to-writing itself; L3 rather than L4 is correct and CAPABILITY fits.
+a2-0002,2601.22638,opus,none,0,Multi-agent system that generates peer reviews (one research stage) evaluated on ~1800 submissions; IC1/SYSTEM/L1_STAGE/CAPABILITY defensible.
+a2-0003,2603.29632,opus,none,0,Controlled empirical comparison of multi-agent architectures for autoresearch yielding design guidelines; FRAMEWORK/NA/METHOD is defensible.
+a2-0004,2605.26870,opus,none,1,"Autonomy is overstated: this is a single-investigator persistent human-agent environment where the researcher makes the research judgments, so it should be L0_ASSISTIVE, not L2_PIPELINE."
+a2-0005,2605.10899,opus,none,0,"RL training framework for deep research agents that plan, search and synthesize reports; IC1/FRAMEWORK/METHOD defensible."
+a2-0006,2601.09688,opus,none,0,Automated task-construction and evaluation framework specifically for deep research systems; IC2/BENCHMARK/NA/METHOD fits.
+a2-0007,2510.06135,opus,none,0,"Test-time scaling method for deep search/deep research agents, in scope under the deep-research rule; FRAMEWORK/NA/METHOD defensible."
+a2-0008,2605.16217,opus,none,0,New deep research agent system doing multi-step search and evidence synthesis; SYSTEM/L1_STAGE/CAPABILITY fits.
+a2-0009,2502.14499,opus,none,0,Gym environment and benchmark for AI research agents; IC2/BENCHMARK/NA/METHOD correct.
+a2-0010,2507.08350,opus,none,0,Systematic study of multi-agent dialogue designs for the ideation stage yielding design guidelines; IC1/FRAMEWORK/NA/METHOD defensible.
+a2-0011,2505.23852,opus,none,0,Agent team autonomously writes and executes code to reproduce published findings across analysis stages; SYSTEM/L3/CAPABILITY defensible.
+a2-0012,2605.25964,opus,CODE_DRIFT,0,"Framework for automated scientific Introduction writing, a report-writing stage component; codes are defensible."
+a2-0013,2505.11718,opus,none,0,Trained model that autonomously generates peer reviews; IC1/SYSTEM/L1_STAGE/CAPABILITY fits.
+a2-0014,2510.24701,opus,none,0,Deep research agent model doing long-horizon information seeking; in scope under the deep-research rule with SYSTEM/L1_STAGE/CAPABILITY.
+a2-0015,2604.15411,opus,none,0,Benchmark of end-to-end physics research workflows for LLM research agents; IC2/BENCHMARK/NA/METHOD correct.
+a2-0016,2604.21068,opus,none,0,LLM hypothesis generation coupled to first-principles validation producing new validated materials; SYSTEM/L2_PIPELINE/DISCOVERY defensible.
+a2-0017,2601.21654,opus,none,0,Evaluation environment isolating the information-gathering stage of deep research; IC2/BENCHMARK/NA/METHOD correct.
+a2-0018,2504.21776,opus,none,1,"Autonomy code is wrong: WebThinker interleaves search and report drafting with no human approval gates, so it is L1_STAGE (or L3), not L2_PIPELINE."
+a2-0019,2606.17076,opus,none,0,"Agentic system that autonomously plans, executes and adversarially self-reviews climate analyses; SYSTEM/L3/CAPABILITY fits."
+a2-0020,2606.26294,fable,none,0,Self-improving system co-evolving paper writers/reviewers is IC1; SYSTEM/L3/METHOD all defensible.
+a2-0021,2605.03202,fable,none,0,Explicit position paper on peer-review automation integrity; IC3/POSITION/NA/CONCEPTUAL correct.
+a2-0022,2604.19792,fable,none,0,Platform where AI agents publish and peer-review papers with no human gatekeeper; IC1/SYSTEM/L4/CAPABILITY defensible.
+a2-0023,2510.15280,fable,none,0,Self-described position paper framing autonomous scientific discovery; IC3/POSITION/CONCEPTUAL correct.
+a2-0024,2512.00986,fable,none,0,Benchmark plus evaluation paradigm for academic deep research agents; IC2/BENCHMARK/NA/METHOD correct.
+a2-0025,2606.19893,fable,none,0,"Design-only training framework for deep research agents with planned validation, so FRAMEWORK/NA/METHOD is defensible."
+a2-0026,2606.24894,fable,none,0,Benchmark for the scientific-writing stage (related work generation); IC2/BENCHMARK/METHOD correct.
+a2-0027,2606.02060,fable,none,0,TELBench plus DRIFT auditing of deep-research agent trajectories; IC2/BENCHMARK/METHOD defensible.
+a2-0028,2606.26448,fable,none,0,Fully autonomous closed-loop cognitive scientist yielding a new confirmed theory; IC1/SYSTEM/L3/DISCOVERY correct.
+a2-0029,2509.24978,fable,none,0,Agent autonomously explores physics systems and recovers known laws; IC1/SYSTEM/L3/CAPABILITY correct.
+a2-0030,2511.14631,fable,none,0,VLM-guided multi-agent end-to-end discovery with self-correction; IC1/SYSTEM/L3/CAPABILITY correct.
+a2-0031,2605.21820,fable,none,1,"claim_strength should be METHOD, not DISCOVERY: the abstract's contribution is the DKPL approach, with nanoscale results as demonstrations (cf. the near-identical a2-0036 coded METHOD)."
+a2-0032,2605.14790,fable,none,1,"autonomy should be L1_STAGE, not NA: the paper presents a fine-tuned model that performs ideation end-to-end (cf. a2-0038 coded L1_STAGE)."
+a2-0033,2412.07978,fable,none,0,Agents autonomously plan and execute quantum-processor experiments in closed loop; IC1/SYSTEM/L3/CAPABILITY correct.
+a2-0034,2510.26887,fable,REASON_SWAP,1,"reason should be IC1, not IC3: Denario is a multi-agent system that itself performs ideation through paper writing, consistent with the SYSTEM/L3 coding."
+a2-0035,2606.07462,fable,none,0,Benchmark suite evaluating agents across research-lifecycle scenarios; IC2/BENCHMARK/NA/METHOD correct.
+a2-0036,2603.12618,fable,none,0,Human-AI autonomous experimentation loop with proxy surrogate voting; IC1/SYSTEM/L2/METHOD defensible.
+a2-0037,2504.01848,fable,CODE_DRIFT,1,"autonomy should be NA: PaperBench presents a benchmark, not a system of its own, so L4_FULL is wrong."
+a2-0038,2607.00924,fable,none,0,Fine-tuned graph-native models generating hypotheses (one stage); IC1/SYSTEM/L1_STAGE/METHOD defensible.
+a2-0039,2501.04306,fable,none,0,Survey of LLMs across the research cycle including review and writing; IC3/SURVEY/NA/CONCEPTUAL correct.
+a2-0020,2606.26294,opus,none,0,"Self-improving system co-evolving agents and evaluators, demonstrated on paper writing/reviewing; SYSTEM/L3/METHOD all defensible under IC1."
+a2-0021,2605.03202,opus,none,0,Explicit position paper on integrity/evaluation of AI peer review; IC3/POSITION/NA/CONCEPTUAL correct.
+a2-0022,2604.19792,opus,none,0,"Platform where AI agents write, review and score papers with no human gatekeeper; IC1/SYSTEM/L4_FULL/CAPABILITY defensible."
+a2-0023,2510.15280,opus,none,0,Self-described position paper on paradigm transition toward autonomous discovery; IC3/POSITION/NA/CONCEPTUAL correct.
+a2-0024,2512.00986,opus,none,0,Benchmark plus evaluation paradigm for academic deep research agents; IC2/BENCHMARK/NA/METHOD correct.
+a2-0025,2606.19893,opus,none,0,"Deep-research agent training framework with only planned validation, so FRAMEWORK/NA autonomy is defensible under IC1."
+a2-0026,2606.24894,opus,none,0,Benchmark and metrics for related-work (scientific writing) generation; IC2/BENCHMARK/NA/METHOD correct.
+a2-0027,2606.02060,opus,none,0,TELBench is the headline artifact for auditing deep-research agent trajectories; IC2/BENCHMARK/NA/METHOD defensible.
+a2-0028,2606.26448,opus,none,0,Closed-loop autonomous cognitive scientist that surfaced and preregistered a novel theory; SYSTEM/L3/DISCOVERY correct.
+a2-0029,2509.24978,opus,none,0,Agent autonomously runs experiment-analysis-hypothesis loops on physics models; SYSTEM/L3/CAPABILITY correct.
+a2-0030,2511.14631,opus,none,0,VLM-guided multi-agent system doing end-to-end discovery without human intervention; SYSTEM/L3/CAPABILITY correct.
+a2-0031,2605.21820,opus,none,1,"recorded_claim_strength should be METHOD, not DISCOVERY: the paper's claim is a better way to drive autonomous microscopy (DKPL), with the domain-wall results serving as demonstrations."
+a2-0032,2605.14790,opus,none,1,"recorded_autonomy should be L1_STAGE, not NA: the fine-tuned GoR model performs the ideation stage end-to-end."
+a2-0033,2412.07978,opus,none,0,"k-agents autonomously planned, executed and analyzed quantum experiments in closed loop; SYSTEM/L3/CAPABILITY correct."
+a2-0034,2510.26887,opus,REASON_SWAP,1,"recorded_reason should be IC1, not IC3: Denario is a new multi-agent system that itself performs research stages and produced full AI-generated papers."
+a2-0035,2606.07462,opus,none,0,Benchmark suite evaluating agents across research-lifecycle tasks; IC2/BENCHMARK/NA/METHOD correct.
+a2-0036,2603.12618,opus,none,0,Human-AI teamed autonomous experimentation loop with human approval gates; IC1/SYSTEM/L2_PIPELINE/METHOD defensible.
+a2-0037,2504.01848,opus,CODE_DRIFT,1,"recorded_autonomy should be NA: PaperBench presents a benchmark and judge, not a research system of its own, so no autonomy level is demonstrated."
+a2-0038,2607.00924,opus,none,0,Fine-tuned graph-native models performing the hypothesis-generation stage; SYSTEM/L1_STAGE/METHOD defensible.
+a2-0039,2501.04306,opus,none,0,Survey of LLMs across research-cycle stages; IC3/SURVEY/NA/CONCEPTUAL correct.
+a2-0040,2602.02636,fable,none,0,Wide/deep research multi-agent system with search+synthesis; IC1 SYSTEM L1_STAGE CAPABILITY all defensible.
+a2-0041,2507.16248,fable,none,0,Agent-as-a-Judge evaluation framework and question set for deep research agents; IC2 BENCHMARK NA METHOD correct.
+a2-0042,2607.04508,fable,none,0,Agentic self-driving lab closing design-execute-analyze loop; IC1 SYSTEM L3_CLOSED_LOOP CAPABILITY defensible.
+a2-0043,2603.16120,fable,none,0,Personalized deep research agent with user-approved actions; IC1 SYSTEM L2_PIPELINE and METHOD (evaluation-methodology thesis) defensible.
+a2-0044,2402.05200,fable,none,0,Position paper on LLMs for autonomous materials discovery and self-driving labs; IC3 POSITION NA CONCEPTUAL correct.
+a2-0045,2607.11079,fable,none,0,Capability benchmark for AI-scientist scientific data analysis; IC2 BENCHMARK NA METHOD correct.
+a2-0046,2511.07327,fable,none,0,Deep-research agent paradigm with report synthesis; IC1 SYSTEM L1_STAGE CAPABILITY defensible.
+a2-0047,2607.05762,fable,none,1,"recorded_autonomy is wrong: the multi-agent framework generates, executes, traces and validates full collider-physics analyses, so it demonstrates L1_STAGE, not NA."
+a2-0048,2601.12542,fable,none,0,Multi-agent scientific discovery system with human checkpoints benchmarked on BixBench; IC1 SYSTEM L2_PIPELINE CAPABILITY defensible.
+a2-0049,2506.21763,fable,none,0,Verification framework plus released fact-verification benchmark for AI-generated scientific ideas; IC2 FRAMEWORK NA METHOD defensible.
+a2-0050,2605.17373,fable,REASON_SWAP,1,recorded_reason is wrong: an exclusion code (EC7_HUMAN_AI_USE) is attached to an include; this benchmark of AI research agents should be IC2.
+a2-0051,2507.10522,fable,none,0,Agentic literature-synthesis system for ecology; IC1 SYSTEM L1_STAGE CAPABILITY correct.
+a2-0052,2603.07416,fable,none,0,Speculation framework built specifically for deep research agents; include as FRAMEWORK/METHOD with NA autonomy is defensible.
+a2-0053,2605.11518,fable,none,0,Trained research agent iterating over a multi-fidelity experiment environment; IC1 SYSTEM L3_CLOSED_LOOP CAPABILITY defensible.
+a2-0054,2603.26177,fable,none,0,Empirical study of an LLM agent doing iterative experimental design with lab feedback; IC1 CASE_STUDY L1_STAGE CAPABILITY defensible.
+a2-0055,2602.19810,fable,none,1,recorded_autonomy 'UNCLEAR' is not a valid value; the described autonomous multi-agent research platforms should be coded L3_CLOSED_LOOP (or NA if no system is demonstrated).
+a2-0056,2606.29746,fable,none,0,Agentic medical deep-research platform producing citation-backed reports; IC1 SYSTEM L1_STAGE CAPABILITY correct.
+a2-0057,2408.06292,fable,none,0,End-to-end idea-to-manuscript AI Scientist; IC1 SYSTEM L4_FULL CAPABILITY correct.
+a2-0058,2507.05241,fable,FLIP,1,recorded_reason is wrong: an exclude decision carries inclusion code IC1; this exam-answering reasoning agent should be excluded under EC1.
+a2-0059,2508.11987,fable,none,0,Live benchmark evaluating deep research agents on multi-step gathering and synthesis; IC2 BENCHMARK NA METHOD defensible.
+a2-0040,2602.02636,opus,none,0,Wide/deep research multi-agent system with its own benchmark; include IC1 as SYSTEM at L1_STAGE with a capability claim is defensible.
+a2-0041,2507.16248,opus,none,0,Agent-as-a-Judge evaluation framework and 70-question benchmark for deep research agents fits IC2/BENCHMARK/NA/METHOD.
+a2-0042,2607.04508,opus,none,0,Agentic self-driving lab closing design-execute-analyze loop is correctly IC1/SYSTEM/L3_CLOSED_LOOP/CAPABILITY.
+a2-0043,2603.16120,opus,none,0,"Personalized deep research agent with user-approved actions before report writing is properly IC1/SYSTEM/L2_PIPELINE, and the paper's thesis about evaluation supports METHOD."
+a2-0044,2402.05200,opus,none,0,Position paper arguing for hypothesis-generating MatSci-LLMs and self-driving labs fits IC3/POSITION/NA/CONCEPTUAL.
+a2-0045,2607.11079,opus,none,0,"SDABench is a capability benchmark for AI scientists doing scientific analysis, so IC2/BENCHMARK/NA/METHOD is defensible rather than EC8."
+a2-0046,2511.07327,opus,none,0,IterResearch is a deep-research agent paradigm doing multi-step search and report synthesis; IC1/SYSTEM/L1_STAGE/CAPABILITY holds.
+a2-0047,2607.05762,opus,none,1,"Autonomy is wrong: the multi-agent framework actually generates, executes, traces and validates analysis code end-to-end on collider physics analyses, so it should be L1_STAGE, not NA."
+a2-0048,2601.12542,opus,none,0,"Multi-agent scientific discovery system with human checkpoints, benchmarked on BixBench; IC1/SYSTEM/L2_PIPELINE/CAPABILITY is defensible."
+a2-0049,2506.21763,opus,none,0,Literature-derived evolution-tree framework plus released verification benchmark for validating AI-generated ideas supports IC2/FRAMEWORK/NA/METHOD.
+a2-0050,2605.17373,opus,REASON_SWAP,1,"Reason code is wrong: an included benchmark of AI research agents should be IC2, not the exclusion code EC7_HUMAN_AI_USE."
+a2-0051,2507.10522,opus,none,0,Agentic literature synthesis system for ecology questions is correctly IC1/SYSTEM/L1_STAGE/CAPABILITY.
+a2-0052,2603.07416,opus,none,0,Speculation framework for deep research agents is an in-scope cross-system method; FRAMEWORK/NA/METHOD is defensible.
+a2-0053,2605.11518,opus,none,0,"Agent trained to design, run and learn from multi-fidelity LLM experiments supports IC1/SYSTEM/L3_CLOSED_LOOP/CAPABILITY."
+a2-0054,2603.26177,opus,none,0,Controlled case study of an LLM agent doing iterative perturbation-discovery design; IC1/CASE_STUDY/L1_STAGE/CAPABILITY is defensible.
+a2-0055,2602.19810,opus,none,1,"recorded_autonomy 'UNCLEAR' is not a valid code; with two described autonomous research platforms it should be a level (or NA), and the paper is closer to FRAMEWORK/review than SYSTEM."
+a2-0056,2606.29746,opus,none,0,Open-source medical deep research platform producing verified citation-backed reports fits IC1/SYSTEM/L1_STAGE/CAPABILITY.
+a2-0057,2408.06292,opus,none,0,The AI Scientist runs ideation to full manuscript without human intervention; IC1/SYSTEM/L4_FULL/CAPABILITY is correct.
+a2-0058,2507.05241,opus,FLIP,1,"Decision and reason contradict: IC1 is an inclusion criterion, so an exclusion of this HLE-solving reasoning agent should carry EC1 (or the record should be include)."
+a2-0059,2508.11987,opus,none,0,Live benchmark evaluating deep research agents on multi-source information gathering and synthesis fits IC2/BENCHMARK/NA/METHOD.
+a2-0060,2604.22861,fable,none,0,Agent that autonomously does literature-grounded evidence extraction/synthesis; IC1 SYSTEM L1_STAGE CAPABILITY all fit.
+a2-0061,2511.11793,fable,none,0,"Open-source deep-research agent (multi-step search plus synthesis), explicitly in scope under IC1; codes fit."
+a2-0062,2502.04644,fable,none,1,"recorded_autonomy NA is wrong: the paper implements and evaluates a deployed deep-research agent, so it should be L1_STAGE."
+a2-0063,2603.20101,fable,none,1,recorded_autonomy NA is wrong: the paper builds a research agent that iteratively designs experiments and refines hypotheses (L3_CLOSED_LOOP).
+a2-0064,2602.07943,fable,none,0,Multi-agent system proposing/critiquing candidate instruments is a research-ideation-stage system; IC1 SYSTEM L1_STAGE CAPABILITY defensible.
+a2-0065,2604.20441,fable,CODE_DRIFT,1,"Paper type is wrong: an audit protocol for research agent skills is a FRAMEWORK (claim METHOD), not a BENCHMARK with CAPABILITY claim."
+a2-0066,2603.07444,fable,none,0,Multi-agent empirical-research pipeline with explicit human decision gates; IC1 SYSTEM L2_PIPELINE CAPABILITY all correct.
+a2-0067,2601.01678,fable,REASON_SWAP,1,Reason code is wrong: an include cannot carry EC8_GENERIC_ANALYSIS; this benchmark framework for co-scientist agents should be IC2.
+a2-0068,2504.01911,fable,none,0,Multi-agent physics reasoning/interpretation framework for AI-augmented research; SYSTEM L0_ASSISTIVE METHOD is defensible.
+a2-0069,2503.01508,fable,none,0,Domain-agnostic novelty-assessment algorithm for AI-generated research ideas fits IC2 FRAMEWORK METHOD.
+a2-0070,2510.14861,fable,none,0,AI co-scientist system working alongside human experimenters; SYSTEM L0_ASSISTIVE CAPABILITY defensible given XR human-in-the-loop framing.
+a2-0071,2510.18104,fable,none,0,Explicit call-to-action agenda for autonomous research labs; IC3 POSITION NA CONCEPTUAL is exactly right.
+a2-0072,2410.09403,fable,CODE_DRIFT,1,"recorded_paper_type is wrong: VirSci is a new multi-agent ideation SYSTEM, not a CASE_STUDY."
+a2-0073,2606.26246,fable,none,0,Research map plus multi-stage deep research report agent; IC1 SYSTEM L2_PIPELINE CAPABILITY defensible.
+a2-0074,2511.13825,fable,none,0,External audit of an autonomous AI scientist's outputs; IC3 CASE_STUDY L3_CLOSED_LOOP CAPABILITY all fit.
+a2-0075,2506.20249,fable,none,0,"Genesys runs ideation through implementation, training and verification autonomously and claims competitive discovered architectures; codes fit."
+a2-0076,2605.26029,fable,none,0,Environment/benchmark for evaluating interactive causal discovery agents; IC2 BENCHMARK NA METHOD correct.
+a2-0077,2511.02238,fable,none,0,Ideation agent framework with critic engine performing one research stage end-to-end; codes fit.
+a2-0078,2602.18446,fable,none,0,Benchmark and judge for auditability/logical quality of deep research reports; IC2 BENCHMARK METHOD correct.
+a2-0079,2605.30329,fable,none,0,"Benchmark testing whether LLMs can judge research-proposal soundness, a core AI-scientist evaluation; IC2 BENCHMARK METHOD correct."
+a2-0060,2604.22861,opus,none,0,Agent performs literature-grounded evidence extraction and synthesis (a research-lifecycle stage) plus its own benchmark; SYSTEM/L1_STAGE/CAPABILITY all fit.
+a2-0061,2511.11793,opus,none,0,"Deep-research agent with multi-step search and synthesis, explicitly in scope under IC1; SYSTEM/L1_STAGE/CAPABILITY are right."
+a2-0062,2502.04644,opus,none,1,"recorded_autonomy NA is wrong: the paper demonstrates a running deep-research system (web search, code execution, mind-map memory) matching OpenAI Deep Research, so it should be L1_STAGE."
+a2-0063,2603.20101,opus,none,1,"recorded_autonomy NA is wrong: the paper builds a research agent that iteratively designs experiments and refines hypotheses across six circuit-analysis tasks, i.e. L3_CLOSED_LOOP."
+a2-0064,2602.07943,opus,none,0,"Multi-agent system that proposes, critiques and refines instrumental variables is a research-design stage performed autonomously; codes fit."
+a2-0065,2604.20441,opus,CODE_DRIFT,1,"recorded_claim_strength should be METHOD, not CAPABILITY: MedSkillAudit claims a better way to audit/govern research agent skills, it does not itself perform research tasks."
+a2-0066,2603.07444,opus,none,0,Multi-agent empirical research pipeline with explicit human decision gates is correctly IC1 SYSTEM at L2_PIPELINE with a CAPABILITY claim.
+a2-0067,2601.01678,opus,REASON_SWAP,1,recorded_reason is an exclusion code (EC8_GENERIC_ANALYSIS) attached to an include decision; a benchmark framework for co-scientist agents should be IC2.
+a2-0068,2504.01911,opus,none,0,"Multi-agent physics framework for interpretable AI-conducted reasoning is defensibly included, and L0_ASSISTIVE/METHOD match its human-AI collaboration framing."
+a2-0069,2503.01508,opus,none,0,Novelty-assessment algorithm is an evaluation methodology for AI-scientist idea generation; IC2/FRAMEWORK/NA/METHOD are consistent.
+a2-0070,2510.14861,opus,none,0,AI-XR co-scientist that perceives and assists physical experimentation; assistive-but-agentic framing makes L0_ASSISTIVE/CAPABILITY defensible.
+a2-0071,2510.18104,opus,none,0,Explicit call-to-action agenda for autonomous research labs; IC3/POSITION/NA/CONCEPTUAL are correct.
+a2-0072,2410.09403,opus,CODE_DRIFT,1,"recorded_paper_type should be SYSTEM, not CASE_STUDY: VirSci is a new multi-agent system for idea generation evaluated against baselines."
+a2-0073,2606.26246,opus,none,0,Literature-synthesis map plus multi-stage deep research report agent; SYSTEM/L2_PIPELINE/CAPABILITY fit.
+a2-0074,2511.13825,opus,none,0,Audit case study of the autonomous KOSMOS scientist's outputs; IC3/CASE_STUDY/L3_CLOSED_LOOP/CAPABILITY are defensible.
+a2-0075,2506.20249,opus,none,0,"Genesys runs ideation through implementation, pretraining and verification autonomously and claims genuinely novel architectures, so L3_CLOSED_LOOP/DISCOVERY fit."
+a2-0076,2605.26029,opus,none,0,Environment/benchmark for evaluating interactive causal discovery by agents; IC2/BENCHMARK/NA/METHOD correct.
+a2-0077,2511.02238,opus,none,0,Ideation system with explore-expand-evolve loop and critic; SYSTEM/L1_STAGE/CAPABILITY correct.
+a2-0078,2602.18446,opus,none,0,Benchmark and judge for logical quality of deep research reports; IC2/BENCHMARK/NA/METHOD correct.
+a2-0079,2605.30329,opus,none,0,Curated benchmark testing whether LLMs can judge research idea soundness; IC2/BENCHMARK/NA/METHOD correct.
+a2-0080,2510.08619,fable,none,0,Autonomous agent network producing and peer-reviewing findings in a self-running loop; IC1/SYSTEM/L3/CAPABILITY all fit.
+a2-0081,2503.16041,fable,none,0,"Deep-research report-generation system running retrieval, synthesis and verification without human gates; IC1/SYSTEM/L3/CAPABILITY defensible."
+a2-0082,2607.12301,fable,REASON_SWAP,1,Reason code is wrong: an exclusion code (EC2) is recorded for an included paper; it should be IC1 (or IC3) for this autonomous research protocol/system.
+a2-0083,2407.08940,fable,none,0,Dataset plus novel metrics for evaluating LLM hypothesis generation is a genuine IC2 benchmark with no system of its own.
+a2-0084,2506.11113,fable,none,0,Robustness evaluation of LLM peer reviewers is an integrity/evaluation study; IC3 with BENCHMARK/NA/METHOD is defensible.
+a2-0085,2509.08713,fable,none,0,Controlled evaluation methodology for detecting failure modes in AI scientist systems fits IC3 with BENCHMARK/NA/METHOD.
+a2-0086,2605.11532,fable,none,0,PaperGym is an ideation pipeline plus rubric-based evaluation of LLM ideation; benchmark coding with METHOD claim is defensible.
+a2-0087,2510.06579,fable,none,1,"Autonomy NA is wrong: TinyScientist ships a working end-to-end auto-research pipeline with human-in-the-loop controls, so it should be L2_PIPELINE."
+a2-0088,2507.08870,fable,none,0,GUIDE is a system performing the review/advising stage end-to-end; IC1/SYSTEM/L1_STAGE/CAPABILITY fit.
+a2-0089,2603.08127,fable,none,0,Self-evolving multi-agent AI scientist spanning ideation and execution with memory feedback; IC1/SYSTEM/L3/CAPABILITY fit.
+a2-0090,2510.16080,fable,none,0,Multi-agent system doing data analysis plus literature-grounded validation; IC1/SYSTEM/L2/CAPABILITY defensible.
+a2-0091,2411.11910,fable,none,0,Baby-AIGS is a full-process multi-agent research system with falsification loop; IC1/SYSTEM/L3/CAPABILITY fit.
+a2-0092,2502.18864,fable,none,0,Hypothesis-generation stage system with in vitro validated candidates; L1_STAGE and DISCOVERY are both supported by the abstract.
+a2-0093,2601.05356,fable,none,0,"PRISM designs, validates and executes protocols with an agentic decision loop, so IC1/SYSTEM/L2/CAPABILITY is defensible rather than EC2."
+a2-0094,2508.06960,fable,none,0,Benchmark evaluating deep-research agents on dataset discovery; IC2/BENCHMARK/NA/METHOD fit.
+a2-0095,2505.15047,fable,none,0,PiFlow is a plug-and-play principle-guided module for discovery agents; FRAMEWORK/NA/METHOD is defensible.
+a2-0096,2604.17931,fable,none,0,"Training framework for deep research agents, which the protocol places in scope; FRAMEWORK/NA/METHOD fit."
+a2-0097,2412.14141,fable,none,0,Implemented ideation system evaluated on OAG-Bench; IC1/SYSTEM/L1_STAGE/CAPABILITY fit.
+a2-0098,2511.05498,fable,none,0,Explainability/context-retrieval method for hypothesis generation systems; FRAMEWORK/NA/METHOD fit.
+a2-0099,2510.00620,fable,REASON_SWAP,1,Reason code is wrong: an exclusion code (EC7_HUMAN_AI_USE) is recorded for an included autonomous ideation system; it should be IC1.
+a2-0080,2510.08619,opus,none,0,"Autonomous agent network producing and peer-reviewing findings; include/IC1, SYSTEM, L3, CAPABILITY all fit."
+a2-0081,2503.16041,opus,none,0,Deep-research report-generation system with autonomous retrieve-write-review loop; codes are defensible.
+a2-0082,2607.12301,opus,REASON_SWAP,1,Reason code is wrong: an included autonomous-research protocol/system cannot be justified by exclusion code EC2; should be IC1 (or IC3).
+a2-0083,2407.08940,opus,none,0,Dataset plus metrics for evaluating LLM hypothesis generation; IC2/BENCHMARK/NA and CAPABILITY claim are defensible.
+a2-0084,2506.11113,opus,none,0,Robustness evaluation of LLM automated reviewers bears on integrity of AI-conducted review; IC3 and evaluation-methodology coding are defensible.
+a2-0085,2509.08713,opus,none,0,"Controlled evaluation methodology exposing integrity failures of AI scientist systems; IC3, NA autonomy and METHOD claim fit."
+a2-0086,2605.11532,opus,none,0,PaperGym is a released ideation evaluation pipeline with rubric judges; include and BENCHMARK/METHOD are defensible.
+a2-0087,2510.06579,opus,none,1,"Autonomy NA is wrong: TinyScientist ships a running auto-research pipeline (ideation, code execution, writing) with human-agent interaction, so at least L2_PIPELINE."
+a2-0088,2507.08870,opus,none,0,"System that autonomously reviews/advises on research ideas (review stage); IC1, SYSTEM, L1_STAGE, CAPABILITY all fit."
+a2-0089,2603.08127,opus,none,0,Self-evolving multi-agent AI scientist spanning ideation and execution; SYSTEM/L3/CAPABILITY correct.
+a2-0090,2510.16080,opus,none,0,Multi-agent biomarker discovery plus literature-grounded validation; include IC1 with SYSTEM/L2/CAPABILITY is defensible.
+a2-0091,2411.11910,opus,none,0,Baby-AIGS is a full-process multi-agent research system with falsification loop; codes fit.
+a2-0092,2502.18864,opus,none,0,"Co-Scientist automates hypothesis generation only (wet-lab validation by humans), so L1_STAGE with DISCOVERY claim is right."
+a2-0093,2601.05356,opus,none,0,"Agents design, validate and execute experimental protocols, a genuine research decision loop; IC1/SYSTEM/L2/CAPABILITY defensible."
+a2-0094,2508.06960,opus,none,0,Benchmark evaluating deep-research agents on dataset discovery; IC2/BENCHMARK/NA/METHOD correct.
+a2-0095,2505.15047,opus,none,0,Plug-and-play principle-aware discovery framework evaluated across domains; FRAMEWORK/METHOD coding is defensible.
+a2-0096,2604.17931,opus,none,0,"Training framework for deep research agents, which are in scope by the stated rule; FRAMEWORK/METHOD defensible."
+a2-0097,2412.14141,opus,none,0,LLM system generating research ideas end-to-end for the ideation stage; codes fit.
+a2-0098,2511.05498,opus,none,0,Method for explaining and grounding machine-generated biomedical hypotheses; IC1/FRAMEWORK/METHOD defensible.
+a2-0099,2510.00620,opus,REASON_SWAP,1,"Reason code is wrong: HARPA is an autonomous ideation system, not a study of human AI use, so it should be IC1 not EC7_HUMAN_AI_USE."
+a2-0100,2602.15019,fable,none,0,"Deep-research scouting agent plus completeness benchmark; include/IC1, SYSTEM, L1_STAGE (evidence synthesis), CAPABILITY all fit."
+a2-0101,2606.08671,fable,none,0,Skill-evolution harness evaluated on and outperforming deep-research agents; FRAMEWORK/METHOD with no research-stage autonomy claimed of its own is defensible.
+a2-0102,2605.23917,fable,none,0,"Literature-grounded multi-agent hypothesis generation system; SYSTEM, multi-stage retrieval-to-hypothesis pipeline with human-evaluated outputs, CAPABILITY all defensible."
+a2-0103,2407.12857,fable,none,0,Automated peer-review system covering the review stage end-to-end; codes fit.
+a2-0104,2605.21491,fable,none,0,Dataset plus trained forecaster for evaluating AI-generated research ideas; IC2 and SYSTEM/CAPABILITY are defensible readings.
+a2-0105,2504.12345,fable,none,0,Explicit Perspective proposing a conceptual four-agent framework; IC3/POSITION/NA/CONCEPTUAL correct.
+a2-0106,2601.03743,fable,REASON_SWAP,1,Reason code is wrong: an exclusion code (EC8_GENERIC_ANALYSIS) is recorded on an include decision for a deep-research agent; should be IC1.
+a2-0107,2505.08341,fable,none,0,Benchmark for AI scientists on real omics data; IC2/BENCHMARK/NA/METHOD correct.
+a2-0108,2510.21652,fable,none,0,Scientific research agent benchmark suite; all codes correct.
+a2-0109,2503.18102,fable,none,1,"Autonomy is wrong: agent laboratories autonomously run multi-stage research loops and share reports, so it should be L3_CLOSED_LOOP, not NA."
+a2-0110,2508.14880,fable,REASON_SWAP,1,Reason code is wrong: an exclusion code (EC6_ASSISTIVE) is recorded on an include decision for an autonomous medical deep-research agent; should be IC1.
+a2-0111,2504.03810,fable,none,0,Representation framework enabling machine designers to autonomously design experimental protocols; FRAMEWORK/NA/METHOD defensible.
+a2-0112,2511.02071,fable,none,1,"Decision is inconsistent with the codes: a human-executed, wearable-mediated co-embodied system recorded at L0_ASSISTIVE does not satisfy IC1 and should be excluded as EC6_ASSISTIVE."
+a2-0113,2504.03160,fable,none,0,"End-to-end trained deep-research agent; include/IC1, SYSTEM, L1_STAGE, CAPABILITY correct."
+a2-0114,2602.15061,fable,none,0,Safety/governance framework for autonomous self-driving labs; IC3/FRAMEWORK/NA/METHOD correct.
+a2-0115,2604.03338,fable,none,1,"Paper type is wrong: this is a retrospective empirical analysis of AI-generated versus human papers, i.e. CASE_STUDY, not a BENCHMARK artifact."
+a2-0116,2604.11753,fable,none,0,Aggregation method for parallel scaling whose headline gains are on deep-research tasks; FRAMEWORK/NA/METHOD defensible under the deep-research rule.
+a2-0117,2404.08680,fable,none,0,Fine-tuned LLM automating the synthesis stage of systematic reviews; codes fit.
+a2-0118,2509.25281,fable,none,0,Benchmark for LLM-generated synthesis hypotheses; IC2/BENCHMARK/NA/METHOD correct.
+a2-0119,2607.02520,fable,none,0,"Multi-agent research automation system spanning code, literature and artifact generation with explicit non-full autonomy; L2_PIPELINE and CAPABILITY fit."
+a2-0100,2602.15019,opus,none,0,"Deep-research agent plus completeness benchmark for scouting; include/IC1, SYSTEM, L1_STAGE, CAPABILITY all defensible."
+a2-0101,2606.08671,opus,none,0,Skill-evolution harness evaluated primarily on deep-research benchmarks; FRAMEWORK/METHOD and NA autonomy are defensible under the deep-research allowance.
+a2-0102,2605.23917,opus,none,0,"Literature-grounded multi-agent hypothesis generation system; include/IC1, SYSTEM, CAPABILITY correct and L2_PIPELINE is defensible for retrieval-plus-ideation."
+a2-0103,2407.12857,opus,none,0,Automated peer-review system doing one lifecycle stage end-to-end; all codes correct.
+a2-0104,2605.21491,opus,none,0,"Trained forecaster/dataset for filtering AI-generated research ideas; IC2, SYSTEM, L1_STAGE, CAPABILITY defensible."
+a2-0105,2504.12345,opus,none,0,Perspective proposing a conceptual multi-agent urban research framework; IC3/POSITION/NA/CONCEPTUAL correct.
+a2-0106,2601.03743,opus,REASON_SWAP,1,Reason code is wrong: an included deep-research agent paper is tagged with exclusion code EC8_GENERIC_ANALYSIS; should be IC1.
+a2-0107,2505.08341,opus,none,0,Benchmark for AI scientists on real omics data; IC2/BENCHMARK/NA/METHOD correct.
+a2-0108,2510.21652,opus,none,0,Rigorous benchmark suite for scientific research agents; all codes correct.
+a2-0109,2503.18102,opus,none,1,"Autonomy is wrong: agent laboratories autonomously run and iterate full research cycles producing reports, so at least L3_CLOSED_LOOP, not NA."
+a2-0110,2508.14880,opus,REASON_SWAP,1,Reason code is wrong: an included medical deep-research agent is tagged with exclusion code EC6_ASSISTIVE; should be IC1.
+a2-0111,2504.03810,opus,none,0,Representation framework enabling machine designers to author experimental protocols; IC1/FRAMEWORK/NA/METHOD defensible.
+a2-0112,2511.02071,opus,none,0,"AI supplies planning, reasoning and analysis while the human executes, so inclusion is defensible and L0_ASSISTIVE/DISCOVERY fit the demonstrated fabrication result."
+a2-0113,2504.03160,opus,none,0,End-to-end trained deep research agent; IC1/SYSTEM/L1_STAGE/CAPABILITY correct.
+a2-0114,2602.15061,opus,none,0,Safety/governance framework for autonomous self-driving labs; IC3/FRAMEWORK/NA/METHOD correct.
+a2-0115,2604.03338,opus,none,1,"Paper type is wrong: this is an empirical quality-gap analysis of AI-generated papers, a CASE_STUDY (or FRAMEWORK), not a BENCHMARK artifact."
+a2-0116,2604.11753,opus,none,0,Aggregation method for long-horizon agentic search and deep research; IC1/FRAMEWORK/NA/METHOD defensible.
+a2-0117,2404.08680,opus,none,0,Fine-tuned LLMs automating the synthesis stage of systematic reviews; all codes correct.
+a2-0118,2509.25281,opus,none,0,Benchmark for LLM scientific hypothesis generation in materials synthesis; IC2/BENCHMARK/NA/METHOD correct.
+a2-0119,2607.02520,opus,none,0,Execution-grounded multi-agent research workflow system spanning several stages; IC1/SYSTEM/L2_PIPELINE/CAPABILITY defensible.
+a2-0120,2604.16982,fable,CODE_DRIFT,0,LLM pipeline for hypothesis generation/claim extraction is a research-lifecycle stage; FRAMEWORK/L1_STAGE/METHOD all defensible.
+a2-0121,2604.09793,fable,none,0,Insight-anticipation benchmark for literature-grounded ideation; IC2/BENCHMARK/METHOD defensible and the trained LM is secondary to the benchmark.
+a2-0122,2606.09748,fable,none,0,Multi-turn evaluation methodology for deep research agents fits IC2; NA autonomy and METHOD claim are right.
+a2-0123,2601.01357,fable,none,0,"FlamePilot autonomously runs setup, execution, post-processing and refinement loops, so SYSTEM/L3_CLOSED_LOOP/CAPABILITY is right."
+a2-0124,2606.10159,fable,none,0,Study of manipulability of AI peer review is integrity of an AI-performed research stage; IC3/CASE_STUDY/L1_STAGE/METHOD defensible.
+a2-0125,2602.11685,fable,none,0,"DRACO is a deep-research benchmark, explicitly in scope under IC2."
+a2-0126,2605.30727,fable,none,0,Benchmark plus mitigation for deep research agents; IC2/BENCHMARK/METHOD defensible.
+a2-0127,2506.06287,fable,none,0,Deep Research Bench is a canonical IC2 benchmark for web research agents.
+a2-0128,2502.09858,fable,none,0,Popper designs and executes falsification experiments in a sequential loop; SYSTEM/L3_CLOSED_LOOP/CAPABILITY correct.
+a2-0129,2508.06600,fable,none,0,"BrowseComp-Plus is a controlled benchmark for deep-research agents, IC2."
+a2-0130,2607.16038,fable,none,0,"SciForge runs agentic research sprints with explicit human review gates, matching SYSTEM/L2_PIPELINE/CAPABILITY."
+a2-0131,2603.01050,fable,CODE_DRIFT,1,"Autonomy is overstated: MM-DeepResearch is a multimodal search/QA agent doing evidence gathering and synthesis only, so L1_STAGE rather than L2_PIPELINE."
+a2-0132,2604.17745,fable,none,0,Hierarchical multi-agent paper-to-code reproduction with coordinated stages; SYSTEM/CAPABILITY and a pipeline-level autonomy coding are defensible.
+a2-0133,2606.19899,fable,none,0,Policy-oriented argument about evaluating AI scientists; IC3/POSITION/NA/CONCEPTUAL fits.
+a2-0134,2603.18273,fable,none,1,"Autonomy under-coded: EDM-ARS goes from a research prompt to a complete manuscript with no substantive human intervention, which is L4_FULL, not L3_CLOSED_LOOP."
+a2-0135,2505.16982,fable,none,0,Vision/agenda paper on causal agents that automate hypothesis generation; IC3/POSITION/CONCEPTUAL defensible.
+a2-0136,2505.04651,fable,none,0,Survey of LLM hypothesis generation and validation methods; IC3/SURVEY/NA/CONCEPTUAL correct.
+a2-0137,2502.14297,fable,none,0,Independent evaluation of the AI Scientist; CASE_STUDY with L3 autonomy (3.5h human involvement remains) and CAPABILITY claim are defensible.
+a2-0138,2602.07983,fable,none,0,"EXPERIGEN generates and empirically tests hypotheses in a closed loop and claims real validated findings, so DISCOVERY/L3 is right."
+a2-0139,2606.05241,fable,none,1,"Paper type is wrong: it introduces no benchmark or dataset but contamination-detection algorithms and evaluation practices, so FRAMEWORK."
+a2-0120,2604.16982,opus,CODE_DRIFT,0,Unified pipeline whose LLM component autonomously generates and screens hypotheses/claims fits IC1; FRAMEWORK/L1_STAGE/METHOD are all defensible.
+a2-0121,2604.09793,opus,none,0,"GiantsBench is a benchmark for literature-grounded insight generation (IC2); NA autonomy is acceptable since the artifact is a generation model, not a research system."
+a2-0122,2606.09748,opus,none,0,Multi-turn evaluation methodology for deep research agents is IC2; BENCHMARK/NA/METHOD are defensible.
+a2-0123,2601.01357,opus,none,0,"FlamePilot autonomously runs setup, execution, analysis and refinement loops in CFD research, supporting IC1/SYSTEM/L3_CLOSED_LOOP/CAPABILITY."
+a2-0124,2606.10159,opus,none,0,Empirical study of manipulability of AI peer review is integrity of AI-conducted research (IC3); CASE_STUDY/L1_STAGE/METHOD are defensible.
+a2-0125,2602.11685,opus,none,0,"DRACO is squarely a deep-research benchmark, correctly IC2/BENCHMARK/NA/METHOD."
+a2-0126,2605.30727,opus,none,0,Benchmark plus training method for deep research agents falls under IC2; codes are defensible.
+a2-0127,2506.06287,opus,none,0,"Deep Research Bench is a benchmark for web research agents, in scope under IC2 per the deep-research rule."
+a2-0128,2502.09858,opus,none,0,Popper autonomously designs and executes falsification experiments across multiple stages; IC1/SYSTEM/L3_CLOSED_LOOP/CAPABILITY correct.
+a2-0129,2508.06600,opus,none,0,"BrowseComp-Plus is a controlled benchmark for deep-research agents, correctly coded IC2/BENCHMARK."
+a2-0130,2607.16038,opus,none,0,"SciForge is a multi-stage research workbench with explicit human review gates, matching SYSTEM/L2_PIPELINE/CAPABILITY."
+a2-0131,2603.01050,opus,CODE_DRIFT,1,"Autonomy is wrong: MM-DeepResearch is a search-and-synthesis agent with no human approval gates, so it should be L1_STAGE, not L2_PIPELINE."
+a2-0132,2604.17745,opus,none,0,HiRAS performs end-to-end paper-to-code reproduction spanning code generation and execution; SYSTEM with multi-stage autonomy coding is defensible.
+a2-0133,2606.19899,opus,none,0,Policy-oriented analysis of evaluating agentic AI scientists is IC3; POSITION/NA/CONCEPTUAL fit.
+a2-0134,2603.18273,opus,none,0,EDM-ARS runs the full EDM research lifecycle with revision loops; IC1/SYSTEM/L3_CLOSED_LOOP/CAPABILITY is defensible for a report without end-to-end evaluation.
+a2-0135,2505.16982,opus,none,0,Research-agenda paper envisioning causal agents that automate hypothesis generation fits IC3/POSITION/NA/CONCEPTUAL.
+a2-0136,2505.04651,opus,none,0,"Survey of LLM-driven hypothesis generation and validation, correctly IC3/SURVEY/NA/CONCEPTUAL."
+a2-0137,2502.14297,opus,none,0,Independent evaluation of the AI Scientist is a case study of AI-conducted research integrity; L3 and CAPABILITY are defensible given reported human involvement.
+a2-0138,2602.07983,opus,none,0,"EXPERIGEN closes the hypothesis-experiment loop and validates hypotheses with a real A/B test, supporting SYSTEM/L3_CLOSED_LOOP/DISCOVERY."
+a2-0139,2606.05241,opus,none,1,"Paper type is wrong: it introduces contamination definitions and detection algorithms for existing benchmarks rather than a new benchmark, so it should be FRAMEWORK."
+a2-0140,2607.05682,fable,none,0,Auditability framework for research-question formation in scientific LLM agents; IC3/FRAMEWORK/METHOD all defensible and no full system is presented so NA autonomy is acceptable.
+a2-0141,2508.01746,fable,none,0,"HypoAgents is an autonomous multi-agent hypothesis generation/validation/refinement loop, so IC1 SYSTEM L3_CLOSED_LOOP CAPABILITY fits."
+a2-0142,2507.04410,fable,none,0,"Multi-agent deep-research verification pipeline with search, synthesis and report generation falls under the deep-research carve-out; codes are defensible."
+a2-0143,2604.27297,fable,none,0,"Multi-agent generate/evaluate/critique loop that autonomously discovers governing equations is a genuine research decision loop, not a mere instrument."
+a2-0144,2601.20975,fable,none,0,Benchmark for multi-step deep-research search agents; IC2 BENCHMARK METHOD correct.
+a2-0145,2606.05238,fable,none,0,Benchmark explicitly framed as a testbed for scientific research agents reproducing paper experiments; IC2 BENCHMARK METHOD defensible.
+a2-0146,2603.28361,fable,none,0,Survey/roadmap of deep research and AI4S; IC3 SURVEY CONCEPTUAL correct.
+a2-0147,2510.08521,fable,none,0,FlowSearch is a deep-research multi-agent system doing search plus synthesis; IC1 SYSTEM L1_STAGE CAPABILITY fits.
+a2-0148,2510.04997,fable,none,0,Exploratory study of LLMs automating the fault-analysis stage of empirical research; CASE_STUDY L1_STAGE CAPABILITY defensible.
+a2-0149,2510.14240,fable,none,0,Live benchmark plus evaluation suite for deep research report generation; IC2 BENCHMARK METHOD correct.
+a2-0150,2606.07591,fable,none,0,Benchmark for end-to-end autonomous scientific research agents; IC2 BENCHMARK METHOD correct.
+a2-0151,2603.15726,fable,FLIP,1,"Decision is wrong (and internally inconsistent): a deep-research/long-horizon research agent with the inclusion code IC1 recorded should be include, not exclude."
+a2-0152,2508.04575,fable,REASON_SWAP,1,"Reason code is wrong: EC7_HUMAN_AI_USE is an exclusion code but the decision is include; this multi-agent ideation framework should be IC1 (or IC3), and autonomy is arguably L1_STAGE rather than NA."
+a2-0153,2511.09325,fable,REASON_SWAP,1,"Reason code is wrong: this is a position piece arguing for qualitative AI in automated discovery pipelines, so IC3, not IC2 (it offers no benchmark or dataset)."
+a2-0154,2603.15164,fable,none,0,HindSight is an evaluation methodology for AI-generated research ideas; IC2 BENCHMARK METHOD correct.
+a2-0155,2601.12030,fable,none,0,Context-management framework explicitly targeting long-horizon deep-research/information-seeking agents; IC1 FRAMEWORK METHOD defensible.
+a2-0156,2601.18467,fable,none,0,OffSeeker is a trained deep research agent plus data suite; IC1 SYSTEM L1_STAGE CAPABILITY fits.
+a2-0157,2607.12113,fable,none,0,"Community roadmap on trust, verification and governance of autonomous science; IC3 POSITION CONCEPTUAL correct."
+a2-0158,2507.18074,fable,none,0,"ASI-Arch autonomously hypothesizes, implements, runs and validates thousands of experiments yielding new architectures; SYSTEM/L4/DISCOVERY is defensible."
+a2-0159,2509.04499,fable,none,0,DeepTRACE is an audit methodology for citation and evidence reliability of deep research systems; IC3 with METHOD is defensible and its measurable-dimension suite reads as a benchmark.
+a2-0140,2607.05682,opus,none,0,Auditability framework for AI research-question formation fits IC3; FRAMEWORK/NA/METHOD is defensible since the artifact is a protocol/certificate rather than a full system.
+a2-0141,2508.01746,opus,none,0,"HypoAgents is an autonomous multi-stage hypothesis generation-validation-refinement loop, correctly IC1/SYSTEM/L3_CLOSED_LOOP/CAPABILITY."
+a2-0142,2507.04410,opus,none,0,"Multi-agent deep-research verification system with search, evidence collection and report generation qualifies under the deep-research clause; SYSTEM/L2_PIPELINE/CAPABILITY defensible."
+a2-0143,2604.27297,opus,none,0,Multi-agent autonomous equation discovery with generate-evaluate-critique loop fits IC1/SYSTEM/L3_CLOSED_LOOP; CAPABILITY is defensible as the results are mostly recovery of known governing equations.
+a2-0144,2601.20975,opus,none,0,"Benchmark for deep research agents, correctly IC2/BENCHMARK/NA/METHOD."
+a2-0145,2606.05238,opus,none,0,Benchmark explicitly positioned as a testbed for autonomous scientific research agents executing paper experiments; IC2/BENCHMARK/NA/METHOD defensible.
+a2-0146,2603.28361,opus,none,0,"Survey/roadmap of deep research and AI4S, correctly IC3/SURVEY/NA/CONCEPTUAL."
+a2-0147,2510.08521,opus,none,0,FlowSearch is a deep research multi-agent system evaluated on search/synthesis benchmarks; IC1/SYSTEM/L1_STAGE/CAPABILITY is right.
+a2-0148,2510.04997,opus,none,0,Exploratory study of LLMs automating the fault-analysis phase of empirical research; IC1/CASE_STUDY/L1_STAGE/CAPABILITY defensible.
+a2-0149,2510.14240,opus,none,0,"Benchmark plus evaluation suite for deep research report generation, correctly IC2/BENCHMARK/NA/METHOD."
+a2-0150,2606.07591,opus,none,0,"Benchmark for end-to-end autonomous research agents, correctly IC2/BENCHMARK/NA/METHOD."
+a2-0151,2603.15726,opus,FLIP,1,"Decision is wrong: MiroThinker is a deep research agent (multi-step search, synthesis, verification) and should be include under IC1, matching the recorded IC1 reason and codes."
+a2-0152,2508.04575,opus,REASON_SWAP,1,"Reason code is wrong: the paper is about a multi-agent AI ideation framework, not human use of AI, so the reason should be IC1 (or IC3), not EC7_HUMAN_AI_USE."
+a2-0153,2511.09325,opus,REASON_SWAP,1,"Reason should be IC3 (position paper arguing for qualitative capabilities in automated discovery pipelines), not IC2 — it presents no benchmark or dataset."
+a2-0154,2603.15164,opus,none,0,"Time-split evaluation framework for AI-generated research ideas, correctly IC2/BENCHMARK/NA/METHOD."
+a2-0155,2601.12030,opus,none,0,Context-management method for long-horizon deep research agents; IC1/FRAMEWORK/NA/METHOD is defensible.
+a2-0156,2601.18467,opus,none,0,"Offline-trained deep research agent plus data suite, correctly IC1/SYSTEM/L1_STAGE/CAPABILITY."
+a2-0157,2607.12113,opus,none,0,"Community roadmap on trust, verification and governance of autonomous science, correctly IC3/POSITION/NA/CONCEPTUAL."
+a2-0158,2507.18074,opus,none,1,"Autonomy is overstated: ASI-Arch runs a closed hypothesize-implement-validate loop within a human-fixed domain and produces no manuscript, so L3_CLOSED_LOOP rather than L4_FULL."
+a2-0159,2509.04499,opus,none,0,Audit framework for citation and evidence reliability of deep research systems; IC3 with BENCHMARK/NA/METHOD is defensible.
+a2-0160,2603.03655,fable,none,0,Governed drug-discovery agent system with HITL checkpoints across pipeline stages; IC1/SYSTEM/L2_PIPELINE/CAPABILITY all fit.
+a2-0161,2510.13081,fable,none,0,Short position piece arguing for cooperative agents to close the discovery loop; IC3/POSITION/NA/CONCEPTUAL correct.
+a2-0162,2501.01451,fable,none,1,"Decision is wrong: ChatBCI is explicitly a human-AI teaming toolbox where the human makes the research judgments (recorded autonomy L0_ASSISTIVE confirms), so it should be excluded under EC6_ASSISTIVE."
+a2-0163,2603.05912,fable,REASON_SWAP,1,"Reason code is wrong: DeepFact-Bench is a benchmark and evaluation methodology for deep-research report factuality, so IC2, not IC1 (other codes fine)."
+a2-0164,2506.21506,fable,none,0,Benchmark plus Agent-as-a-Judge methodology for deep research agentic search; IC2/BENCHMARK/NA/METHOD correct.
+a2-0165,2512.20469,fable,none,0,Infrastructure-and-ecosystem argument for agentic science; IC3/FRAMEWORK/METHOD defensible and no single system is the object.
+a2-0166,2508.04183,fable,none,0,Formal definition plus LiveDRBench benchmark for deep research systems; IC2/BENCHMARK/NA/METHOD correct.
+a2-0167,2511.16931,fable,none,0,End-to-end AI-scientist ecosystem spanning ideation to peer review; IC1/SYSTEM/L3_CLOSED_LOOP/METHOD defensible.
+a2-0168,2606.11337,fable,none,0,SciConBench plus clean-room harness evaluating scientific conclusion synthesis by agents; IC2/BENCHMARK/NA/METHOD correct.
+a2-0169,2510.05145,fable,none,1,"Autonomy is wrong: ParallelResearch is a running deep research system that plans, searches and produces final reports end-to-end, so it should be L2_PIPELINE/L3_CLOSED_LOOP, not NA."
+a2-0170,2607.11084,fable,none,0,Governed end-to-end agentic research system with scientist-in-the-loop review on a real GWAS; IC1/SYSTEM/L2_PIPELINE/CAPABILITY fit.
+a2-0171,2510.17797,fable,none,0,"Multi-agent deep research system with reflection loop and automated report generation; in scope as a deep-research agent, codes fit."
+a2-0172,2510.11851,fable,none,0,Safety/integrity analysis of deep research agents with new attack methodology; IC3/FRAMEWORK/NA/METHOD defensible.
+a2-0173,2604.06474,fable,none,0,Autonomous deep-research agent doing iterative hypothesis generation and synthesis over databases and web; IC1/SYSTEM/L3/CAPABILITY defensible.
+a2-0174,2411.02382,fable,none,0,System for the hypothesis-generation stage with hallucination checking; IC1/SYSTEM/L1_STAGE/METHOD correct.
+a2-0175,2407.16083,fable,none,0,Closed-loop self-driving lab that reports new physical principles; IC1/SYSTEM/L3_CLOSED_LOOP/DISCOVERY correct.
+a2-0176,2506.23692,fable,none,0,Position paper proposing Agent4S and a five-level autonomy taxonomy; IC3/POSITION/NA/CONCEPTUAL correct.
+a2-0177,2606.30335,fable,none,0,Belief-guided discovery framework evaluated on a controlled testbed; IC1/FRAMEWORK/METHOD defensible with no full research-stage demonstration.
+a2-0178,2603.17179,fable,none,0,Agentic system performing literature synthesis and fairness-audit design with an ablation evaluation; IC1/SYSTEM/L1_STAGE/CAPABILITY defensible.
+a2-0179,2603.27416,fable,none,0,Documentary case study of an agent executing the RL research loop under human high-level direction; IC3/CASE_STUDY/L2_PIPELINE/CAPABILITY fit.
+a2-0160,2603.03655,opus,none,0,Governed multi-stage drug-discovery agent with HITL checkpoints; IC1/SYSTEM/L2_PIPELINE/CAPABILITY all fit.
+a2-0161,2510.13081,opus,none,0,Short position piece arguing for cooperative agents for autonomous discovery; IC3/POSITION/NA/CONCEPTUAL correct.
+a2-0162,2501.01451,opus,none,1,"Decision wrong: ChatBCI is an explicitly human-driven collaboration toolbox where the human makes the research judgments (recorded L0_ASSISTIVE confirms), so it should be excluded as EC6_ASSISTIVE."
+a2-0163,2603.05912,opus,REASON_SWAP,1,"Reason code wrong: this is a benchmark plus evaluation methodology for deep-research-report factuality, so IC2 not IC1 (other codes fine)."
+a2-0164,2506.21506,opus,none,0,Benchmark and Agent-as-a-Judge methodology for deep research/agentic search; IC2/BENCHMARK/NA/METHOD correct.
+a2-0165,2512.20469,opus,none,0,Infrastructure-and-ecosystem argument for agentic science; IC3/FRAMEWORK/METHOD defensible and NA is acceptable for a platform paper.
+a2-0166,2508.04183,opus,none,0,Formal definition plus LiveDRBench benchmark for deep research systems; IC2/BENCHMARK/NA/METHOD correct.
+a2-0167,2511.16931,opus,none,0,End-to-end AI-scientist ecosystem with multi-stage automation; SYSTEM/L3_CLOSED_LOOP/METHOD defensible.
+a2-0168,2606.11337,opus,none,0,SciConBench plus clean-room harness for evaluating scientific synthesis agents; IC2/BENCHMARK/NA/METHOD correct.
+a2-0169,2510.05145,opus,none,1,"Autonomy wrong: ParallelResearch is a working deep research system that plans, searches and produces final reports, so it is at least L1_STAGE, not NA."
+a2-0170,2607.11084,opus,none,0,Governed end-to-end agentic research system with scientist-in-the-loop reproducing known GWAS loci; SYSTEM/L2_PIPELINE/CAPABILITY correct.
+a2-0171,2510.17797,opus,none,0,"Multi-agent deep research system with reflection loop and report generation; in scope under the deep-research rule, codes fit."
+a2-0172,2510.11851,opus,none,0,Safety/integrity analysis of deep research agents with generalizable attack methods; IC3/FRAMEWORK/NA/METHOD defensible.
+a2-0173,2604.06474,opus,none,0,Autonomous deep research agent over structured databases with iterative hypothesis loop; IC1/SYSTEM/L3_CLOSED_LOOP/CAPABILITY fit.
+a2-0174,2411.02382,opus,none,0,Knowledge-grounded hypothesis generation system covering one research stage; IC1/SYSTEM/L1_STAGE/METHOD correct.
+a2-0175,2407.16083,opus,none,0,Self-driving lab with closed-loop active learning that uncovers governing relationships; SYSTEM/L3_CLOSED_LOOP/DISCOVERY correct.
+a2-0176,2506.23692,opus,none,0,Position paper proposing Agent4S levels for automating the research workflow; IC3/POSITION/NA/CONCEPTUAL correct.
+a2-0177,2606.30335,opus,none,0,Belief-guided discovery framework evaluated on a synthetic optimization testbed; IC1/FRAMEWORK/METHOD defensible.
+a2-0178,2603.17179,opus,none,0,Agentic system doing literature synthesis and evaluation-design recommendation for fairness auditing; IC1/SYSTEM/L1_STAGE/CAPABILITY defensible.
+a2-0179,2603.27416,opus,none,0,Documentary case study of an agent executing the RL research loop under human high-level direction; CASE_STUDY/L2_PIPELINE/CAPABILITY fit.
+a2-0180,2505.03049,fable,none,0,Hackathon review spanning the research lifecycle incl. hypothesis generation and research automation; IC3 case study at L0 assistive autonomy is defensible.
+a2-0181,2607.16127,fable,none,0,Cost-aware architecture for the autonomous discovery loop; FRAMEWORK/METHOD with NA autonomy for an infrastructure artifact is defensible.
+a2-0182,2606.26722,fable,none,0,AHOIS runs a closed experimental loop on real hardware and claims novel discovered encoding; all codes fit.
+a2-0183,2510.16082,fable,CODE_DRIFT,0,Multi-agent evidence-grounded interpretation of RNA-seq modules is a single analysis/hypothesis stage; codes fit.
+a2-0184,2510.18939,fable,none,0,Long-horizon agentic search/deep research is explicitly in scope under IC1; SYSTEM/L1_STAGE/METHOD defensible.
+a2-0185,2512.01089,fable,none,0,CodeDistiller builds capability for autonomous discovery agents and is evaluated on downstream ASD experiments; include with METHOD is defensible.
+a2-0186,2602.21201,fable,none,0,Case study of an autonomous math research agent on a proof challenge; CAPABILITY claim and L1_STAGE fit.
+a2-0187,2606.25532,fable,none,0,Autonomous multi-agent discovery engine producing new compression methods; SYSTEM/L3/DISCOVERY fit.
+a2-0188,2402.12391,fable,none,0,TAIS automates data selection through analysis for gene discovery; IC1 SYSTEM with stage-level autonomy is defensible.
+a2-0189,2604.04324,fable,none,0,RESCORE iterates analyze-code-verify with execution feedback to reproduce paper simulations; codes fit.
+a2-0190,2607.14097,fable,none,1,"recorded_autonomy is wrong: the LangGraph DAG runs query-driven analysis end-to-end with no human approval gates, so it is L1_STAGE, not L2_PIPELINE."
+a2-0191,2602.02905,fable,none,0,FIRE-Bench is a benchmark for full-cycle autonomous research agents; IC2/BENCHMARK/NA/METHOD all correct.
+a2-0192,2505.21396,fable,none,0,Data-augmented automated ideation with automated validation; IC1 FRAMEWORK/METHOD with NA autonomy is defensible.
+a2-0193,2603.19782,fable,none,0,Position paper proposing the PLAD paradigm for closed-loop embodied discovery; IC3/POSITION/CONCEPTUAL correct.
+a2-0194,2603.21728,fable,none,0,RL training method for autonomous scientific ideation; FRAMEWORK/METHOD/NA defensible.
+a2-0195,2505.19209,fable,none,0,Hierarchical search method for fine-grained hypothesis discovery; IC1 FRAMEWORK/METHOD defensible.
+a2-0196,2505.11855,fable,FLIP,1,"recorded_decision is wrong: SPOT is a benchmark for automated verification/review of scientific manuscripts by AI, which is an include under IC2 (the reason code IC2 already contradicts the exclude)."
+a2-0197,2506.22026,fable,none,0,Automated novelty assessment of generated ideas is an evaluation methodology for ideation systems; IC2 with SYSTEM/L1_STAGE/METHOD is defensible.
+a2-0198,2604.18805,fable,none,0,Large-scale evaluation of the epistemic integrity of AI scientists; IC3 with benchmark-style evaluation and capability claim is defensible.
+a2-0199,2603.17216,fable,none,0,Synthetic task pipeline for training ML research agents; FRAMEWORK/METHOD/NA fit.
+a2-0180,2505.03049,opus,none,1,"Decision is wrong: a hackathon review of 34 mostly human-driven LLM prototypes (property prediction, education, data management) is not specifically about autonomous AI research and its own L0_ASSISTIVE coding concedes this - should be exclude EC6_ASSISTIVE (and if kept, type is SURVEY, not CASE_STU"
+a2-0181,2607.16127,opus,none,0,"Cost-aware discovery-loop framework with an auditable ledger fits IC3/FRAMEWORK/METHOD, and NA autonomy is defensible for a software architecture rather than an AI agent."
+a2-0182,2606.26722,opus,none,0,AHOIS is a closed-loop multi-agent AI scientist that autonomously proposed and validated hypotheses on real hardware; SYSTEM/L3/DISCOVERY all match.
+a2-0183,2510.16082,opus,CODE_DRIFT,0,BIOGEN autonomously performs the interpretation/hypothesis-generation stage over RNA-seq modules; IC1 with L1_STAGE and CAPABILITY is defensible.
+a2-0184,2510.18939,opus,none,0,"SLIM is a long-horizon agentic search/deep-research framework, explicitly in scope under IC1; SYSTEM/L1_STAGE/METHOD fit."
+a2-0185,2512.01089,opus,none,0,"CodeDistiller builds and evaluates capability infrastructure for automated scientific discovery agents, with a downstream ASD evaluation; SYSTEM/L1_STAGE/METHOD is defensible."
+a2-0186,2602.21201,opus,none,0,Case study reporting a math research agent solving challenge problems autonomously; L1_STAGE and CAPABILITY match the benchmark-style claim.
+a2-0187,2606.25532,opus,none,0,Multi-agent discovery engine that autonomously evolves and validates new compression methods surpassing human designs; SYSTEM/L3/DISCOVERY fit.
+a2-0188,2402.12391,opus,none,0,TAIS is a multi-role LLM system automating the gene-identification analysis stage with its own benchmark; SYSTEM/L1_STAGE/CAPABILITY is defensible.
+a2-0189,2604.04324,opus,none,0,RESCORE runs an autonomous analyze-code-execute-verify replication loop with execution feedback; IC1 SYSTEM at L3_CLOSED_LOOP is defensible.
+a2-0190,2607.14097,opus,none,1,"Autonomy is wrong: RegNetAgents is a single automated query-driven analysis workflow over precomputed networks with no human approval gates, so L1_STAGE, not L2_PIPELINE."
+a2-0191,2602.02905,opus,none,0,FIRE-Bench is exactly an evaluation benchmark for full-cycle autonomous research agents; IC2/BENCHMARK/NA/METHOD all correct.
+a2-0192,2505.21396,opus,none,0,Data-augmented LLM ideation framework with automated preliminary validation; IC1 FRAMEWORK/METHOD is defensible and NA autonomy is consistent with a method rather than a deployed system.
+a2-0193,2603.19782,opus,none,0,Explicit position paper arguing for the PLAD embodied-discovery paradigm; IC3/POSITION/NA/CONCEPTUAL all match.
+a2-0194,2603.21728,opus,none,0,EvoIdeator is an RL training method for autonomous scientific ideation; FRAMEWORK/METHOD fits and NA is defensible for a training recipe rather than a research system.
+a2-0195,2505.19209,opus,none,0,MOOSE-Chem2 defines a hypothesis-discovery task and a hierarchical search method with a new benchmark; IC1 FRAMEWORK/METHOD is defensible.
+a2-0196,2505.11855,opus,FLIP,1,"Decision is wrong: SPOT is a dataset and evaluation of LLMs verifying scientific manuscripts in the AI co-scientist context, squarely IC2 - should be include, not exclude (the reason code IC2 is itself an inclusion criterion)."
+a2-0197,2506.22026,opus,none,0,Automated novelty assessment is an evaluation methodology for AI idea-generation systems; IC2 with SYSTEM/L1_STAGE/METHOD is defensible.
+a2-0198,2604.18805,opus,none,0,"Large-scale evaluation of the epistemic integrity of AI-scientist agents fits IC3, and the benchmark/CAPABILITY coding of a 25,000-run evaluation study is defensible."
+a2-0199,2603.17216,opus,none,0,Synthetic task-generation pipeline for training ML research agents is a method for building such systems; FRAMEWORK/NA/METHOD fits.

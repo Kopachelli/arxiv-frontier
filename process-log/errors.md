@@ -152,6 +152,55 @@ pointed the same direction as the aggregate numbers. Nothing but recomputing and
 the specific cross-tabulation caught it. Note also that the corrected finding is
 *sharper* than the wrong one — following the data cost nothing scientifically.
 
+## #10 — 2026-07-26 — Paper 1 corpus — 18 internal-consistency violations (2.2%)
+
+**Description.** A mechanical check of rules the protocol already implied found 18 records in
+the published corpus that violate them:
+- **15 papers included while coded `L0_ASSISTIVE`**, contradicting amendment A1's boundary
+  rule BR1, under which assistive tools where the human makes the research judgments are
+  excluded as `EC6_ASSISTIVE`. Either the inclusion or the autonomy code is wrong; which one
+  differs by paper and requires adjudication.
+- **3 `POSITION` papers credited with lifecycle stages**, where the codebook assigns `NA` to
+  papers presenting no system.
+
+**How caught.** Indirectly. The Phase V LLM audit produced one true positive among fourteen
+flags on uncorrupted records; that one flag prompted writing `code/check_consistency.py`,
+which then found all 18 deterministically across the full corpus.
+
+**Consequence.** Affects the published Zenodo record. Under the Phase V protocol §6 commitment,
+this is reported publicly and a corrected version is to be deposited. The headline findings
+(auditability 55%, held-out transfer 5%, human role unstated 71%, the discovery dissociation)
+do not depend on D2 and are unaffected in direction; the autonomy distribution and the
+corpus size will change slightly.
+
+**Why this matters for RQ4.** The error is not a wrong judgement but an **unenforced
+invariant**: the protocol stated a rule (BR1) and the pipeline never checked that the coded
+output obeyed it. Nothing in the review's design connected the screening rule to the coding
+output, so the contradiction sat in a published dataset. Systematic reviews — human or AI —
+routinely state rules of this kind and routinely do not test them.
+
+## #9 — 2026-07-26 — Phase V — Verification prompt paraphrased the rule it was verifying
+
+**Description.** The Arm 2 audit prompt rendered the codebook's autonomy rule as "NA if the
+paper presents no system", where the codebook says autonomy applies *only* to `SYSTEM` and
+`CASE_STUDY` papers and is `NA` for everything else. Both auditors, following the paraphrase,
+flagged correctly-coded `FRAMEWORK` papers as errors — producing most of the 14 apparent
+false positives.
+
+**How caught.** Adjudicating the flagged items against the codebook rather than accepting the
+auditors' agreement as evidence. Two independent models agreeing did not make them right; they
+were both faithfully applying an instruction that was wrong.
+
+**Consequence.** Inflated apparent error rate in Paper 1's corpus (7.8% flagged versus 2.2%
+genuine violations). No effect on published data.
+
+**Why this matters for RQ4.** A verifier is only as good as the statement of what it is
+verifying against, and here the AI paraphrased its own normative document when constructing
+the check. **Two models agreeing at 97% told us nothing about correctness — it told us they
+received the same wrong instruction.** High inter-rater agreement is routinely reported as
+evidence of quality; this is a concrete case where it measured shared instruction-following
+instead.
+
 ## #8 — 2026-07-26 — Phase 7 (submission) — Recommendation made without checking a
 ## necessary condition
 
