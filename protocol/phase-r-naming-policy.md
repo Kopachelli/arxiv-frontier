@@ -40,6 +40,22 @@ reasonable period to respond. Responses are published alongside our results, une
 an author demonstrates our verification was wrong, we correct the ledger and record the
 correction rather than quietly amending it.
 
+**Timing — decided 2026-07-26 (Khristian).** Authors are contacted **once, after all nine
+areas are verified**, not area by area. Reasons, recorded now so the choice is not
+re-litigated later:
+
+- A paper may appear in only one area, but our verification method will have improved across
+  the programme. Contacting everyone at the same maturity level treats all authors alike.
+- Per-area contact would leak partial findings before the cross-cutting analyses exist, and
+  an author would be replying to a claim whose context is not yet written.
+- It concentrates the correction window: replies arrive together, are adjudicated together,
+  and every ledger is updated once rather than drifting.
+
+The cost is that the interval between verification and notification is longer, and a
+repository may change in between. We therefore record the verification date and the commit
+or retrieval timestamp for every paper, and re-check any claim an author disputes against
+the state at the time we looked *and* the state at reply.
+
 ## 4. Our own method is on the record
 
 The verification procedure, scripts, environment, and full claim ledger are released, so that
