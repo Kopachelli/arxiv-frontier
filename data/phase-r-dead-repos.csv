@@ -1,0 +1,68 @@
+arxiv_id,url,owner_exists,owner_type,diagnosis,closest_repo_same_owner,name_similarity,likely_typo,cohort,title
+2504.08066,github.com/SakanaAI/AI-Scientist-ICLR2025-Works,1,Organization,owner_exists_repo_missing,AI-Scientist-ICLR2025-Workshop-Experiment,0.794,0,2025-H1,The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via
+2406.06769,github.com/allenai/discoveryworld.1,1,Organization,owner_exists_repo_missing,discoveryworld,0.933,1,2024-H1,DISCOVERYWORLD: A Virtual Environment for Developing and Evaluating Au
+2407.12888,github.com/Yijia-Xiao/Know2BIO.gitcdKnow2BIO,1,User,owner_exists_repo_missing,Know2BIO,0.533,0,unknown,
+2408.06292,github.com/fedebotu/ICLR20,1,User,owner_exists_repo_missing,aichallenge-2022,0.455,0,2024-H2,The AI Scientist: Towards Fully Automated Open-Ended Scientific Discov
+2503.05712,github.com/NikeHop/automatic_,1,User,owner_exists_repo_missing,automatic_scientific_quality_metrics,0.435,0,2025-H1,Automatic Evaluation Metrics for Artificially Generated Scientific Res
+2505.22648,github.com/RUCAIBox/SimpleDeepSear,1,Organization,owner_exists_repo_missing,SimpleDeepSearcher,0.875,1,2025-H1,WebDancer: Towards Autonomous Information Seeking Agency
+2505.23852,github.com/ndobb/nacc_paper_llm_reproducer2,1,User,owner_exists_repo_missing,simple-mapreduce,0.429,0,2025-H1,Large Language Model-Based Agents for Automated Research Reproducibili
+2506.08140,github.com/en/graphql,1,User,owner_exists_repo_missing,EQGRP,0.5,0,2025-H1,AutoSDT: Scaling Data-Driven Discovery Tasks Toward Open Co-Scientists
+2506.11113,github.com/Lin-TzuLing/Break,1,User,owner_exists_repo_missing,Breaking-the-Reviewer,0.385,0,2025-H1,Breaking the Reviewer: Assessing the Vulnerability of Large Language M
+2506.18096,github.com/ai-agents-2030/awesome-deep-research-,1,User,owner_exists_repo_missing,awesome-deep-research-agent,0.898,1,2025-H1,Deep Research Agents: A Systematic Examination And Roadmap
+2507.05495,github.com/cxcscmu/Deep-Research-,1,Organization,owner_exists_repo_missing,Deep-Research-Comparator,0.737,0,2025-H2,Deep Research Comparator: A Platform For Fine-grained Human Annotation
+2507.11330,github.com/njust-winchy/method,1,User,owner_exists_repo_missing,method_novelty_predict,0.429,0,2025-H2,Automated Novelty Evaluation of Academic Paper: A Collaborative Approa
+2507.16075,github.com/langchain-ai/open_deep_,1,Organization,owner_exists_repo_missing,langsmith-opencode,0.429,0,2025-H2,Deep Researcher with Test-Time Diffusion
+2508.05668,github.com/langchain-ai/open_,1,Organization,owner_exists_repo_missing,mcp-agent,0.429,0,2025-H2,"A Survey of LLM-based Deep Search Agents: Paradigm, Optimization, Eval"
+2508.10152,github.com/nickscamara/ope,1,User,owner_exists_repo_missing,Slot-Prizes,0.429,0,2025-H2,Improving and Evaluating Open Deep Research Agents
+2508.19200,github.com/colinzhaoust/ramon,1,User,owner_exists_repo_missing,README,0.545,0,2025-H2,The Ramon Llull's Thinking Machine for Automated Ideation
+2508.19200,github.com/tatsu-lab/alpaca,1,Organization,owner_exists_repo_missing,alpaca_eval,0.706,0,2025-H2,The Ramon Llull's Thinking Machine for Automated Ideation
+2509.13312,github.com/langchain-ai/open_dee,1,Organization,owner_exists_repo_missing,langsmith-opencode,0.462,0,2025-H2,WebWeaver: Structuring Web-Scale Evidence with Dynamic Outlines for Op
+2509.24978,github.com/MaxNaeg/S,1,User,owner_exists_repo_missing,distr_flax,0.182,0,2025-H2,Agentic Exploration of Physics Models
+2509.24978,github.com/MaxNaeg/Sci,1,User,owner_exists_repo_missing,SciExpColab,0.429,0,2025-H2,Agentic Exploration of Physics Models
+2510.05145,github.com/langchain-ai/open,1,Organization,owner_exists_repo_missing,mcp-agent,0.462,0,2025-H2,Efficient Tree-Structured Deep Research with Adaptive Resource Allocat
+2510.10472,github.com/sicara/easy-few-sho,1,Organization,owner_exists_repo_missing,easy-few-shot-learning,0.706,0,2025-H2,FML-bench: Benchmarking Machine Learning Agents for Scientific Researc
+2510.10994,github.com/langchain-ai/open_deep_resear,1,Organization,owner_exists_repo_missing,local-deep-researcher,0.595,0,2025-H2,Deep Research with Open-Domain Evaluation and Multi-Stage Guardrails f
+2510.11661,github.com/SymposiumOrganization/NeuralSymbolicRegressionThatS,1,Organization,owner_exists_repo_missing,NeuralSymbolicRegressionThatScales,0.921,1,2025-H2,SR-Scientist: Scientific Equation Discovery With Agentic AI
+2510.12194,github.com/ResearAI/ResearStudio,1,User,owner_exists_repo_missing,Researcher,0.545,0,2025-H2,ResearStudio: A Human-Intervenable Framework for Building Controllable
+2510.14240,github.com/langchain-ai/open_deep_,1,Organization,owner_exists_repo_missing,langsmith-opencode,0.429,0,2025-H2,LiveResearchBench: A Live Benchmark for User-Centric Deep Research in 
+2510.14438,github.com/huggingface/s,1,Organization,owner_exists_repo_missing,hffs,0.4,0,2025-H2,WebAggregator: Enhancing Compositional Reasoning Capabilities of Deep 
+2511.06701,github.com/karsar/ai-,1,User,owner_exists_repo_missing,AI-Scientist,0.4,0,2025-H2,Structural Enforcement of Statistical Rigor in AI-Driven Discovery: A 
+2511.07262,github.com/jdtoscano94/Learning-Scientific_Machine_Learning_Residual_,1,User,owner_exists_repo_missing,NABLA-SciML,0.281,0,2025-H2,AgenticSciML: Collaborative Multi-Agent Systems for Emergent Discovery
+2511.18303,github.com/ruiding-uchicago/DToR_deep_research,1,User,owner_exists_repo_missing,local-deep-researcher-ML-coder-v1,0.51,0,2025-H2,Hierarchical Deep Research with Local-Web RAG: Toward Automated System
+2511.18743,github.com/langchain-ai/open_dee,1,Organization,owner_exists_repo_missing,langsmith-opencode,0.462,0,2025-H2,RhinoInsight: Improving Deep Research through Control Mechanisms for M
+2601.08536,github.com/imlrz/DeepResearch-Bench-IIto,1,User,owner_exists_repo_missing,DeepResearch-Bench-II,0.955,1,2026-H1,DeepResearch Bench II: Diagnosing Deep Research Agents via Rubrics fro
+2601.09465,github.com/QuantaAlpha/EvoFSM,1,Organization,owner_exists_repo_missing,EvoControl,0.375,0,2026-H1,EvoFSM: Controllable Self-Evolution for Deep Research with Finite Stat
+2601.12910,github.com/en/rest,1,User,owner_exists_repo_missing,dreams,0.6,0,2026-H1,SciCoQA: Quality Assurance for Scientific Paper--Code Alignment
+2603.24402,github.com/autoproflab-debug/AI-Supervisor,1,User,owner_exists_repo_missing,,0.0,0,2026-H1,AI-Supervisor: Autonomous AI Research Supervision via a Persistent Res
+2603.25342,github.com/tzq1999/CDR,1,User,owner_exists_repo_missing,scrapy,0.444,0,2026-H1,From Intent to Evidence: A Categorical Approach for Structural Evaluat
+2603.27416,github.com/DeepRobotics/rl,1,Organization,owner_exists_repo_missing,,0.0,0,2026-H1,Agent-Driven Autonomous Reinforcement Learning Research: Iterative Pol
+2603.28589,github.com/hojonathanho/diffus,1,User,owner_exists_repo_missing,diffusion,0.8,0,2026-H1,Towards a Medical AI Scientist
+2603.29632,github.com/wanshuiyin/Auto-claude-code-research-,1,User,owner_exists_repo_missing,Auto-claude-code-research-in-sleep,0.867,1,2026-H1,An Empirical Study of Multi-Agent Collaboration for Automated Research
+2604.01354,github.com/openai/moderati,1,Organization,owner_exists_repo_missing,codex-action,0.6,0,2026-H1,Open-Domain Safety Policy Construction
+2604.05854,github.com/Xiangyue-Zhang/auto-,1,User,owner_exists_repo_missing,auto-deep-researcher-24x7,0.333,0,2026-H1,Deep Researcher Agent: An Autonomous Framework for 24/7 Deep Learning 
+2604.05952,github.com/langchain-ai/open_,1,Organization,owner_exists_repo_missing,mcp-agent,0.429,0,2026-H1,Towards Trustworthy Report Generation: A Deep Research Agent with Prog
+2604.07720,github.com/langchain-ai/open_,1,Organization,owner_exists_repo_missing,mcp-agent,0.429,0,2026-H1,Towards Knowledgeable Deep Research: Framework and Benchmark
+2604.16723,github.com/mnsalimi/Debate-as-Reward-A-Multi-Agent-Reward-System-for-Scientific-Ideation-via-RL-Post-Training,1,User,owner_exists_repo_missing,HardNewsDetection,0.264,0,2026-H1,Debate as Reward: A Multi-Agent Reward System for Scientific Ideation 
+2604.20441,github.com/aipoch/medical-research-skillsunder,1,Organization,owner_exists_repo_missing,medical-research-skills,0.902,1,2026-H1,MedSkillAudit: A Domain-Specific Audit Framework for Medical Research 
+2605.01489,github.com/karpathy/auto,1,User,owner_exists_repo_missing,autoresearch,0.5,0,2026-H1,SciResearcher: Scaling Deep Research Agents for Frontier Scientific Re
+2605.05258,github.com/gtrhythm/PARNESSand,1,User,owner_exists_repo_missing,PARNESS,0.824,0,2026-H1,PARNESS: A Paper Harness for End-to-End Automated Scientific Research 
+2605.06177,github.com/openai/healthbench,1,Organization,owner_exists_repo_missing,mle-bench,0.6,0,2026-H1,BioMedArena: An Open-source Toolkit for Building and Evaluating Biomed
+2605.24002,github.com/learningmatter-mit/AtomisticSk,1,Organization,owner_exists_repo_missing,AtomisticSkills,0.846,0,2026-H1,Harnessing AtomisticSkills for Agentic Atomistic Research
+2605.26029,github.com/DylanZSZ/CausaLab,1,User,owner_exists_repo_missing,CausaLab-Benchmark,0.615,0,2026-H1,CausaLab: A Scalable Environment for Interactive Causal Discovery Towa
+2605.30947,github.com/YatingPan/SPIRE,1,User,owner_exists_repo_missing,sgrwdh-web,0.4,0,2026-H1,Extending AI for Research to the Humanities: A Multi-Agent Framework f
+2606.00644,github.com/roytian1992/ResearchForesig,1,User,owner_exists_repo_missing,ResearchForesight,0.938,1,2026-H1,ForeSci: Evaluating LLM Agents for Forward-Looking AI Research Judgmen
+2606.09198,github.com/tjunlp-lab/MASS_,1,User,owner_exists_repo_missing,MASS_DeepResearch,0.455,0,2026-H1,MASS: Deep Research for Social Sciences with Memory-Augmented Social S
+2606.09748,github.com/sabharwalrishabh/Mu,1,User,owner_exists_repo_missing,STEAM,0.286,0,2026-H1,Multi-Turn Evaluation of Deep Research Agents Under Process-Level Feed
+2606.17076,github.com/qdrant/fa,1,Organization,owner_exists_repo_missing,bfb,0.4,0,2026-H1,"CMIP-Forge: An Agentic System that Retrieves, Computes, and Self-Revie"
+2606.18191,github.com/ServiceNow/drflow,1,Organization,owner_exists_repo_missing,drflow_old,0.75,0,2026-H1,DRFLOW: A Deep Research Benchmark for Personalized Workflow Prediction
+2606.23175,github.com/seulig/g4,1,User,owner_exists_repo_missing,seulig,0.25,0,2026-H1,"Position: Correct Answer, Wrong Mechanism -- When AI Scientists Defend"
+2606.26246,github.com/assafelovic/gpt-,1,User,owner_exists_repo_missing,gpt3-api,0.667,0,2026-H1,Lacuna: A Research Map for Machine Learning
+2606.26448,github.com/akjagadish/autocog,1,User,owner_exists_repo_missing,GPT3goesPsychology,0.4,0,2026-H1,Closing the Loop to Discover Psychological Theories with an Automated 
+2607.04293,github.com/anomalyco/o,1,Organization,owner_exists_repo_missing,ion,0.5,0,2026-H2,CausalGame: Benchmarking Causal Thinking of LLM Agents in Games
+2607.07663,github.com/bamboodrift/recursive_self_improvement,1,User,owner_exists_repo_missing,coding-interview-university,0.264,0,2026-H2,Recursive Self-Improvement in AI: From Bounded Self-Refinement to Auto
+2607.14178,github.com/ReasLab/ReasFlow.git,1,Organization,owner_exists_repo_missing,ReasFlow,1.0,1,2026-H2,ReasFlow: Assisting Reasoning-Centric Scientific Discovery in Applied 
+2607.14178,github.com/reaslab/ReasFlow.git,1,Organization,owner_exists_repo_missing,ReasFlow,1.0,1,2026-H2,ReasFlow: Assisting Reasoning-Centric Scientific Discovery in Applied 
+2607.16038,github.com/AGI4Sci/m,1,Organization,owner_exists_repo_missing,molclaw,0.25,0,2026-H2,"SciForge: An AI-Native, Multimodal Workbench for Scientific Discovery"
+2607.16038,github.com/AGI4Sci/molclaw.Phase,1,Organization,owner_exists_repo_missing,molclaw,0.7,0,2026-H2,"SciForge: An AI-Native, Multimodal Workbench for Scientific Discovery"
+2607.16038,github.com/AGI4Sci/scenari,1,Organization,owner_exists_repo_missing,startup-site,0.421,0,2026-H2,"SciForge: An AI-Native, Multimodal Workbench for Scientific Discovery"
+2607.20891,github.com/bytedance/deer-,1,Organization,owner_exists_repo_missing,deer-flow,0.714,0,2026-H2,Is Deep Research Reliable? Misleading Knowledge Induces False Conclusi

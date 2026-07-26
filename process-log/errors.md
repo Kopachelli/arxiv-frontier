@@ -152,6 +152,41 @@ pointed the same direction as the aggregate numbers. Nothing but recomputing and
 the specific cross-tabulation caught it. Note also that the corrected finding is
 *sharper* than the wrong one — following the data cost nothing scientifically.
 
+## #12 — 2026-07-26 — Phase R — Our extractor truncated URLs, inflating a headline rate
+## against other people's papers
+
+**Description.** The repository-URL regex ran over PDF-extracted text, in which long URLs are
+broken across lines. It therefore captured truncated repository names — `SimpleDeepSear` for
+`SimpleDeepSearcher`, `NeuralSymbolicRegressionThatS` for
+`NeuralSymbolicRegressionThatScales`, `diffus` for `diffusion` — and did not strip a trailing
+`.git`. Those URLs 404, so **17 working repositories were counted as dead links belonging to
+other researchers' papers.** The reported rate was 8.3% when the measured rate was 6.2%.
+
+**How caught.** Not by the rate looking wrong — 8.3% was entirely plausible. It was caught by
+asking *why* the links were dead rather than only how many: diagnosing owner-account existence
+and near-name matches under the same owner surfaced a pattern of names that were prefixes of
+real repositories, which is a signature of truncation rather than of author error.
+
+**Consequence.** A published-facing statistic about other people's work was overstated by a
+third, in the direction unfavourable to them. Corrected before any area paper was written:
+URL dead rate 8.3% → **6.2%**; papers with no resolvable repository 9.4% → **8.1%**. All 17
+repairs are recorded in `data/phase-r-url-repairs.csv` with the reason for each.
+
+**Correction.** A conservative repair rule (repair only when the cited name is a prefix of a
+real repository under the same owner, or differs only by `.git`), applied mechanically and
+logged per URL rather than applied silently.
+
+**Why this matters for RQ4.** This is the first error in the project whose cost would have
+fallen on **third parties**: a measurement error in our tooling, presented as a finding about
+other researchers' rigour. It is also the error most likely to have survived review, because
+the number was plausible, the method was described accurately, and nothing about the output
+looked wrong. The general point for a verification programme: **before reporting that someone
+else's artifact is missing, establish why it is missing.** An aggregate failure rate computed
+without mechanism analysis will silently include your own defects and attribute them to the
+people you are measuring. The naming policy's requirement that every `NOT_LOCATED` verdict
+record the specific search performed exists for exactly this reason, and this episode is why
+it is not optional.
+
 ## #11 — 2026-07-26 — Phase R — Shell pipeline silently truncated a sweep, exit code 0
 
 **Description.** The repository-availability sweep was launched as

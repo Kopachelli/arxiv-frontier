@@ -1,0 +1,17 @@
+  50/490
+  100/490
+  150/490
+  200/490
+  250/490
+  300/490
+  350/490
+  400/490
+  450/490
+
+ARCHETYPES (dimension E):
+  FULL_PIPELINE     312
+  CODE_ONLY          89
+  DEAD               63
+  STUB               16
+  DEMO_APP            7
+  DATA_ONLY           3

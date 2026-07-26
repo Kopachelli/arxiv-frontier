@@ -82,10 +82,25 @@ field-level rate and tests whether papers reporting provenance mechanisms (D6) d
 those that do not — which turns the remedy claim in `notes/unmarked-hypothesis.md` §3 into a
 falsifiable prediction rather than an argument.
 
-**Open design questions for Khristian.**
-- How to define the 7–10 areas: by scientific domain (materials / biomed / ML / …), by system
-  type (self-driving lab / deep research / ideation / …), by lifecycle stage, or by claim type?
-  Each partition produces a different set of papers and a different argument.
+**Partition — DECIDED 2026-07-26 (Khristian).** He chose to combine six of the candidate
+schemes rather than pick one. The design that implements this is
+`protocol/phase-r-design.md`; the essential move is that the six occupy three different
+roles rather than being six competing partitions:
+
+- **A (what the repository is supposed to support)** is the partition — 8 areas, 8 papers.
+- **E (artifact archetype)** is the *method router*: it decides which verification levels are
+  even possible for a given repository, so a prompts-only repo is never scored as though
+  execution had been attempted.
+- **B (domain), D (cohort), F (lineage), H (institution type)** are cross-cutting dimensions
+  recorded on every paper, reported inside every area, and aggregated into three additional
+  cross-area papers (lineage, trend, synthesis).
+
+One shared ledger schema serves all of them, so collection happens once and every paper is a
+slice of the same rows. Dimension H carries an extra constraint fixed in advance: aggregate
+by institution *type* only, never ranking or naming institutions, with small cells merged or
+suppressed (`protocol/phase-r-design.md` §7).
+
+**Remaining open design questions for Khristian.**
 - Repository access ethics and load: cloning ~489 public repos is heavy but ordinary; we should
   set a rate limit, respect licences, and publish only aggregate findings plus per-paper
   claim ledgers, not redistributed code.
