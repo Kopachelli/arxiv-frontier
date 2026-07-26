@@ -41,17 +41,26 @@ def area_of(coded, fin, cand):
         return "A2_auditability"
     if d2 in ("L3_CLOSED_LOOP", "L4_FULL"):
         return "A3_end_to_end"
-    if "EXECUTION" in stages and d4 in ("MATERIALS", "CHEMISTRY", "PHYSICS"):
-        return "A4_self_driving_lab"
+    # A4: research that acts on the physical world — wet lab, instruments, materials,
+    # patients — as opposed to research conducted purely over data. Merges the former
+    # A4 (self-driving labs) and A8 (biomedical), which were individually too small to
+    # carry a paper and share the property that their claims can be checked against
+    # physical outcomes.
+    if ("EXECUTION" in stages and d4 in ("MATERIALS", "CHEMISTRY", "PHYSICS")) or d4 == "BIOMED":
+        return "A4_physical_life_sciences"
     if d1 == "BENCHMARK":
         return "A5_benchmark"
     if fin.get("rule_applied") == "BR7":
         return "A6_deep_research"
     if "IDEATION" in stages:
         return "A7_ideation"
-    if d4 == "BIOMED":
-        return "A8_biomedical"
-    return "A9_other"
+    # The former residual bin was not random. Inspection showed two coherent groups:
+    # systems that consume and evaluate the scholarly record (literature synthesis and
+    # peer review), and tooling that supports research without performing a research
+    # stage itself (protocol design, scientific coding, illustration, proof assistance).
+    if "LITERATURE" in stages or "REVIEW" in stages:
+        return "A8_scholarly_record"
+    return "A9_research_infrastructure"
 
 
 def cohort_of(date):
