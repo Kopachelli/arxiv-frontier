@@ -6,8 +6,8 @@
 - Records identified by other methods (expert-identified): **2**
 - Records in codable window (first submitted >= 2024-01-01): **1357**
 - Records screened (window + expert-identified): **1359**
-- Records excluded: **548**
-- **Papers included in the corpus: 811**
+- Records excluded: **552**
+- **Papers included in the corpus: 807**
 
 ## Layer 1 — dual-pass screening reliability (RQ4)
 
@@ -38,9 +38,9 @@ Inclusion reasons:
 
 | code | n |
 |---|---|
-| IC1 | 483 |
+| IC1 | 481 |
 | IC2 | 204 |
-| IC3 | 124 |
+| IC3 | 122 |
 
 Exclusion reasons:
 
@@ -50,21 +50,21 @@ Exclusion reasons:
 | EC2 | 105 |
 | EC8_GENERIC_ANALYSIS | 62 |
 | EC7_HUMAN_AI_USE | 57 |
-| EC6_ASSISTIVE | 48 |
+| EC6_ASSISTIVE | 52 |
 | EC3 | 4 |
 
 Boundary rule invoked (all decisions):
 
 | rule | included | excluded |
 |---|---|---|
-| BR1 | 39 | 50 |
-| BR2 | 115 | 26 |
+| BR1 | 37 | 52 |
+| BR2 | 114 | 27 |
 | BR3 | 29 | 10 |
 | BR4 | 87 | 54 |
 | BR5 | 62 | 59 |
 | BR6 | 27 | 60 |
 | BR7 | 233 | 0 |
-| none | 219 | 289 |
+| none | 218 | 290 |
 
 ## RQ3 — corpus growth
 
@@ -74,13 +74,13 @@ Included papers by quarter of first submission:
 |---|---|
 | 2024-Q1 | 6 |
 | 2024-Q2 | 14 |
-| 2024-Q3 | 17 |
-| 2024-Q4 | 23 |
+| 2024-Q3 | 16 |
+| 2024-Q4 | 22 |
 | 2025-Q1 | 28 |
-| 2025-Q2 | 74 |
+| 2025-Q2 | 73 |
 | 2025-Q3 | 79 |
 | 2025-Q4 | 115 |
-| 2026-Q1 | 164 |
+| 2026-Q1 | 163 |
 | 2026-Q2 | 241 |
 | 2026-Q3 | 49 |
 
@@ -98,8 +98,8 @@ All harvested candidates by year (trend context, includes pre-2024):
 
 | category | n |
 |---|---|
-| cs.AI | 361 |
-| cs.CL | 214 |
+| cs.AI | 359 |
+| cs.CL | 213 |
 | cs.LG | 80 |
 | cs.IR | 21 |
 | cond-mat.mtrl-sci | 20 |
@@ -108,46 +108,45 @@ All harvested candidates by year (trend context, includes pre-2024):
 | cs.DL | 11 |
 | cs.CV | 10 |
 | cs.SE | 10 |
-| cs.HC | 6 |
+| cs.HC | 5 |
 | cs.RO | 5 |
 
-## Coded corpus (811 papers)
+## Coded corpus (807 papers)
 
 
 ### D1
 
 | code | n |
 |---|---|
-| SYSTEM | 392 |
+| SYSTEM | 389 |
 | BENCHMARK | 212 |
 | FRAMEWORK | 119 |
 | POSITION | 36 |
 | SURVEY | 26 |
-| CASE_STUDY | 26 |
+| CASE_STUDY | 25 |
 
 ### D2
 
 | code | n |
 |---|---|
 | NA | 393 |
+| L1_STAGE | 153 |
 | L3_CLOSED_LOOP | 148 |
-| L1_STAGE | 144 |
-| L2_PIPELINE | 86 |
+| L2_PIPELINE | 88 |
 | L4_FULL | 19 |
-| L0_ASSISTIVE | 15 |
 | UNCLEAR | 6 |
 
 ### D3
 
 | code | n |
 |---|---|
-| LITERATURE | 342 |
-| ANALYSIS | 280 |
-| IDEATION | 262 |
-| EXECUTION | 233 |
-| EXP_DESIGN | 182 |
-| NA | 162 |
-| WRITING | 159 |
+| LITERATURE | 340 |
+| ANALYSIS | 274 |
+| IDEATION | 259 |
+| EXECUTION | 231 |
+| EXP_DESIGN | 181 |
+| NA | 165 |
+| WRITING | 157 |
 | REVIEW | 87 |
 | UNCLEAR | 1 |
 
@@ -158,12 +157,12 @@ All harvested candidates by year (trend context, includes pre-2024):
 | GENERAL_ML | 361 |
 | MULTI | 110 |
 | OTHER | 101 |
-| BIOMED | 88 |
+| BIOMED | 86 |
 | MATERIALS | 53 |
-| PHYSICS | 39 |
+| PHYSICS | 38 |
 | SOCIAL_SCI | 30 |
 | CHEMISTRY | 13 |
-| MATH_FORMAL | 8 |
+| MATH_FORMAL | 7 |
 | UNCLEAR | 6 |
 | SOFTWARE | 2 |
 
@@ -173,9 +172,9 @@ All harvested candidates by year (trend context, includes pre-2024):
 |---|---|
 | BENCHMARK_METRIC | 575 |
 | LLM_JUDGE | 170 |
-| HUMAN_EXPERT | 135 |
-| NONE | 110 |
-| REAL_WORLD | 87 |
+| HUMAN_EXPERT | 134 |
+| NONE | 108 |
+| REAL_WORLD | 86 |
 | HELD_OUT_TRANSFER | 37 |
 | UNCLEAR | 3 |
 
@@ -183,10 +182,10 @@ All harvested candidates by year (trend context, includes pre-2024):
 
 | code | n |
 |---|---|
-| NONE | 445 |
+| NONE | 444 |
 | REPRO_ARTIFACTS | 190 |
-| PROVENANCE | 136 |
-| TRACES | 110 |
+| PROVENANCE | 135 |
+| TRACES | 108 |
 | UNCERTAINTY | 39 |
 | FORMAL_VERIF | 10 |
 
@@ -194,7 +193,7 @@ All harvested candidates by year (trend context, includes pre-2024):
 
 | code | n |
 |---|---|
-| NO | 610 |
+| NO | 606 |
 | YES | 157 |
 | PARTIAL | 44 |
 
@@ -202,7 +201,7 @@ All harvested candidates by year (trend context, includes pre-2024):
 
 | code | n |
 |---|---|
-| NO | 667 |
+| NO | 663 |
 | YES | 98 |
 | PARTIAL | 46 |
 
@@ -210,8 +209,8 @@ All harvested candidates by year (trend context, includes pre-2024):
 
 | code | n |
 |---|---|
-| METHOD | 371 |
-| CAPABILITY | 320 |
+| METHOD | 370 |
+| CAPABILITY | 317 |
 | CONCEPTUAL | 62 |
 | DISCOVERY | 58 |
 
@@ -222,10 +221,10 @@ All harvested candidates by year (trend context, includes pre-2024):
 | NONE_CLAIMED | 287 |
 | UNSPECIFIED | 286 |
 | EVALUATOR | 136 |
-| CO_PERFORMER | 72 |
+| CO_PERFORMER | 68 |
 | GATEKEEPER | 30 |
 
 ## RQ2 — auditability gap (prespecified)
 
-- Strong-claim / weak-verification papers: **36** (4.4% of coded corpus)
-- Papers with at least one strong verification mechanism: **388** (47.8%)
+- Strong-claim / weak-verification papers: **35** (4.3% of coded corpus)
+- Papers with at least one strong verification mechanism: **386** (47.8%)

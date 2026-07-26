@@ -1,19 +1,1 @@
 rule,arxiv_id,title,detail
-C1,2407.12888,Explainable Biomedical Hypothesis Generation via Retrieval Augmented G,included / IC1 but coded L0_ASSISTIVE
-C1,2407.13993,LLAssist: Simple Tools for Automating Literature Review Using Large La,included / IC1 but coded L0_ASSISTIVE
-C1,2501.01451,Human-AI Teaming Using Large Language Models: Boosting Brain-Computer ,included / IC3 but coded L0_ASSISTIVE
-C1,2504.01911,Advancing AI-Scientist Understanding: Multi-Agent LLMs with Interpreta,included / IC1 but coded L0_ASSISTIVE
-C1,2505.03049,34 Examples of LLM Applications in Materials Science and Chemistry: To,included / IC3 but coded L0_ASSISTIVE
-C5,2507.15617,Why can't Epidemiology be automated (yet)?,D1=POSITION but D3=EXP_DESIGN;EXECUTION;ANALYSIS;WRITING
-C1,2508.19200,The Ramon Llull's Thinking Machine for Automated Ideation,included / IC1 but coded L0_ASSISTIVE
-C1,2510.14861,LabOS: The AI-XR Co-Scientist That Sees and Works With Humans,included / IC1 but coded L0_ASSISTIVE
-C1,2511.02071,Human-AI Co-Embodied Intelligence for Scientific Experimentation and M,included / IC1 but coded L0_ASSISTIVE
-C1,2511.18259,DiscoVerse: Multi-Agent Pharmaceutical Co-Scientist for Traceable Drug,included / IC1 but coded L0_ASSISTIVE
-C1,2602.09723,AI-Assisted Scientific Assessment: A Case Study on Climate Change,included / IC1 but coded L0_ASSISTIVE
-C1,2602.22842,"The AI Research Assistant: Promise, Peril, and a Proof of Concept",included / IC3 but coded L0_ASSISTIVE
-C1,2603.00612,From Literature to Hypotheses: An AI Co-Scientist System for Biomarker,included / IC1 but coded L0_ASSISTIVE
-C1,2603.12226,Sparking Scientific Creativity via LLM-Driven Interdisciplinary Inspir,included / IC1 but coded L0_ASSISTIVE
-C1,2605.21481,AiraXiv: An AI-Driven Open-Access Platform for Human and AI Scientists,included / IC3 but coded L0_ASSISTIVE
-C5,2605.27905,AI Research Agents Narrow Scientific Exploration,D1=POSITION but D3=IDEATION
-C5,2606.23175,"Position: Correct Answer, Wrong Mechanism -- When AI Scientists Defend",D1=POSITION but D3=EXECUTION;ANALYSIS
-C1,2607.08003,Reaction-network reasoning with frontier models for experimentally con,included / IC1 but coded L0_ASSISTIVE

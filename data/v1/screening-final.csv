@@ -62,7 +62,7 @@ arxiv_id,final_decision,final_reason,rule_applied,justification,layer1_A,layer1_
 2407.10362,include,IC2,none,"Benchmark specifically measuring AI systems on practical biology research tasks, built toward automated research systems.",include,include,agree,0
 2407.11054,exclude,EC7_HUMAN_AI_USE,BR5,"Review and policy guidance on researchers responsibly using generative AI tools in HTA workflows with human oversight, not autonomous AI research systems.",borderline,include,needs_adjudication,0
 2407.12857,include,IC1,none,"Automated peer-review framework where the AI produces the reviews, performing the peer-review lifecycle stage.",include,include,agree,0
-2407.12888,exclude,EC6_ASSISTIVE,BR2,"corrected in v2 after full-text adjudication: RUGGED is a protocol for an interactive CLI where the investigator poses natural-language 'query'/'predict'/'search' commands and iteratively refines them; the system retrieves knowledge-graph facts, link-prediction resu",borderline,include,needs_adjudication,0
+2407.12888,include,IC1,BR2,"System generates biomedical hypotheses (drug-disease links) in a real scientific domain, in scope even without a full agent loop.",borderline,include,needs_adjudication,0
 2407.13364,exclude,EC2,BR4,"Theoretical active-exploration/experiment-design algorithm driven by an external loop, an optimizer contribution rather than an autonomous research system.",exclude,exclude,agree,0
 2407.13993,include,IC1,BR3,"LLM system autonomously screens and extracts from literature, producing the relevance judgments itself for the review stage.",borderline,include,needs_adjudication,0
 2407.16083,include,IC1,BR4,Self-driving lab with closed-loop active learning that decides what experiment to run next and discovers governing equations.,include,include,agree,0
@@ -145,7 +145,7 @@ arxiv_id,final_decision,final_reason,rule_applied,justification,layer1_A,layer1_
 2412.16270,include,IC1,BR2,"MetaScientist's AI generates scientific hypotheses and synthesizes metamaterial designs, with humans validating rather than producing the output.",include,include,agree,0
 2412.17596,include,IC2,BR2,LiveIdeaBench is a benchmark specifically for evaluating LLM scientific idea generation across scientific domains.,include,include,agree,0
 2412.20138,exclude,EC1,none,"Multi-agent LLM framework for financial trading, not scientific research work.",exclude,exclude,agree,0
-2501.01451,exclude,EC6_ASSISTIVE,none,"corrected in v2 after full-text adjudication: In the demonstrated motor-imagery project the humans rejected the LLM's generated ideas and chose the topic themselves ('we decided for the following, human-specified topic'), and every subsequent step - data validation,",include,include,agree,0
+2501.01451,include,IC3,none,Position/framework and case study explicitly about adapting autonomous AI scientist approaches (arguing for human-AI teaming) to BCI and neuroscience research.,include,include,agree,0
 2501.04227,include,IC1,none,"Agent Laboratory autonomously performs literature review, experimentation, and report writing end to end from a human-provided idea.",include,include,agree,0
 2501.04306,include,IC3,none,"Systematic survey specifically of LLMs performing stages of the scientific research lifecycle, with methodologies and benchmarks.",include,include,agree,0
 2501.08120,include,IC1,BR2,Reasoning framework built for automated scientific discovery whose demonstrations include machine generation of scientific hypotheses in materials science.,borderline,borderline,needs_adjudication,0
@@ -203,7 +203,7 @@ arxiv_id,final_decision,final_reason,rule_applied,justification,layer1_A,layer1_
 2503.24047,include,IC3,none,Survey specifically of LLM-based scientific agents that automate research lifecycle stages from hypothesis generation to analysis.,include,include,agree,0
 2504.00986,exclude,EC2,BR4,"Orchestration and scheduling infrastructure for self-driving labs; the paper's contribution is workflow/instrument integration, not a system that decides what experiment to run next.",borderline,include,needs_adjudication,0
 2504.01848,include,IC2,none,"Benchmark evaluating AI agents' ability to autonomously replicate research papers, including experiment execution.",include,include,agree,0
-2504.01911,exclude,EC6_ASSISTIVE,BR1,"corrected in v2 after full-text adjudication: The contribution is an interpretability/validation layer (summarizer, model builder, visualization builder, tester, interactive Gradio UI) whose explicit purpose is to let human physicists 'examine and verify the science",include,include,agree,0
+2504.01911,include,IC1,BR1,"Multi-agent LLM system autonomously performs physics reasoning and builds/validates science models, with the human interacting rather than producing the analysis.",include,include,agree,0
 2504.02822,exclude,EC1,BR2,"Study of what Hamiltonian/Lagrangian neural networks learn and their training dynamics — model-learning properties as such, not an autonomous hypothesis-generating research system.",exclude,borderline,needs_adjudication,0
 2504.03160,include,IC1,BR7,End-to-end trained deep research agent performing real-world multi-source search and synthesis.,borderline,exclude,needs_adjudication,0
 2504.03810,include,IC1,BR4,"Machine designers autonomously plan, modify, and adjust experimental protocols for self-driving labs — AI performing the experiment-design stage.",include,include,agree,0
@@ -793,7 +793,7 @@ arxiv_id,final_decision,final_reason,rule_applied,justification,layer1_A,layer1_
 2602.22603,exclude,EC1,none,"KV cache compression infrastructure for inference efficiency, not a research-performing system.",exclude,exclude,agree,0
 2602.22675,include,IC1,BR7,Long-horizon agentic search framework for deep research with evidence gathering and synthesis.,exclude,exclude,agree,0
 2602.22808,include,IC1,BR7,Open-source agent framework purpose-built for general deep research tasks.,exclude,exclude,agree,0
-2602.22842,exclude,EC6_ASSISTIVE,BR1,"corrected in v2 after full-text adjudication: The coding is right and the inclusion is wrong: this is a single mathematician chatting with GPT-4/Claude, with an explicit division of responsibilities reserving 'Problem formulation and research direction', 'Verificati",include,include,agree,0
+2602.22842,include,IC3,BR1,"Case study of AI producing substantive mathematical research outputs (proof exploration, novel bounds) with human verification, documenting capabilities and failure modes.",include,include,agree,0
 2602.22953,exclude,EC1,none,"General-purpose agent architecture evaluation across many domains, not targeted at research agents.",exclude,exclude,agree,0
 2602.23271,include,IC2,BR7,"Evaluation framework quantifying stochasticity/reproducibility of deep research agents' research outputs, including scientific discovery use.",include,include,agree,0
 2602.23335,exclude,EC6_ASSISTIVE,BR1,"Usage/interaction study of humans using assistive literature-discovery and QA tools; humans make the research judgments, no autonomous research system as subject.",include,include,agree,1
