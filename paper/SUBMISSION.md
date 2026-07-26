@@ -61,7 +61,12 @@ contribution rather than accountability, the AI would be a co-author.
 five figure PDFs. Note: figure paths use `../figures/`; for arXiv the figures must be copied
 into the submission directory and the paths flattened. Not yet done.
 
-## Zenodo deposit (companion record)
+## Zenodo deposit (companion record) -- PUBLISHED
+
+- v1: 10.5281/zenodo.21577093 (2026-07-25)
+- **v2: 10.5281/zenodo.21579505 (2026-07-26)** -- corpus corrected to 807 papers
+- **Concept DOI (always latest): 10.5281/zenodo.21577092**
+
 
 Purpose: a citable record carrying the explicit joint-authorship statement that arXiv policy
 does not permit, plus archived data and code.
