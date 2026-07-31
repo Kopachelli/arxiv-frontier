@@ -111,3 +111,36 @@ suppressed (`protocol/phase-r-design.md` §7).
 
 Phase V is small and should run first: it validates the instrument used in Paper 1 before
 Phase R relies on the same instrument at ten times the scale.
+
+---
+
+## Phase R execution plan — fixed 2026-07-26 (Khristian)
+
+**No sampling. Every area is verified in full.** Sampling the large areas was offered and
+declined: coverage is to be complete before any area paper is written, even if that spans
+several sessions and several context compactions.
+
+| # | area | n | cycle | status |
+|---|---|---|---|---|
+| 1 | A1 discovery | 32 | done | ✅ 255 claims |
+| 2 | A2 auditability | 49 | done | ✅ 352 claims |
+| 3 | A8 scholarly record | 24 | current | running |
+| 4 | A9 research infrastructure | 16 | current | running |
+| 5 | A4 physical & life sciences | 49 | next (with A7) | pending |
+| 6 | A7 ideation | 39 | next (with A4) | pending |
+| 7 | A6 deep research | 79 | **its own cycle** | pending |
+| 8 | A5 benchmark | 116 | **its own cycle** | pending |
+| 9 | A3 end-to-end | 86 | later session | pending |
+
+**Cycle rule.** A6 and A5 each get a dedicated cycle because of their size. A4 and A7 may
+share one. Nothing new starts until the current cycle's results are merged and committed.
+
+**Budget note.** Verification costs ~85k tokens per paper (measured: A1 2.87M/32,
+A2 3.98M/49). The remaining work exceeds a single context window, so it is expected to span
+compactions and sessions. Each area's ledger is written to `data/phase-r-ledger-<area>.csv`
+and committed as it completes, so progress is durable and no state lives only in context.
+
+**Open item.** Khristian's "everything" list named A4, A7, A6, A5. **A3 end-to-end (86) was
+not in that list but is still outstanding** and was earlier grouped with A5 for a later
+session. Flagged for confirmation; assumed still required, since the stated principle is
+complete coverage.
