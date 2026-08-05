@@ -85,26 +85,58 @@ the \nDiscovery{} papers making a \emph{discovery} claim --- an assertion that t
 new knowledge about the world, rather than that it performed a task well or that a method
 works. These are the claims for which a reader's ability to verify matters most.
 
-Discovery papers evaluate their \emph{results} substantially better than the corpus average.
-Half of them (\pctDiscRealWorld{}) report external validation against \pctRealWorld{}
-corpus-wide, \pctDiscStrongEval{} use at least one evaluation that tests a claim outside the
-loop that produced it against \pctStrongEval{} overall, and they use held-out transfer at
-three times the corpus rate. Authors claiming a discovery evidently feel the burden of proving
-the finding, and many discharge it.
+Discovery papers evaluate their \emph{results} substantially better than the corpus average,
+and this half of the comparison is unambiguous. Half of them (\pctDiscRealWorld{}, CI
+\ciDiscRealWorld{}) report external validation against \pctRealWorld{} corpus-wide;
+\pctDiscStrongEval{} (CI \ciDiscStrongEval{}) use at least one evaluation that tests a claim
+outside the loop that produced it, against \pctStrongEval{} overall; and they use held-out
+transfer at three times the corpus rate. In each case the corpus rate falls far outside the
+discovery interval. Authors claiming a discovery evidently feel the burden of proving the
+finding, and many discharge it.
 
-They do not discharge the other burden. The same papers expose their \emph{process} worse than
-average: \pctDiscNoAudit{} provide no auditability mechanism at all, against \pctAuditNone{}
-across the corpus, and \pctDiscRepo{} link a code repository against \pctRepo{} overall.
+They do not discharge the other burden --- but the correct statement is weaker than the one
+we first drew, and we set it out precisely because the paper's own argument is that evidence
+must match the claim it is asked to support. Discovery papers provide an auditability
+mechanism at \pctDiscAudit{} against \pctAnyAudit{} corpus-wide, and link a code repository at
+\pctDiscRepo{} against \pctRepo{}. At $n=\nDiscPapers{}$ the intervals are \ciDiscAudit{} and
+\ciDiscRepo{}, and \textbf{both contain the corpus rate}. We therefore do not claim that
+discovery papers expose their process \emph{worse} than the field. What the data support is
+that they expose it \emph{no better}, while validating results far better.
 
-This dissociation is the sharpest result in our map, and it is not what we expected to find.
-Validation of outputs and auditability of process are different things, and this literature
-does the first considerably better than the second precisely where its claims are strongest.
-A reader of a typical discovery paper can often verify \emph{that} the reported finding holds
---- a material was synthesised, a known result was reproduced --- while having no way to
-establish \emph{how} the system reached it, whether the route generalises, or whether the
-result survived a selection process over many discarded attempts that is nowhere reported.
-For a claim about what an autonomous system can discover, the second question is the load
-bearing one.
+That asymmetry is the finding, and it is sharper than a difference would have been. The
+burden authors accept and the burden they do not are visible in the same papers: proving that
+the finding is real is treated as obligatory, and showing how it was reached is not. Validation
+of outputs and auditability of process are different commitments, and this literature has
+adopted the first without the second precisely where its claims are strongest. A reader of a
+typical discovery paper can often verify \emph{that} the reported finding holds --- a material
+was synthesised, a known result was reproduced --- while having no way to establish \emph{how}
+the system reached it, whether the route generalises, or whether the result survived a
+selection process over many discarded attempts that is nowhere reported. For a claim about
+what an autonomous system can discover, the second question is the load-bearing one.
+
+\paragraph{Robustness to how the corpus was drawn.} The review had to make contested
+boundary decisions (Section~\ref{sec:method}), so we recompute the headline statistics under
+three defensible definitions of the corpus: as published ($n=\nCorpus{}$); excluding every
+paper admitted by the amended deep-research boundary rule, the review's most contested
+inclusion decision ($n=\nNoBRSeven{}$); and restricted to papers on which both independent
+screening passes agreed ($n=\nUnanimousOnly{}$).
+
+\begin{center}\small
+\begin{tabular}{lrrrr}
+\toprule
+corpus definition & no auditability & held-out & real-world & human role unstated \\
+\midrule
+as published ($n=\nCorpus{}$)          & \pctAuditNone{} & \pctHeldOut{} & \pctRealWorld{} & \pctHumanUnspec{} \\
+excl.\ rule-BR7 entrants ($n=\nNoBRSeven{}$) & \pctAuditNoneNoBRSeven{} & \pctHeldOutNoBRSeven{} & \pctRealWorldNoBRSeven{} & \pctHumanUnspecNoBRSeven{} \\
+unanimous screening only ($n=\nUnanimousOnly{}$) & \pctAuditNoneUnanOnly{} & \pctHeldOutUnanOnly{} & \pctRealWorldUnanOnly{} & \pctHumanUnspecUnanOnly{} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+No headline rate moves by more than four percentage points, and the auditability figure --- the
+paper's most-cited number --- moves by under one. The corpus-boundary problem that consumed
+much of this review's methodology is therefore a real difficulty for deciding \emph{which
+papers} belong, and not a material source of error in \emph{what we report about them}.
 
 \begin{table}[b]
 \centering
@@ -123,7 +155,11 @@ All papers  & \nCorpus{}      & \pctStrongEval{}     & \pctRealWorld{}     & \pc
 \end{tabular}
 \caption{Verification and auditability by strength of headline claim. ``Strong eval.''
 means at least one of human-expert assessment, held-out transfer, or real-world validation.
-Code-repository figures are verified from full text, not abstracts.}
+Code-repository figures are verified from full text, not abstracts. For the discovery row
+($n=\nDiscPapers{}$) the 95\% Wilson intervals are: strong eval.\ \ciDiscStrongEval{},
+real-world \ciDiscRealWorld{}, any audit \ciDiscAudit{}, code repo \ciDiscRepo{}. The
+corpus rate falls outside the first two intervals and inside the second two, which is why
+we claim a difference for validation and not for auditability.}
 \label{tab:gap}
 \end{table}
 

@@ -53,6 +53,15 @@ The protocol, codebook, screening prompts, and all amendments were written befor
 corresponding stage and are released verbatim; amendments are dated and justified. We
 summarise here and refer to the repository for the normative text.
 
+The design follows the evidence-synthesis tradition rather than inventing one: a
+pre-specified protocol, independent duplicate screening, dated amendments, reported
+inter-rater reliability, and a flow accounting for every record are all PRISMA~2020
+requirements \citep{page2021prisma}, and we adopt them. Where we depart, it is because the
+review was AI-conducted and the standard has no provision for it --- the reliability
+statistics we report are between two model passes rather than between two human reviewers,
+and the process log in Section~\ref{sec:reflexive} has no counterpart in the guideline. Those
+departures are marked as such rather than presented as novelty.
+
 \subsection{Search and corpus construction}
 
 We harvested arXiv metadata via the public API using 42 query strings in three families:
@@ -112,7 +121,10 @@ generic would define the field to fit the reviewer's framing. Re-screening the a
 moved 183 papers into the corpus. We flag this as the clearest instance in the project of
 human judgment correcting the AI's, and we report the AI's original position alongside it.
 
-The final corpus is \nCorpus{} papers.
+Screening closed with \nCorpusVOne{} included papers. Four were removed at the correction
+described in Section~\ref{sec:corrections}, giving the \nCorpus{} papers reported throughout
+this version. Every count in this paper refers to \nCorpus{} unless it explicitly concerns
+version~1.
 
 \subsection{Coding}
 
@@ -137,6 +149,10 @@ The correction is large. Abstract-based coding put code release at \pctRepoAbstr
 corpus; full-text verification finds repository links in \pctRepo{}. All artifact statistics
 we report use the full-text measurement, and we flag the discrepancy as a caution for
 abstract-based systematic reviews generally.
+
+Full text was retrieved for \nArtAttempted{} papers, of which \nArtFailed{} failed to parse
+and are recorded as failures rather than as absences of a repository. Artifact percentages are
+computed over the \nArtChecked{} papers that parsed.
 
 \subsection{The minimal-intervention condition}
 \label{sec:minimal}

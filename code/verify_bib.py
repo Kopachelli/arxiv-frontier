@@ -22,12 +22,19 @@ NS = {"atom": "http://www.w3.org/2005/Atom"}
 
 
 def parse_bib(text):
-    """Minimal .bib parser: returns list of dicts with key, and lowercase field map."""
+    """Minimal .bib parser: returns list of dicts with key, and lowercase field map.
+
+    The field pattern must not require a trailing newline: the final field of an entry is
+    followed directly by the closing brace. An earlier version required one and therefore
+    silently dropped the last field of every entry — which went unnoticed because the fields
+    this script checks (eprint, doi) happened not to be last. See process-log/errors.md #13.
+    """
     entries = []
     for m in re.finditer(r"@(\w+)\s*\{\s*([^,]+),(.*?)\n\}", text, re.S):
         fields = dict(
             (k.lower(), re.sub(r"\s+", " ", v).strip(" {}"))
-            for k, v in re.findall(r"(\w+)\s*=\s*[{\"](.*?)[}\"]\s*,?\s*\n", m.group(3), re.S)
+            for k, v in re.findall(r"(\w+)\s*=\s*[{\"](.*?)[}\"]\s*,?\s*(?=\n|$)",
+                                   m.group(3), re.S)
         )
         entries.append({"type": m.group(1), "key": m.group(2).strip(), **fields})
     return entries

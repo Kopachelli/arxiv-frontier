@@ -179,6 +179,14 @@ def write_macros(cand, l1, fin, inc):
     def thousands(n):
         return f"{n:,}".replace(",", "{,}")  # LaTeX-safe thousands separator
 
+    v1p = DATA / "v1" / "coded-corpus.csv"
+    if v1p.exists():
+        m["nCorpusVOne"] = sum(1 for _ in csv.DictReader(open(v1p, encoding="utf-8")))
+    art_p = DATA / "artifact-verification.csv"
+    if art_p.exists():
+        _a = list(csv.DictReader(open(art_p, encoding="utf-8")))
+        m["nArtAttempted"] = len(_a)
+        m["nArtFailed"] = sum(1 for r in _a if r["status"] != "ok")
     m["nHarvest"] = thousands(len(cand) - 2)
     m["nExpert"] = 2
     m["nScreened"] = thousands(len(fin))
@@ -279,6 +287,57 @@ def write_macros(cand, l1, fin, inc):
             m[f"pct{tag}Repo"] = p(sum(1 for r in sub if art_rows.get(r["arxiv_id"], {}).get("has_repo") == "1"), t)
         m["pctStrongEval"] = p(sum(1 for r in coded if set(r["D5"].split(";")) & strong_eval), n)
         m["pctAnyAudit"] = p(sum(1 for r in coded if r["D6"] != "NONE"), n)
+
+        # Wilson score intervals. Added 2026-07-31 after an external critique showed the
+        # headline dissociation was stated more strongly than n=58 supports; three of the
+        # four comparisons had the corpus rate inside the discovery interval.
+        import math
+
+        def wilson(k, tot, z=1.96):
+            if not tot:
+                return (0.0, 0.0)
+            ph = k / tot
+            d = 1 + z * z / tot
+            c = (ph + z * z / (2 * tot)) / d
+            h = z * math.sqrt(ph * (1 - ph) / tot + z * z / (4 * tot * tot)) / d
+            return max(0.0, c - h), min(1.0, c + h)
+
+        def ci(k, tot):
+            lo, hi = wilson(k, tot)
+            return (f"{lo:.0%}--{hi:.0%}").replace("%", "\\%")
+
+        for cl, tag in [("DISCOVERY", "Disc"), ("CAPABILITY", "Cap"),
+                        ("METHOD", "Meth"), ("CONCEPTUAL", "Conc")]:
+            sub = [r for r in coded if r["D8"] == cl]
+            if not sub:
+                continue
+            t = len(sub)
+            m[f"n{tag}Papers"] = t
+            m[f"ci{tag}StrongEval"] = ci(sum(1 for r in sub if set(r["D5"].split(";")) & strong_eval), t)
+            m[f"ci{tag}RealWorld"] = ci(sum(1 for r in sub if "REAL_WORLD" in r["D5"].split(";")), t)
+            m[f"ci{tag}Audit"] = ci(sum(1 for r in sub if r["D6"] != "NONE"), t)
+            m[f"ci{tag}Repo"] = ci(sum(1 for r in sub if art_rows.get(r["arxiv_id"], {}).get("has_repo") == "1"), t)
+        m["ciStrongEval"] = ci(sum(1 for r in coded if set(r["D5"].split(";")) & strong_eval), n)
+        m["ciRealWorld"] = ci(sum(1 for r in coded if "REAL_WORLD" in r["D5"].split(";")), n)
+        m["ciAnyAudit"] = ci(sum(1 for r in coded if r["D6"] != "NONE"), n)
+        m["ciRepo"] = ci(sum(1 for r in coded if art_rows.get(r["arxiv_id"], {}).get("has_repo") == "1"), n)
+
+        # sensitivity of headline statistics to corpus-boundary decisions
+        fin_all = {r["arxiv_id"]: r for r in load("screening-final.csv")}
+        l1_all = {r["arxiv_id"]: r for r in load("screening-decisions.csv")}
+        br7 = {p_ for p_, r in fin_all.items() if r.get("rule_applied") == "BR7"}
+        unan = {p_ for p_, r in l1_all.items() if r["agreement"] == "agree"}
+        no_br7 = [r for r in coded if r["arxiv_id"] not in br7]
+        unan_only = [r for r in coded if r["arxiv_id"] in unan]
+        m["nNoBRSeven"] = len(no_br7)
+        m["nUnanimousOnly"] = len(unan_only)
+        for label, rows_ in [("NoBRSeven", no_br7), ("UnanOnly", unan_only)]:
+            t = len(rows_)
+            m[f"pctAuditNone{label}"] = p(sum(1 for r in rows_ if r["D6"] == "NONE"), t)
+            m[f"pctHeldOut{label}"] = p(sum(1 for r in rows_ if "HELD_OUT_TRANSFER" in r["D5"].split(";")), t)
+            m[f"pctRealWorld{label}"] = p(sum(1 for r in rows_ if "REAL_WORLD" in r["D5"].split(";")), t)
+            m[f"pctHumanUnspec{label}"] = p(sum(1 for r in rows_
+                                                if r["D9"] in ("NONE_CLAIMED", "UNSPECIFIED")), t)
 
         disc = [r for r in coded if r["D8"] == "DISCOVERY"]
         if disc:

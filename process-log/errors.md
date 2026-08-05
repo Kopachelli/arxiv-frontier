@@ -152,6 +152,58 @@ pointed the same direction as the aggregate numbers. Nothing but recomputing and
 the specific cross-tabulation caught it. Note also that the corrected finding is
 *sharper* than the wrong one — following the data cost nothing scientifically.
 
+## #14 — 2026-07-31 — Paper v2 — Headline claim stated more strongly than n supports
+
+**Description.** Version 2 claimed that papers making discovery claims "expose their process
+worse" than the corpus: auditability 36% vs 45%, code release 55% vs 61%. At $n=58$ the 95%
+Wilson intervals are 25--49% and 42--67%, **both of which contain the corpus rate**. The
+comparison does not support a difference. The validation half of the dissociation is
+unaffected and remains large (real-world validation 50% vs 11%, interval 38--62%).
+
+**How caught.** An external reader's critique of the published v2, not by us. This is the
+first substantive error in the project found from outside.
+
+**Consequence.** A published paper asserted a difference its own data did not support, in the
+direction that made its story sharper. Corrected in v3: the claim is now "audits no better",
+intervals are reported throughout, and a sensitivity analysis was added.
+
+**Why this matters for RQ4.** The paper's central charge against the literature is that
+evidence is not matched to the strength of the claim it is asked to carry. We committed
+exactly that error, in our own headline, while the machinery for catching it — the released
+per-paper data — was sitting in the repository the whole time. Nothing in our process computed
+an interval, because nothing required one. That is the same shape as failure #10: a rule we
+believed in, never enforced by anything mechanical. The general lesson holds a third time —
+**a standard that is not implemented as a check is not a standard, it is an intention.**
+
+Note also what did work: the error was findable *because* the data was released. A reader
+could recompute and did.
+
+## #13 — 2026-07-31 — Paper — Our citation verifier silently dropped the last field of
+## every bibliography entry
+
+**Description.** `code/verify_bib.py` — the script whose entire purpose is to guarantee no
+unverified citation reaches the paper — parsed fields with a pattern requiring a trailing
+newline. The final field of a BibTeX entry is followed directly by the closing brace, so
+**every entry's last field was silently discarded**. The defect was invisible for 17 entries
+because the fields it checks (`eprint`, `doi`) happened never to be last. It surfaced only
+when a newly added reference put `doi` last, which the verifier then reported as
+"unverifiable — no eprint or doi field".
+
+**How caught.** By the verifier failing loudly on a citation known to be correct, which is
+the good failure mode. Had the new entry been ordered differently, the bug would still be
+latent.
+
+**Consequence.** None to published output: no citation was wrongly passed, and all 18 now
+verify at exact title match. But the guarantee the script provided was weaker than believed
+for the whole project.
+
+**Why this matters for RQ4.** A verification tool with a silent data-dropping bug provides
+false assurance, which is worse than no tool, because it stops anyone looking. This is the
+fourth instance in the project of silent truncation (see #3, #5, #11) and the first inside a
+*checker* rather than a producer. The pattern is now unambiguous enough to state as a rule:
+**anything that parses or transfers data must be tested with an input where the failure would
+be visible.** A checker that has never failed has not been shown to work.
+
 ## #12 — 2026-07-26 — Phase R — Our extractor truncated URLs, inflating a headline rate
 ## against other people's papers
 

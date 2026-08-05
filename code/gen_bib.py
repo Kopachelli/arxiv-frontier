@@ -38,6 +38,22 @@ CITES = {
     "ramos2024llmchem": "2407.01603",
 }
 
+# Non-arXiv references, verified by DOI rather than arXiv ID (code/verify_bib.py checks
+# these against Crossref). PRISMA is the standard this review's method is adapted from;
+# omitting it was a gap an external critique correctly identified.
+DOI_CITES = {
+    "page2021prisma": {
+        "doi": "10.1136/bmj.n71",
+        "title": "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews",
+        "author": ("Matthew J Page and Joanne E McKenzie and Patrick M Bossuyt and "
+                   "Isabelle Boutron and Tammy C Hoffmann and Cynthia D Mulrow and others"),
+        "journal": "BMJ",
+        "year": "2021",
+        "volume": "372",
+        "pages": "n71",
+    },
+}
+
 
 def fetch(arxiv_id):
     url = "http://export.arxiv.org/api/query?" + urllib.parse.urlencode(
@@ -80,8 +96,21 @@ def main():
         out.append("}\n")
         print(f"  {key}: {title[:70]}")
         time.sleep(3)
+
+    for key, d in DOI_CITES.items():
+        out.append(f"@article{{{key},")
+        out.append(f"  title        = {{{{{d['title']}}}}},")
+        out.append(f"  author       = {{{d['author']}}},")
+        out.append(f"  journal      = {{{d['journal']}}},")
+        out.append(f"  year         = {{{d['year']}}},")
+        out.append(f"  volume       = {{{d['volume']}}},")
+        out.append(f"  pages        = {{{d['pages']}}},")
+        out.append(f"  doi          = {{{d['doi']}}}")
+        out.append("}\n")
+        print(f"  {key}: {d['title'][:70]}")
+
     (ROOT / "paper" / "references.bib").write_text("\n".join(out), encoding="utf-8")
-    print(f"\nwrote paper/references.bib ({len(CITES)} entries)")
+    print(f"\nwrote paper/references.bib ({len(CITES) + len(DOI_CITES)} entries)")
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-\begin{thebibliography}{17}
+\begin{thebibliography}{18}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -79,6 +79,15 @@ Jingjie Ning, Xiaochuan Li, Shanshan Zhong, Ji~Zeng, and Guolin Ke.
 \newblock Auto research for materials: Auditable {AI-Scientist} workflows with
   {Held-Out} transfer.
 \newblock \emph{arXiv preprint arXiv:2607.17100}, 2026.
+
+\bibitem[Page et~al.(2021)Page, McKenzie, Bossuyt, Boutron, Hoffmann, Mulrow,
+  et~al.]{page2021prisma}
+Matthew~J Page, Joanne~E McKenzie, Patrick~M Bossuyt, Isabelle Boutron, Tammy~C
+  Hoffmann, Cynthia~D Mulrow, et~al.
+\newblock {The PRISMA 2020 statement: an updated guideline for reporting
+  systematic reviews}.
+\newblock \emph{BMJ}, 372:\penalty0 n71, 2021.
+\newblock \doi{10.1136/bmj.n71}.
 
 \bibitem[Ramos et~al.(2024)Ramos, Collison, and White]{ramos2024llmchem}
 Mayk~Caldas Ramos, Christopher~J. Collison, and Andrew~D. White.

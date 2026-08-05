@@ -26,7 +26,7 @@ states exactly which parts of the work each of us performed. arXiv policy does n
 systems to be listed as authors; a companion record with an explicit joint-authorship
 statement is deposited separately (Section~\ref{sec:avail}).}}
 
-\date{July 2026\\[0.2em]{\small Version 2 --- see Section~\ref{sec:corrections}}}
+\date{July 2026\\[0.2em]{\small Version 3 --- see Section~\ref{sec:corrections}}}
 
 \begin{document}
 \maketitle
@@ -46,16 +46,20 @@ Two things distinguish this map. First, the object: we ask not what these system
 \pctAuditNone{} of the corpus provides no auditability mechanism of any kind, only
 \pctHeldOut{} test a selected result outside the loop that produced it, and
 \pctHumanUnspec{} never state what humans did. Conditioning on claim strength separates two
-things the aggregates blur: papers claiming the AI produced new scientific knowledge validate
-their \emph{results} better than average (\pctDiscRealWorld{} report external validation
-versus \pctRealWorld{} corpus-wide) while exposing their \emph{process} worse
-(\pctDiscNoAudit{} provide no auditability mechanism versus \pctAuditNone{} overall). This
-field validates outputs better than it exposes process, and the gap is widest where its
-claims are strongest.
+things the aggregates blur. Papers claiming the AI produced new scientific knowledge
+($n=\nDiscPapers{}$) validate their \emph{results} far better than average ---
+\pctDiscRealWorld{} report external validation (95\% CI \ciDiscRealWorld{}) against
+\pctRealWorld{} corpus-wide --- while auditing their \emph{process} no better than average
+(\pctDiscAudit{} provide an auditability mechanism, CI \ciDiscAudit{}, against
+\pctAnyAudit{} overall). Authors claiming a discovery evidently feel the burden of proving
+the finding and discharge it; they feel no corresponding burden to expose how it was reached.
+These headline rates are insensitive to the corpus-boundary decisions the review had to
+make, varying by under four points across three defensible definitions of the corpus.
 
 Second, the instrument: the review was conducted by a frontier language model, and its
-process was logged rather than smoothed. That log is data. Two frontier models screening
-the same corpus under the same protocol disagreed on \pctAdjudicate{} of decisions
+process was logged rather than smoothed. That log is data. Two models from the same family
+--- not independent raters, and we do not treat them as such --- screening the same corpus
+under the same protocol disagreed on \pctAdjudicate{} of decisions
 ($\kappa = \kappaThree{}$), and the disagreements were not noise --- they clustered on seven
 boundary classes where the field itself has not settled what counts as an AI scientist,
 forcing a documented protocol amendment mid-review. We also record measured failure rates
