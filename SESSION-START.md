@@ -8,8 +8,9 @@ next cycle itself.
 ---
 
 ```
-Read notes/roadmap.md, notes/PHASE-R-CYCLES.md, protocol/phase-r-design.md,
-protocol/phase-r-naming-policy.md and process-log/errors.md.
+Read for-thoughts.md FIRST and answer anything in its Open section in writing, including
+where you disagree. Then read notes/roadmap.md, notes/PHASE-R-CYCLES.md,
+protocol/phase-r-design.md, protocol/phase-r-naming-policy.md and process-log/errors.md.
 
 Then work out where we actually are, from disk rather than from anything you assume:
   - ls data/phase-r-ledger-*.csv          -> which areas are already verified

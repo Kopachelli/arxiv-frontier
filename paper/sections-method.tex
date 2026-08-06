@@ -154,6 +154,44 @@ Full text was retrieved for \nArtAttempted{} papers, of which \nArtFailed{} fail
 and are recorded as failures rather than as absences of a repository. Artifact percentages are
 computed over the \nArtChecked{} papers that parsed.
 
+\subsection{Coding reliability}
+\label{sec:codingrel}
+
+Screening received two independent passes and a stability check; coding, which produces every
+headline number in this paper, was a single pass. That asymmetry was noted in version~2 and
+not measured. It is measured here: 149 papers drawn at random were re-coded from title and
+abstract by a second pass with no access to the original codes.
+
+Nine of the ten dimensions reach substantial agreement --- paper type $\kappa=0.92$, claim
+strength $0.87$, code release $0.86$, domain $0.83$, autonomy $0.78$, and (as multi-select
+Jaccard) evaluation method $0.92$ and auditability mechanisms $0.81$. Two require comment.
+
+\emph{Human role} scores $\kappa=0.37$ across its five categories, driven almost entirely by
+one confusion: 50 papers coded \texttt{NONE\_CLAIMED} were re-coded \texttt{UNSPECIFIED}. Both
+mean the paper does not say what humans did, and whether a paper actively asserts no human
+involvement or merely omits it is not reliably recoverable from an abstract. We record that as
+a codebook defect. The figure this paper reports collapses those two categories, and on the
+quantity as used agreement is 92.6\% ($\kappa=0.78$), with the two passes producing 77.9\% and
+78.5\%. The reported statistic is reliable although the dimension beneath it is not --- a
+distinction worth drawing generally, since $\kappa$ on a dimension can badly understate the
+reliability of a statistic that collapses categories the coders cannot separate.
+
+\emph{Auditability} is the uncomfortable one, and it carries this paper's most-cited number.
+Agreement on ``provides no auditability mechanism'' is 84.6\% with $\kappa=0.67$, but the two
+passes differ on the \emph{rate}: 57.7\% against 70.5\%, a gap of nearly thirteen points. Both
+agree that a clear majority of this literature provides no auditability mechanism, which is
+the claim we make and the basis of the argument; the precise percentage does not survive
+re-coding. \textbf{The \pctAuditNone{} figure should therefore be read as ``most papers,
+somewhere near three in five'', not as a point estimate.} Held-out transfer (4.7\% versus
+5.4\%) and real-world validation (13.4\% versus 11.4\%) are by contrast tight, so those
+figures stand as reported.
+
+The likely cause of the auditability spread is the one that produced seven boundary classes at
+screening: the dimension asks whether a mechanism is present \emph{as a designed feature}, and
+abstracts frequently gesture at inspectability without committing to it. Judgement calls made
+once are not measurements. Full results, including the confusion matrix, are in
+\texttt{data/CODING-RELIABILITY-RESULTS.md}.
+
 \subsection{The minimal-intervention condition}
 \label{sec:minimal}
 

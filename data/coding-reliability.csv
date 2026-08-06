@@ -1,0 +1,11 @@
+dimension,type,agreement,kappa,interpretation
+D1,single,0.946,0.92,substantial
+D2,single,0.852,0.779,substantial
+D4,single,0.879,0.83,substantial
+D7_code,single,0.946,0.863,substantial
+D7_data,single,0.98,0.93,substantial
+D8,single,0.919,0.875,substantial
+D9,single,0.564,0.371,fair
+D3,multi,0.497,0.627,moderate
+D5,multi,0.832,0.917,substantial
+D6,multi,0.772,0.812,substantial
