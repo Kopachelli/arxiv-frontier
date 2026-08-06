@@ -66,7 +66,7 @@ logs and rating spreadsheets before concluding `NOT_LOCATED`, and largely did no
 | A7 ideation | 65% (n=92) | 15% (n=61) | **4.4×** |
 | **pooled** | **64% (n=438)** | **28% (n=364)** | **2.3×** |
 
-**Six areas, same direction, without exception.** The ratio ranges from 1.6× to 5.4×; the
+**Six areas, same direction, without exception.** The ratio ranges from 1.6× to 4.4×; the
 pooled figure is 2.3×. A described method component is more than twice as likely to be
 locatable in a paper's own repository as a reported number.
 
