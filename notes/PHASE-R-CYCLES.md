@@ -12,13 +12,13 @@ the whole of the programme's durable state.
 | — | — | A1 discovery | 32 | 2.87M actual | ✅ **done** — 255 claims |
 | — | — | A2 auditability | 49 | 3.98M actual | ✅ **done** — 352 claims |
 | **1** | SOFTWR-205 | A8 scholarly record + A9 research infrastructure | 24 + 16 | 3.21M actual | ✅ **done** — 279 claims |
-| **2** | SOFTWR-206 | A4 physical & life sciences + A7 ideation | 49 + 39 | 7.70M actual | ✅ **done** — 600 claims |
+| **2** | SOFTWR-206 | A4 physical & life sciences + A7 ideation | 49 + 39 | 7.85M actual | ✅ **done** — 607 claims |
 | **3** | SOFTWR-207 | A6 deep research | 79 | ~6.7M | ⬜ pending |
 | **4** | SOFTWR-208 | A5 benchmark | 116 | ~9.9M | ⬜ pending |
 | **5** | SOFTWR-209 | A3 end-to-end | 86 | ~7.3M | ⬜ pending |
 | **6** | SOFTWR-210 | cross-cutting papers + author right of reply | — | — | ⬜ blocked by 1–5 |
 
-**Total: 490 papers across nine areas.** 208 verified (1,486 claims), 282 remaining.
+**Total: 490 papers across nine areas.** 209 verified (1,493 claims), 281 remaining.
 
 ## How to run a cycle
 
