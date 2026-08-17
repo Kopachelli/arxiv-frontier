@@ -98,6 +98,28 @@ def main():
           f'{pct(c3["NOT_LOCATED"], len(n_all)):>13s}'
           f'{pct(c3["UNVERIFIABLE"], len(n_all)):>14s}')
 
+    # Divergence is conditional on release: you can only disagree with a number you can find.
+    # Over all claims it is a composite of how much an area releases and how well what it
+    # releases matches its text; only the second is what a reader takes it to mean. Both are
+    # printed so the difference stays visible. See notes/divergence-and-checkability.md.
+    print("\n\nDIVERGENCE, RAW vs CONDITIONAL ON THE ARTIFACT BEING LOCATED")
+    LOCATED = ("SUPPORTED", "DIVERGENT", "CONTRADICTED")
+    hdr4 = f'{"area":24s}{"/ all claims":>14s}{"/ located":>12s}{"located n":>11s}'
+    print(hdr4)
+    print("-" * len(hdr4))
+    for a in areas:
+        sub = [r for r in rows if r["area"] == a]
+        loc = [r for r in sub if r["verdict"] in LOCATED]
+        d = sum(1 for r in sub if r["verdict"] == "DIVERGENT")
+        print(f"{AREA_LABEL.get(a, a):24s}{pct(d, len(sub)):>14s}"
+              f"{pct(d, len(loc)):>12s}{len(loc):>11d}")
+    loc_all = [r for r in rows if r["verdict"] in LOCATED]
+    d_all = sum(1 for r in rows if r["verdict"] == "DIVERGENT")
+    print("-" * len(hdr4))
+    print(f'{"POOLED":24s}{pct(d_all, len(rows)):>14s}'
+          f'{pct(d_all, len(loc_all)):>12s}{len(loc_all):>11d}')
+    print("  Area papers report the conditional rate and state the denominator.")
+
     print("\n\nBY CLAIM TYPE, POOLED")
     bt = defaultdict(Counter)
     for r in rows:
