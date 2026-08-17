@@ -15,10 +15,23 @@ the whole of the programme's durable state.
 | **2** | SOFTWR-206 | A4 physical & life sciences + A7 ideation | 49 + 39 | 7.85M actual | ✅ **done** — 607 claims |
 | **3** | SOFTWR-207 | A6 deep research | 79 | 7.19M actual | ✅ **done** — 545 claims |
 | **4** | SOFTWR-208 | A5 benchmark | 116 | 8.04M actual | ✅ **done** — 805 claims |
-| **5** | SOFTWR-209 | A3 end-to-end | 86 | ~7.3M | ⬜ pending |
-| **6** | SOFTWR-210 | cross-cutting papers + author right of reply | — | — | ⬜ blocked by 1–5 |
+| **5** | SOFTWR-209 | A3 end-to-end | 86 | 8.45M actual | ✅ **done** — 595 claims |
+| **6** | SOFTWR-210 | cross-cutting papers + author right of reply | — | — | 🔓 **unblocked** — 1–5 complete |
 
-**Total: 490 papers across nine areas.** 404 verified (2,843 claims), 86 remaining — A3 only.
+**Total: 490 papers across nine areas. All 490 verified — 3,438 claims. Verification is
+complete; no area was sampled.**
+
+## The result, at nine areas of nine
+
+| | pooled |
+|---|---|
+| described method components located | **73%** (n=1,053) |
+| reported numeric results located | **30%** (n=774) |
+| ratio | **2.4×** (range 1.6×–4.7×) |
+
+Same direction in every area, without exception. Fate of the 774 numeric claims: 30%
+supported, 9% divergent, 39% not located, 21% unverifiable. Seven `CONTRADICTED` in 3,438
+claims (0.2%). 85% of verdicts reached R2.
 
 ## How to run a cycle
 
