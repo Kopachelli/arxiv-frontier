@@ -14,7 +14,7 @@ the whole of the programme's durable state.
 | **1** | SOFTWR-205 | A8 scholarly record + A9 research infrastructure | 24 + 16 | 3.21M actual | ✅ **done** — 279 claims |
 | **2** | SOFTWR-206 | A4 physical & life sciences + A7 ideation | 49 + 39 | 7.85M actual | ✅ **done** — 607 claims |
 | **3** | SOFTWR-207 | A6 deep research | 79 | 7.19M actual | ✅ **done** — 545 claims |
-| **4** | SOFTWR-208 | A5 benchmark | 116 | ~9.9M | ⬜ pending |
+| **4** | SOFTWR-208 | A5 benchmark | 116 | ~9.9M | 🔄 **partial** — 38/116 done, 265 claims; session limit hit mid-run, resuming |
 | **5** | SOFTWR-209 | A3 end-to-end | 86 | ~7.3M | ⬜ pending |
 | **6** | SOFTWR-210 | cross-cutting papers + author right of reply | — | — | ⬜ blocked by 1–5 |
 
