@@ -73,13 +73,32 @@ against it is usually not.
 
 ## Divergence is a symptom of checkability, not of sloppiness
 
-A5 has the programme's highest `DIVERGENT` rate (11.4% overall, **16% of dataset claims**), and
-this must be read carefully, because the naive reading is exactly backwards.
+A5 has the programme's second-highest `DIVERGENT` rate (11.4% of all claims, **16% of dataset
+claims**), and this must be read carefully, because the naive reading is exactly backwards.
 
 **You can only disagree with a number you can find.** In areas where the artifact is absent the
 verdict is `NOT_LOCATED` — no mismatch can be recorded, because nothing was there to mismatch.
-A5's divergence rate is high *because* its release rate is high. A rising divergence count is
-what a field looks like when it becomes auditable, not when it becomes careless.
+Divergence is therefore conditional on release, and A5's rate is high *because* its release
+rate is high.
+
+Recomputed over *located* claims only — those where the artifact was found and assessed — the
+ranking reverses:
+
+| | divergence / all claims | divergence / located claims |
+|---|---|---|
+| **A5 benchmark** | 11.4% — 2nd highest of 8 | **14.5% — 2nd lowest of 8** |
+| A8 scholarly record | 13.1% — highest | 22.7% — highest |
+| pooled | 10.4% | 15.7% |
+
+A5 sits above the pooled rate on the raw metric and below it on the corrected one. **On the
+measure that controls for whether anything was there to check, benchmarks are among the most
+accurate areas in the corpus, not the least.** The correction is not monotone across areas
+(A1 discovery moves the opposite way), so a reader cannot adjust for it by intuition — which is
+why every area paper will report divergence over located claims and state the denominator.
+Reasoning recorded in `notes/divergence-and-checkability.md`.
+
+A rising divergence count is what a field looks like when it becomes auditable, not when it
+becomes careless.
 
 Four examples, each a deterministic count rather than an impression:
 
