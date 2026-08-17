@@ -14,11 +14,11 @@ the whole of the programme's durable state.
 | **1** | SOFTWR-205 | A8 scholarly record + A9 research infrastructure | 24 + 16 | 3.21M actual | ✅ **done** — 279 claims |
 | **2** | SOFTWR-206 | A4 physical & life sciences + A7 ideation | 49 + 39 | 7.85M actual | ✅ **done** — 607 claims |
 | **3** | SOFTWR-207 | A6 deep research | 79 | 7.19M actual | ✅ **done** — 545 claims |
-| **4** | SOFTWR-208 | A5 benchmark | 116 | ~9.9M | 🔄 **partial** — 38/116 done, 265 claims; session limit hit mid-run, resuming |
+| **4** | SOFTWR-208 | A5 benchmark | 116 | 8.04M actual | ✅ **done** — 805 claims |
 | **5** | SOFTWR-209 | A3 end-to-end | 86 | ~7.3M | ⬜ pending |
 | **6** | SOFTWR-210 | cross-cutting papers + author right of reply | — | — | ⬜ blocked by 1–5 |
 
-**Total: 490 papers across nine areas.** 288 verified (2,038 claims), 202 remaining.
+**Total: 490 papers across nine areas.** 404 verified (2,843 claims), 86 remaining — A3 only.
 
 ## How to run a cycle
 
