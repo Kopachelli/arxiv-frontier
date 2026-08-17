@@ -5,6 +5,7 @@ Usage: python code/analyze.py  [-> writes data/RESULTS.md and prints a summary]
 """
 
 import csv
+import sys
 import json
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -179,6 +180,49 @@ def write_macros(cand, l1, fin, inc):
     def thousands(n):
         return f"{n:,}".replace(",", "{,}")  # LaTeX-safe thousands separator
 
+    # Coding-reliability macros. Added 2026-08-18 after self-verification findings (a) and (b),
+    # errors.md #15: the whole of §3.5 was hand-typed while the paper claimed no number was,
+    # and "nine of ten dimensions substantial" contradicted this very file, which says eight.
+    # The count is now derived from the data rather than asserted over it.
+    rel_p = DATA / "coding-reliability.csv"
+    if rel_p.exists():
+        _r = list(csv.DictReader(open(rel_p, encoding="utf-8")))
+        m["nRelDims"] = len(_r)
+        m["nRelSubstantial"] = sum(1 for r in _r if r["interpretation"] == "substantial")
+        # LaTeX control sequences may not contain digits, so D7_code -> DSevenCode.
+        _dig = {"1": "One", "2": "Two", "3": "Three", "4": "Four", "5": "Five",
+                "6": "Six", "7": "Seven", "8": "Eight", "9": "Nine", "0": "Zero"}
+        for r in _r:
+            key = "".join(_dig.get(ch, ch) for ch in r["dimension"].replace("_", " ").title()
+                          if ch != " ")
+            m[f"kappa{key}"] = f'{float(r["kappa"]):.2f}'
+            m[f"agree{key}"] = f'{float(r["agreement"]):.3f}'
+            m[f"interp{key}"] = r["interpretation"]
+
+    # Error-log counts, derived from the log rather than asserted about it. Added after
+    # self-verification finding (d), errors.md #15: the paper said "five failures were logged"
+    # while the log held fourteen. A count of a file should be computed from that file.
+    # Phase R and self-verification counts, from the released ledgers.
+    _led = sorted(DATA.glob("phase-r-ledger-*.csv"))
+    if _led:
+        _ids, _self = set(), 0
+        for p in _led:
+            for r in csv.DictReader(open(p, encoding="utf-8")):
+                if r["area"] == "A0_paper_1_self":
+                    _self += 1
+                else:
+                    _ids.add(r["arxiv_id"])
+        m["nPhaseRPapers"] = len(_ids)
+        if _self:
+            m["nSelfClaims"] = _self
+
+    err_p = ROOT / "process-log" / "errors.md"
+    if err_p.exists():
+        _e = err_p.read_text(encoding="utf-8", errors="replace").splitlines()
+        _h = [ln for ln in _e if ln.startswith("## #")]
+        m["nErrLogged"] = len(_h)
+        m["nErrReview"] = sum(1 for ln in _h if "2026-07-25" in ln)
+
     v1p = DATA / "v1" / "coded-corpus.csv"
     if v1p.exists():
         m["nCorpusVOne"] = sum(1 for _ in csv.DictReader(open(v1p, encoding="utf-8")))
@@ -187,6 +231,11 @@ def write_macros(cand, l1, fin, inc):
         _a = list(csv.DictReader(open(art_p, encoding="utf-8")))
         m["nArtAttempted"] = len(_a)
         m["nArtFailed"] = sum(1 for r in _a if r["status"] != "ok")
+        # Self-verification finding (h), errors.md #15: the prose read "811 attempted, 2
+        # failed, computed over 805 that parsed" -- but 811-2 is 809. The 4-paper gap is the
+        # intersection with the v3 corpus, which the sentence never stated. Both quantities
+        # are now macros so the arithmetic in the text is checkable.
+        m["nArtParsed"] = len(_a) - m["nArtFailed"]
     m["nHarvest"] = thousands(len(cand) - 2)
     m["nExpert"] = 2
     m["nScreened"] = thousands(len(fin))
@@ -363,6 +412,7 @@ def write_macros(cand, l1, fin, inc):
             ok = [r for r in coded if art.get(r["arxiv_id"], {}).get("status") == "ok"]
             if ok:
                 m["nArtChecked"] = len(ok)
+                m["nArtDropped"] = m["nArtParsed"] - len(ok)
                 repo = sum(1 for r in ok if art[r["arxiv_id"]]["has_repo"] == "1")
                 m["nRepo"] = repo
                 m["pctRepo"] = f"{repo / len(ok):.0%}".replace("%", "\\%")
@@ -376,7 +426,29 @@ def write_macros(cand, l1, fin, inc):
         lines.append(f"\\newcommand{{\\{k}}}{{{v}}}")
     (ROOT / "paper" / "numbers.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"\n[wrote paper/numbers.tex with {len(m)} macros]")
+    return m
+
+
+def gate():
+    """Run the analysis, then enforce the invariants on what it produced.
+
+    Added 2026-08-18 after self-verification finding (g), errors.md #15. The paper claimed
+    check_consistency.py "runs as a gate on every regeneration of the analysis"; it was
+    invoked by nothing, so the claim was false. Error #10's lesson — state your invariants
+    and check them by script — had been learned in prose and not in code. This is the wiring
+    that makes the published sentence true.
+    """
+    main()
+    import check_consistency
+    print("\n=== consistency gate ===")
+    n = check_consistency.main()
+    if n:
+        print(f"\nGATE FAILED: {n} internal-consistency violations. "
+              f"See data/consistency-violations.csv.")
+        return 1
+    print("\nGATE PASSED: no internal-consistency violations.")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(gate())

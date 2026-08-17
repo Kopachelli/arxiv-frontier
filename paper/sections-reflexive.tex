@@ -40,8 +40,9 @@ the decision to inspect disagreements individually.
 
 \subsection{An error taxonomy with measured rates}
 
-Five failures were logged. We report them with rates because rates are what the literature
-we mapped almost never provides.
+\nErrLogged{} failures are logged in \texttt{process-log/errors.md}; the \nErrReview{} that
+arose during the review itself are taxonomised below. We report them with rates because rates
+are what the literature we mapped almost never provides.
 
 \paragraph{Silent-empty success.} The first screening workflow returned success in 106
 milliseconds having spawned zero agents: an argument arrived as a JSON string where the
@@ -87,9 +88,9 @@ single largest methodological weakness of this review.
 
 Three observations generalise beyond this project.
 
-First, \textbf{every failure we logged was caught by a mechanical check that cost almost
-nothing}: expected-versus-actual reconciliation, refusing to process empty input, and running
-two raters against each other. None required sophisticated oversight. None would have been
+First, \textbf{every failure we caught ourselves was caught by a mechanical check that cost
+almost nothing}: expected-versus-actual reconciliation, refusing to process empty input, and
+running two raters against each other. None required sophisticated oversight. None would have been
 visible in the finished paper.
 
 Second, \textbf{summary statistics concealed the problems that individual records revealed}. A
@@ -109,6 +110,9 @@ A caveat we cannot resolve from the inside. This section was written by the syst
 failures it reports. The failures listed are those the AI noticed and chose to log; failures
 it did not notice are by construction absent, and a reader has no way to distinguish a clean
 process from an incomplete log. We have tried to make the claim checkable rather than asking
-for trust: the logs are timestamped in git history, the data files permit independent
-recomputation of every statistic, and the failure modes named here are mechanically detectable
-in the released artifacts. That is weaker than external audit, and we prefer to say so.
+for trust: the logs are timestamped in git history, the released data files permit independent
+recomputation of the corpus statistics, and the failure modes named here are mechanically
+detectable in the released artifacts. One study is an exception we record rather than gloss:
+the double-coding reliability figures in \Section~3.5 cannot be recomputed, because the second-pass
+codes were not preserved (Section~\ref{sec:corrections}). That is weaker than external audit, and we
+prefer to say so.

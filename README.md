@@ -64,8 +64,9 @@ every per-paper decision with its justification is in `data/`.
 
 ## Integrity commitments
 
-No fabricated data. Every reported number is generated from a released CSV by
-`code/analyze.py` — none is transcribed by hand. Every citation is machine-verified against
+No fabricated data. Every corpus statistic is generated from a released CSV by
+`code/analyze.py` and none is transcribed by hand; narrative sections state some counts
+inline, and self-verification found nine unsupported statements in v3 (see `errors.md` #15). Every citation is machine-verified against
 live arXiv/Crossref metadata (17/17). Every AI failure encountered is recorded in
 `process-log/errors.md` and reported in the paper. The AI's role is disclosed in the abstract,
 a title-page footnote, and a dedicated contribution statement.

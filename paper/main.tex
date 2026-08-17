@@ -69,9 +69,11 @@ forcing a documented protocol amendment mid-review. We also record measured fail
 for silent item-dropping in structured extraction, a workflow that reported success having
 done nothing, and a pipeline defect that fed empty inputs to a reasoning step. We argue that
 the auditability deficit we measure in the literature and the failure modes we logged in
-ourselves are the same problem, and that they are tractable: every one of our own failures
-was caught by a cheap reconciliation check, and none would have been visible in the
-finished paper.
+ourselves are the same problem, and that they are largely tractable: most of our logged
+failures were caught by a cheap reconciliation check before reaching the paper. Two were
+not. One was found by an external reader of the published version~2, and one by turning this
+paper's own verification procedure on itself --- which found nine unsupported statements in
+the version~3 text, five of them completeness claims. Both are reported here.
 \end{abstract}
 
 \input{sections-intro}

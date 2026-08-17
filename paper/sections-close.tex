@@ -259,7 +259,8 @@ We report this prominently rather than in a footnote because a review arguing th
 should expose its process is obliged to expose its own, including the part where it was
 wrong. The error was not a misjudgement but an unenforced invariant: the rule existed and
 nothing tested that the data obeyed it. That check now runs as a gate on every regeneration of
-the analysis.
+the analysis --- though only since version~4, as the third correction below records: for two
+versions this sentence described a script that nothing invoked.
 
 A second correction, in this version, followed an external critique of version~2 rather than
 an internal check. The critique observed that the headline dissociation was stated more
@@ -271,6 +272,48 @@ data. It is now stated as ``no better'', with intervals reported throughout
 (Section~\ref{sec:results}). We note without excuse that this is precisely the failure the
 paper documents in others --- evidence not matching the strength of the claim it is asked to
 carry --- and that it was caught by an outside reader rather than by us.
+
+\paragraph{A third correction, from turning this paper's procedure on itself.} The follow-on
+programme described in Section~\ref{sec:reflexive} verifies claims in \nPhaseRPapers{} papers
+of this corpus against the artifacts those papers released. Its published policy requires this
+paper to be verified first, by the same method, before any other author is contacted. That was
+done at version~3. Six adversarial verifiers examined \nSelfClaims{} claims; nine defects
+survived source-level adjudication, and five were \emph{completeness} claims --- the
+grammatical form that is cheapest to write and most expensive to satisfy.
+
+The substantive ones: this paper claimed that no number in it was transcribed by hand, while
+roughly forty of its own statistics --- the whole of the reliability paragraph in
+Section~\ref{sec:method} --- were typed as literals, one of them ($\kappa=0.87$ for claim
+strength) differing from the released file's \kappaDEight{}; it stated that nine of ten coded
+dimensions reached substantial agreement where its own released
+\texttt{coding-reliability.csv} says \nRelSubstantial{}; it said five failures were logged
+where the log held \nErrLogged{}; it referred readers to a confusion matrix that was described
+in prose but never tabulated; it claimed the released data permit recomputation of every
+statistic, although the second-pass codes behind the reliability study were not preserved and
+that study therefore cannot be recomputed; and it asserted that the consistency checker
+``runs as a gate on every regeneration of the analysis'' when the script was invoked by
+nothing.
+
+Each is corrected here, in one of two ways, and the difference is the point. Where the claim
+was worth keeping we made it true: the missing macros are now generated, and the checker is
+wired into the analysis script so that regeneration genuinely fails on a violation. Where it
+was not recoverable we made the text accurate: the recomputation and confusion-matrix claims
+are withdrawn above, and the counts now derive from the files they describe.
+
+We note what this cost us and what it bought. The claim that our own numbers were mechanically
+generated was false in exactly the section describing our rigour, and the checker whose absence
+allowed it was the one we built after the previous correction --- its lesson recorded in prose
+and never wired into code. That is the distinction this paper exists to draw, and we failed on
+the wrong side of it. It bought the finding that our worst defects cluster in the reflexive
+section: prose about method is not constrained by the pipeline that produces the results, so
+nothing catches it. We think that generalises to every methods section we read.
+
+One figure must not be quoted out of context. These verifiers were adversarially prompted,
+worked from a local checkout with a shell, and were steered toward completeness claims; the
+\nPhaseRPapers{}-paper verification was calibrated the opposite way and worked from remote file
+listings. The individual verdicts hold; the aggregate rate is an artifact of the instrument and
+is not comparable to the corpus figures. Reporting it as though it were would repeat the very
+error corrected immediately above.
 
 \paragraph{Version~1 metadata is in circulation.} Version~1 stated a corpus of
 \nCorpusVOne{} papers and was indexed by at least one automated aggregator before the
@@ -284,9 +327,11 @@ readers encountering the earlier figure should treat this record as authoritativ
 Everything needed to reproduce this paper is released: the harvest script and manifest, the
 full candidate corpus, both layers of screening decisions with per-paper justifications, the
 coded corpus, the artifact-verification results, the analysis and figure scripts, the protocol
-with all amendments, and the three process logs. Every number in the paper is generated into a
-macro file by the analysis script; none is transcribed by hand. Every reference was verified
-against live arXiv and Crossref metadata by a script included in the repository.
+with all amendments, and the three process logs. Every corpus statistic in the paper is
+generated into a macro file by the analysis script and none is transcribed by hand; the
+narrative sections state some counts inline, and Section~\ref{sec:corrections} records which of
+those were wrong when we checked. Every reference was verified against live arXiv and Crossref
+metadata by a script included in the repository.
 
 \begin{itemize}\itemsep1pt
 \item Archived deposit (paper, data, code, protocol, process logs), carrying the joint

@@ -8,6 +8,7 @@ Usage: python code/check_consistency.py
 """
 
 import csv
+import sys
 from collections import Counter
 from pathlib import Path
 
@@ -70,7 +71,8 @@ def main():
         w.writerow(["rule", "arxiv_id", "title", "detail"])
         w.writerows(detail)
     print(f"\nwrote data/consistency-violations.csv ({len(detail)} rows)")
+    return len(detail)
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(1 if main() else 0)

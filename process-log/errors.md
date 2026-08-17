@@ -10,6 +10,79 @@ this file; corrections are appended.
 
 ---
 
+## #15 — 2026-08-18 — Paper 1, self-verification — We committed the failure we documented in
+## 490 other papers, in the sentence claiming we had not
+
+**Description.** Phase R's naming policy §5 ("we go first") requires Paper 1 to be verified by
+the procedure applied to everyone else, before any author is contacted. Six adversarial
+verifiers were run over the paper against this repository. Of 54 claims, **19 were supported
+(35%) and 15 were marked `CONTRADICTED`.** Nine distinct defects survived source-level
+adjudication by the AI lead; every one below was confirmed by hand, deterministically, against
+the released files.
+
+| # | claim as published | what the artifact holds |
+|---|---|---|
+| a | "Every number in the paper is generated into a macro file by the analysis script; **none is transcribed by hand**" | ~40 own-study statistics are typed as literals. The whole of §3.5 — `149`, κ `0.92/0.87/0.86/0.83/0.78/0.92/0.81/0.37`, `50`, `92.6%`, `77.9%`, `78.5%` — has no macro backing |
+| b | "**Nine** of the ten dimensions reach substantial agreement" | `data/coding-reliability.csv`, written by our own script, has **eight** rows reading `substantial`; D3 is `moderate`, D9 is `fair` |
+| c | Abstract: "**every one** of our own failures was caught by a cheap reconciliation check, and none would have been visible in the finished paper" | Error #14 in this file records, verbatim, "An external reader's critique of the published v2, **not by us**" and "A published paper asserted a difference its own data did not support" |
+| d | "**Five** failures were logged" | This file contains **fourteen** numbered entries; six even on the narrowest review-only reading |
+| e | "Full results, **including the confusion matrix**, are in `data/CODING-RELIABILITY-RESULTS.md`" | That file contains no confusion matrix — one prose sentence describing its dominant cell |
+| f | "the data files permit independent recomputation of **every** statistic" | The 149-paper double-coding study cannot be recomputed: `coding_reliability.py score()` globs `rel-*.json`, and **zero** such files are tracked or present on disk |
+| g | "`check_consistency.py` **now runs as a gate** on every regeneration of the analysis" | It is invoked by nothing. `analyze.py` does not import or shell out to it; it is a script a human must remember to run |
+| h | "of which 2 failed to parse … computed over the 805 papers that parsed" | 811 − 2 = **809**, not 805. Both macros are individually right; the sentence joining them is arithmetically false. 805 is the intersection with the 807-paper v3 corpus, which the prose never says |
+| i | "a record of **every** point where the human co-author intervened" | `human-interventions.md` holds six entries, all 2026-07-25, last touched at commit `a9cb1d5`, while the repository runs to 37 commits. `timeline.md` itself records later interventions with no entry |
+
+**How caught.** By our own procedure, turned on ourselves, at the moment the policy required —
+after all nine areas were verified and before a single author was contacted. Not by a reader.
+
+**Consequence.** Nine false or unsupported statements stand in the published v3, on Zenodo,
+under a DOI. Five of them (a, c, d, f, g) are **completeness claims** — *every*, *none*, *all* —
+which is the cheapest kind of sentence to write and the most expensive to satisfy. The
+verifiers were told to be alert to exactly that construction, and it is where they found us.
+
+**Correction.** Fixes are of two kinds, and the distinction matters. Where the claim was worth
+keeping we made it *true* (generated the missing macros; wired the consistency checker into
+`analyze.py` so it genuinely gates). Where it was not recoverable we made the text *accurate*
+(the recomputation and confusion-matrix claims withdrawn, counts fixed, the abstract's
+"every failure" sentence corrected to say plainly that one was found from outside).
+
+**Why this matters for RQ4 — and it matters more than any other entry here.**
+
+This is the paper's own thesis landing on the paper. We measured 490 papers and found that
+described methods are 2.4× more locatable than reported numbers, and argued the field's
+problem is not fabrication but *unpreserved provenance*. Then:
+
+- our reliability study's **inputs were not preserved** (f) — the exact R0 failure we recorded
+  against others, in the one study our headline reliability claims rest on;
+- our numbers were **hand-transcribed in the section about our own rigour** (a);
+- and the claim that we had not done so **was itself unchecked**, because the invariant checker
+  we wrote after error #10 — whose lesson was recorded in this very file as *"state your
+  invariants and check them by script"* — was never wired to anything (g).
+
+We wrote the rule, we wrote the checker, and we did not connect them. Error #10's lesson was
+learned in prose and not in code, which is precisely the distinction this paper exists to draw.
+
+Two further observations belong in the paper, not just the log:
+
+1. **Our worst defects cluster in the reflexive section** — the part describing our own
+   process. The section arguing that process auditability is more fundamental than results is
+   the least auditable section we wrote. That is not irony; it is evidence for the mechanism.
+   Prose about method is unconstrained by the pipeline that produces the results, so nothing
+   catches it. The same is true of every methods section we verified in 490 other papers.
+2. **The 35% support rate is not comparable to the corpus figures and must never be quoted as
+   though it were.** The verifiers here were adversarially prompted ("assume there are
+   unsupported claims"), had the whole repository on local disk with `grep` and a shell, and
+   were steered toward completeness claims. The area verifiers were calibrated the opposite way
+   ("most claims will be SUPPORTED"), worked from a remote file listing, and sampled claims
+   broadly. **The individual verdicts survive adjudication; the rate is an artifact of the
+   instrument.** Reporting 35% against the corpus's 56% would repeat error #14 — a number
+   carrying more weight than its construction supports — in the correction for error #14.
+
+The honest summary is not "we scored badly." It is: **when we pointed our own instrument at
+ourselves, it worked, and what it found was us.**
+
+---
+
 ## #1 — 2026-07-25 — Phase 2 (harvest) — Query design error: unanticipated stemming
 
 **Description.** The AI designed query `qf3_auditable_agent` as

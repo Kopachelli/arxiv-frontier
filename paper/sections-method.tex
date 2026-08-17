@@ -152,7 +152,9 @@ abstract-based systematic reviews generally.
 
 Full text was retrieved for \nArtAttempted{} papers, of which \nArtFailed{} failed to parse
 and are recorded as failures rather than as absences of a repository. Artifact percentages are
-computed over the \nArtChecked{} papers that parsed.
+computed over the \nArtChecked{} papers that both parsed and remain in the version~3 corpus:
+the parse succeeded for \nArtParsed{} papers, and \nArtDropped{} of those were removed from
+the corpus by amendment and so are not counted here.
 
 \subsection{Coding reliability}
 \label{sec:codingrel}
@@ -162,9 +164,11 @@ headline number in this paper, was a single pass. That asymmetry was noted in ve
 not measured. It is measured here: 149 papers drawn at random were re-coded from title and
 abstract by a second pass with no access to the original codes.
 
-Nine of the ten dimensions reach substantial agreement --- paper type $\kappa=0.92$, claim
-strength $0.87$, code release $0.86$, domain $0.83$, autonomy $0.78$, and (as multi-select
-Jaccard) evaluation method $0.92$ and auditability mechanisms $0.81$. Two require comment.
+\nRelSubstantial{} of the \nRelDims{} dimensions reach substantial agreement --- paper type
+$\kappa=\kappaDOne$, claim strength $\kappaDEight$, code release $\kappaDSevenCode$, data
+release $\kappaDSevenData$, domain $\kappaDFour$, autonomy $\kappaDTwo$, and (as multi-select
+Jaccard) evaluation method $\kappaDFive$ and auditability mechanisms $\kappaDSix$. Two require
+comment.
 
 \emph{Human role} scores $\kappa=0.37$ across its five categories, driven almost entirely by
 one confusion: 50 papers coded \texttt{NONE\_CLAIMED} were re-coded \texttt{UNSPECIFIED}. Both
@@ -189,8 +193,12 @@ figures stand as reported.
 The likely cause of the auditability spread is the one that produced seven boundary classes at
 screening: the dimension asks whether a mechanism is present \emph{as a designed feature}, and
 abstracts frequently gesture at inspectability without committing to it. Judgement calls made
-once are not measurements. Full results, including the confusion matrix, are in
-\texttt{data/CODING-RELIABILITY-RESULTS.md}.
+once are not measurements. Per-dimension results are in
+\texttt{data/coding-reliability.csv} and are summarised in
+\texttt{data/CODING-RELIABILITY-RESULTS.md}. Two limits of that release are stated in
+Section~\ref{sec:corrections}: the confusion matrix is described in prose rather than tabulated, and
+the second-pass codes this study was computed from were not preserved, so its $\kappa$ values
+cannot be recomputed from the repository.
 
 \subsection{The minimal-intervention condition}
 \label{sec:minimal}

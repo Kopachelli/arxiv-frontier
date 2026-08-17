@@ -22,6 +22,7 @@ KNOWN = {
     "bibliographystyle", "bibliography", "noindent", "large", "normalsize", "normalfont",
     "bfseries", "titleformat", "thesection", "thesubsection", "kappa", "geometry",
     "hspace", "vspace", "textwidth", "linewidth", "footnote", "quad", "qquad", "\\",
+    "S", "P", "dag", "ddag", "copyright", "pounds",  # LaTeX built-in symbol commands
     "emph", "mathrm", "text", "times", "leq", "geq", "approx", "sim", "%", "&", "#",
     "_", "$", "{", "}", "toprule", "midrule", "bottomrule", "multicolumn", "hline",
     "subsection*", "section*", "protect", "ldots", "dots", "and", "e", "colon",
